@@ -1,6 +1,7 @@
 __author__ = 'Andrew'
 from datatypes.Node import Node
 
+
 class Sink(Node):
 
     def __init__(self, id, x, y):

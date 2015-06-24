@@ -14,7 +14,8 @@ class Packet():
         self.delivered = False
 
     def __str__(self):
-        return 'ID: ' + self.id + ' ORIGIN: ' + self.origin + ' CURRENT: ' + self.current + ' DELIVERED: ' + str(self.delivered)
+        return 'ID: ' + self.id + ' ORIGIN: ' + self.origin + ' CURRENT: ' + self.current + ' DELIVERED: ' + str(
+            self.delivered)
 
     def set_delivered(self):
         self.delivered = True

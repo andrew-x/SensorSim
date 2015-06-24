@@ -28,6 +28,12 @@ class Energizer(Node):
 
     # GETTERS AND SETTERS
 
+    def get_battery(self):
+        return self.battery
+
+    def get_rate(self):
+        return self.rate
+
     def get_rate(self):
         return self.rate
 

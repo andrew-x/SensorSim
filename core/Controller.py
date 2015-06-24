@@ -7,6 +7,7 @@ from datatypes.Relay import Relay
 from datatypes.Sensor import Sensor
 from datatypes.Packet import Packet
 from exceptions.Exceptions import *
+from decimal import Decimal
 
 
 class Controller():
@@ -31,33 +32,55 @@ class Controller():
     period_count = 0
     period_limit = -1
 
+    scheduled = []
+    period_initialized = False
+    schedule_index = 0
+
     def __init__(self):
         self.load_settings()
         self.load_nodes()
         self.load_schedule()
 
+        Inventory.SCHEDULED = Inventory.SCHEDULE[0]
         Inventory.PACKETS = []
         self.period_count = 0
         self.packet_count = 0
         self.dead_nodes = []
 
         self.period_count = 0
-
-    def test_method(self):
-        return 5
+        self.period_initialized = False
+        self.schedule_index = 0
+        self.scheduled = Inventory.SCHEDULE[self.schedule_index]
 
     def fire(self):
-        self.dead_nodes = []
+        self.period_initialized = False
+        self.schedule_index = 0
+        self.scheduled = Inventory.SCHEDULE[self.schedule_index]
+        while True:
+            try:
+                self.step_through()
+            except DoneScheduleException:
+                break
 
-        self.energize()
-        self.generate_packets()
-        while self.done_schedule() is False:
-            self.run_schedule()
-        self.collect_energy()
-        self.period_count += 1
-
-        for i in Inventory.PACKETS:
-            print(i),
+    def step_through(self):
+        if not self.period_initialized:
+            self.dead_nodes = []
+            self.energize()
+            self.generate_packets()
+            self.period_initialized = True
+        if not self.done_schedule():
+            self.run_slot()
+            self.schedule_index += 1
+            if self.schedule_index >= len(Inventory.SCHEDULE):
+                self.schedule_index = 0
+            self.scheduled = Inventory.SCHEDULE[self.schedule_index]
+        if self.done_schedule():
+            self.collect_energy()
+            self.period_count += 1
+            self.period_initialized = False
+            self.schedule_index = 0
+            self.scheduled = Inventory.SCHEDULE[self.schedule_index]
+            raise DoneScheduleException
 
     def done_schedule(self):
         for p in Inventory.PACKETS:
@@ -81,31 +104,31 @@ class Controller():
                 Inventory.PACKETS += [Packet(packet_id, s.get_id())]
                 self.packet_count += 1
 
-    def run_schedule(self):
-        for slot in Inventory.SCHEDULE:
-            for node in slot:
-                if node.get_id() not in self.dead_nodes:
-                    packet_id = ''
-                    parent_id = ''
+    def run_slot(self):
+        slot = self.scheduled
+        for node in slot:
+            if node.get_id() not in self.dead_nodes:
+                packet_id = ''
+                parent_id = ''
+                try:
+                    packet_id, parent_id = node.send()
+                    node.increment_lifetime()
+                except NotEnoughEnergyException:
+                    self.dead_nodes += [node.get_id()]
+                    node.increment_lost_count()
+                    continue
+                if packet_id is None:
+                    continue
+                if parent_id[0] == Inventory.TYPE_SINK:
+                    Inventory.PACKETS[self.find_packet(packet_id)].set_delivered()
+                    Inventory.PACKETS[self.find_packet(packet_id)].set_current(parent_id)
+                else:
                     try:
-                        packet_id, parent_id = node.send()
-                        node.increment_lifetime()
-                    except NotEnoughEnergyException:
-                        self.dead_nodes += [node.get_id()]
-                        node.increment_lost_count()
-                        continue
-                    if packet_id is None:
-                        continue
-                    if parent_id[0] == Inventory.TYPE_SINK:
-                        Inventory.PACKETS[self.find_packet(packet_id)].set_delivered()
+                        Inventory.RELAYS[self.find_relay(parent_id)].receive(packet_id)
                         Inventory.PACKETS[self.find_packet(packet_id)].set_current(parent_id)
-                    else:
-                        try:
-                            Inventory.RELAYS[self.find_relay(parent_id)].receive(packet_id)
-                            Inventory.PACKETS[self.find_packet(packet_id)].set_current(parent_id)
-                        except NotEnoughEnergyException:
-                            node.increment_lost_count()
-                            self.dead_nodes += [parent_id]
+                    except NotEnoughEnergyException:
+                        node.increment_lost_count()
+                        self.dead_nodes += [parent_id]
 
     def find_relay(self, target):
         for i in range(0, len(Inventory.RELAYS)):
@@ -125,30 +148,31 @@ class Controller():
                 return i
         return -1
 
+    # INITIALIZE METHODS
+
     def load_settings(self):
         x_size = -1
         y_size = -1
         seed = -1
-        skip_size = -1
-        refresh_rate = -1
+        refresh_delay = -1
         with open(Inventory.SETTINGS_FILENAME) as f:
             content = f.readlines()
         for l in content:
             l = l.strip()
-            val = int(l[l.index(':') + 1:])
+            val = Decimal(l[l.index(':') + 1:])
             if 'X_SIZE' in l:
                 x_size = val
             elif 'Y_SIZE' in l:
                 y_size = val
             elif 'SEED' in l:
                 seed = val
-            elif 'SKIP_SIZE' in l:
-                skip_size = val
-            elif 'REFRESH_RATE' in l:
-                refresh_rate = val
-        if x_size is not -1 and y_size is not -1 and seed is not -1:
-            Inventory.SKIP_SIZE = skip_size
-            Inventory.REFRESH_RATE = refresh_rate
+            elif 'REFRESH_DELAY' in l:
+                refresh_delay = val
+        if x_size is not -1 and y_size is not -1 and seed is not -1 and refresh_delay is not -1:
+            Inventory.SEED = seed
+            Inventory.REFRESH_DELAY = refresh_delay
+            Inventory.X_SIZE = x_size
+            Inventory.Y_SIZE = y_size
         else:
             print('IMPROPER SETTINGS FILE')
 
@@ -188,6 +212,12 @@ class Controller():
             Inventory.SCHEDULE += [slot]
 
     # SETTERS AND GETTERS
+
+    def get_scheduled(self):
+        return self.scheduled
+
+    def get_period_count(self):
+        return self.period_count
 
     @staticmethod
     def set_energizers(energizers):

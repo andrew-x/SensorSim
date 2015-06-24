@@ -26,10 +26,9 @@ class Sensor(Node):
 
         self.lost_count = 0
 
-    def generate_packet(self, packet_count):
+    def generate_packet(self, packet_id):
         # QUESTION: DOES THIS USE UP ENERGY?
-        packet = str(packet_count)
-        self.packets += [packet]
+        self.packets += [packet_id]
         return True
 
     def send(self):

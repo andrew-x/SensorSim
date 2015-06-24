@@ -18,6 +18,14 @@ class Node():
     def increment_lifetime(self):
         self.lifetime += 1
 
+    # SETTERS AND GETTERS
+
+    def set_x(self, x):
+        self.x = x
+
+    def set_y(self, y):
+        self.y = y
+
     def get_id(self):
         return self.id
 
