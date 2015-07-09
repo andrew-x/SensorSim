@@ -10,7 +10,11 @@ class Sensor(Node):
     parent = None
     packet = ''
 
-    lost_count = 0
+    energy_count = 0
+    energy_count_count = 0
+
+    send_count = 0
+    send_lost_count = 0
 
     def __init__(self, id, x, y, range, battery, e_use_out, parent):
         super(Sensor, self).__init__(id, x, y)
@@ -27,21 +31,38 @@ class Sensor(Node):
         self.lost_count = 0
 
     def generate_packet(self, packet_id):
-        # QUESTION: DOES THIS USE UP ENERGY?
+        """
+        (Sensor, string) -> None
+
+        Generates a packet
+        """
+        # TODO: Add energy loss.
         self.packets += [packet_id]
         return True
 
     def send(self):
+        """
+        (Sensor) -> None
+
+        Sends the packet at the top of the que.
+        Raises NotEnoughEnergyException if it does not have
+        the energy required.
+        """
         if self.battery < self.e_use_out:
             raise NotEnoughEnergyException
-
         self.battery -= self.e_use_out
         if len(self.packets) > 0:
+            self.send_count += 1
             return self.packets.pop(0), self.parent
-        return None, self.parent
+        else:
+            raise EmptyQueueException
 
-    def increment_lost_count(self):
-        self.lost_count += 1
+    def increment_send_lost_count(self):
+        self.send_lost_count += 1
+
+    def increment_energy_count(self):
+        self.energy_count += self.battery
+        self.energy_count_count += 1
 
     def __str__(self):
         return super(Sensor, self).__str__() + " | range: " + str(self.range) + " | battery: " + str(
@@ -64,3 +85,9 @@ class Sensor(Node):
 
     def get_packets(self):
         return self.packets
+
+    def get_send_lost_count(self):
+        return self.send_lost_count
+
+    def get_send_count(self):
+        return self.send_count

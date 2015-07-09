@@ -2,12 +2,20 @@ __author__ = 'Andrew'
 
 
 class Node():
+    """
+    The Node superclass.
+    """
     id = ''
     x = -1
     y = -1
     lifetime = 0
 
     def __init__(self, id, x, y):
+        """
+        (Node, string, int, int) -> None
+
+        Constructor
+        """
         self.id = id
         self.x = x
         self.y = y
@@ -16,6 +24,12 @@ class Node():
         return 'id: ' + self.id + ' | x: ' + str(self.x) + ' | y: ' + str(self.y) + ' | lifetime: ' + str(self.lifetime)
 
     def increment_lifetime(self):
+        """
+        (Node) -> None
+
+        Increments the measure of how long the node
+        has been alive.
+        """
         self.lifetime += 1
 
     # SETTERS AND GETTERS

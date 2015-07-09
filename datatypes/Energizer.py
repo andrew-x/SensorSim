@@ -3,20 +3,40 @@ from datatypes.Node import Node
 
 
 class Energizer(Node):
+    """
+    The energizer object
+    """
     range = -1
     battery = -1
     rate = -1
 
     def __init__(self, id, x, y, range, battery, rate):
+        """
+        (Energizer, string, int, int, int, int, int) -> None
+
+        Constructor
+        """
         super(Energizer, self).__init__(id, x, y)
         self.range = range
         self.battery = battery
         self.rate = rate
 
     def gather_energy(self):
-        self.battery += self.rate  # TODO: Augment with time
+        """
+        (Energizer) -> None
+
+        Gathers energy
+        """
+        # TODO: improve
+        self.battery += self.rate
 
     def energize(self):
+        """
+        (Energizer) -> int
+
+        Returns the amount of energy to charge
+        """
+        # TODO: improve
         try:
             return self.battery
         finally:

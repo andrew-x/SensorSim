@@ -63,7 +63,7 @@ class MainFrame(Frame):
         file_menu.add_command(label='Edit Schedule', command=self.open_schedule)
         file_menu.add_command(label='Edit Settings ', command=self.open_settings)
         file_menu.add_command(label='Reset', command=self.reset)
-        file_menu.add_command(label='Export Node Setup ', command=self.export_nodes)
+        file_menu.add_command(label='Export Data ', command=self.export_data)
         file_menu.add_command(label='Exit', command=self.exit)
         menubar.add_cascade(label='File', menu=file_menu)
 
@@ -209,5 +209,5 @@ class MainFrame(Frame):
         self.control = Controller()
         self.refresh()
 
-    def export_nodes(self):
-        pass
+    def export_data(self):
+        self.control.export_data()

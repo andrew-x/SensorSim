@@ -2,23 +2,51 @@ __author__ = 'Andrew'
 
 
 class Packet():
+    """
+    Packet object
+    """
     id = ''
     origin = ''
     current = ''
+    lost_at = ''
     delivered = False
+    lost = False
 
-    def __init__(self, id='', origin=''):
-        self.id = id
+    hop_count = 0
+
+    def __init__(self, packet_id='', origin=''):
+        """
+        (Packet, string, string) -> None
+
+        Constructor
+        """
+
+        self.id = packet_id
         self.origin = origin
         self.current = origin
         self.delivered = False
+
+    def increment_hop_count(self):
+        """
+        (Packet) -> None
+
+        Increments the number of hops this packet has committed.
+        """
+        self.hop_count += 1
 
     def __str__(self):
         return 'ID: ' + self.id + ' ORIGIN: ' + self.origin + ' CURRENT: ' + self.current + ' DELIVERED: ' + str(
             self.delivered)
 
+    # GETTERS AND SETTERS
+
     def set_delivered(self):
         self.delivered = True
+
+    def set_lost(self):
+        self.lost_at = self.current
+        self.current = ''
+        self.lost = True
 
     def set_current(self, current):
         self.current = current
@@ -34,3 +62,12 @@ class Packet():
 
     def get_delivered(self):
         return self.delivered
+
+    def get_lost(self):
+        return self.lost
+
+    def get_lost_at(self):
+        return self.lost_at
+
+    def get_hop_count(self):
+        return self.hop_count

@@ -7,3 +7,7 @@ class NotEnoughEnergyException(Exception):
 
 class DoneScheduleException(Exception):
     pass
+
+
+class EmptyQueueException(Exception):
+    pass
