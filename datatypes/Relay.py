@@ -18,9 +18,12 @@ class Relay(Node):
     receive_count = 0
     send_lost_count = 0
     receive_lost_count = 0
+    send_success_rate = 0
+    receive_success_rate = 0
 
     energy_count = 0
     energy_count_count = 0
+    energy_average = 0
 
     def __init__(self, id, x, y, relay_range, battery, e_use_in, e_use_out, parent):
         super(Relay, self).__init__(id, x, y)
@@ -67,20 +70,25 @@ class Relay(Node):
 
     def increment_send_lost_count(self):
         self.send_lost_count += 1
+        self.send_success_rate = float("{0:.2f}".format((
+            self.send_count - self.send_lost_count) / self.send_count * 100))
 
     def increment_receive_lost_count(self):
         self.receive_lost_count += 1
+        self.receive_success_rate = float("{0:.2f}".format((self.receive_count -
+                                                            self.receive_lost_count) / self.receive_count * 100))
 
     def increment_energy_count(self):
         self.energy_count += self.battery
         self.energy_count_count += 1
+        self.energy_average = float("{0:.2f}".format(self.energy_count / self.energy_count_count))
 
     def __str__(self):
         return super(Relay, self).__str__() + " | range: " + str(self.range) + " | battery: " + str(
             self.battery) + " | e_use_in: " + str(self.e_use_in) + " | e_use_out: " + str(self.e_use_out) + \
-               " | parent: " + self.parent
+            " | parent: " + self.parent
 
-        # GETTERS AND SETTERS
+    # GETTERS AND SETTERS
 
     def get_range(self):
         return self.range
@@ -111,3 +119,12 @@ class Relay(Node):
 
     def get_receive_count(self):
         return self.receive_count
+
+    def get_send_success_rate(self):
+        return self.send_success_rate
+
+    def get_receive_success_rate(self):
+        return self.receive_success_rate
+
+    def get_energy_average(self):
+        return self.energy_average

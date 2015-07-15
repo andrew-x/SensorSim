@@ -1,0 +1,2 @@
+Id,X,Y,Range,Battery,Energy use in,Energy use out,Parent,Send tries,Send fails,Send success rate,Receive tries,Receive fails,Receive success rate,Battery average
+r1,15,15,0,10,10,i1,5,0,0,5,4,20.0,50.0

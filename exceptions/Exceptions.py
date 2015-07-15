@@ -11,3 +11,7 @@ class DoneScheduleException(Exception):
 
 class EmptyQueueException(Exception):
     pass
+
+
+class NotFoundException(Exception):
+    pass

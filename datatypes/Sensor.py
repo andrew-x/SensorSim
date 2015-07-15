@@ -12,9 +12,11 @@ class Sensor(Node):
 
     energy_count = 0
     energy_count_count = 0
+    energy_average = 0
 
     send_count = 0
     send_lost_count = 0
+    send_success_rate = 0
 
     def __init__(self, id, x, y, range, battery, e_use_out, parent):
         super(Sensor, self).__init__(id, x, y)
@@ -59,15 +61,18 @@ class Sensor(Node):
 
     def increment_send_lost_count(self):
         self.send_lost_count += 1
+        self.send_success_rate = float("{0:.2f}".format(
+            (self.send_count - self.send_lost_count) / self.send_count * 100))
 
     def increment_energy_count(self):
         self.energy_count += self.battery
         self.energy_count_count += 1
+        self.energy_average = self.energy_count / self.energy_count_count
 
     def __str__(self):
         return super(Sensor, self).__str__() + " | range: " + str(self.range) + " | battery: " + str(
             self.battery) + " | e_use_in: " + str(
-            self.e_use_out) + " | parent: " + self.parent
+                self.e_use_out) + " | parent: " + self.parent
 
     # GETTERS AND SETTERS
 
@@ -91,3 +96,9 @@ class Sensor(Node):
 
     def get_send_count(self):
         return self.send_count
+
+    def get_send_success_rate(self):
+        return self.send_success_rate
+
+    def get_energy_average(self):
+        return self.energy_average

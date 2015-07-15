@@ -10,7 +10,9 @@ from gui.infoFrames.SinkInfoFrame import *
 from gui.infoFrames.RelaysInfoFrame import *
 from gui.infoFrames.SensorsInfoFrame import *
 from gui.infoFrames.EnergizersInfoFrame import *
+from gui.generateFrames.GenerateNodesFrame import *
 from core.Controller import *
+from gui.GraphFrame import *
 
 import _thread
 import time
@@ -35,7 +37,12 @@ class MainFrame(Frame):
     step_through_button = None
     next_period_button = None
 
+    mode = 0
+
+    graph = None
+
     playing = False
+    threads_stop = True
 
     def __init__(self, master=Tk()):
         super(MainFrame, self).__init__(master)
@@ -43,7 +50,9 @@ class MainFrame(Frame):
         self.control = Controller()
 
         self.init_window()
+
         self.set_widgets()
+
         self.mainloop()
 
     def init_window(self):
@@ -81,6 +90,10 @@ class MainFrame(Frame):
         view_menu.add_command(label='View Relays Information', command=self.view_relays_info)
         menubar.add_cascade(label='View', menu=view_menu)
 
+        generate_menu = Menu(menubar, tearoff=1)
+        generate_menu.add_command(label='Generate Nodes', command=self.generate_nodes)
+        menubar.add_cascade(label='Generate', menu=generate_menu)
+
         try:
             self.master.config(menu=menubar)
         except AttributeError:
@@ -103,20 +116,16 @@ class MainFrame(Frame):
         self.next_period_button = Button(self.master, text='Next Period', command=self.on_next_period)
         self.next_period_button.grid(row=2, column=2, pady=10, padx=5)
 
-        self.packet_info_frame = PacketsInfoFrame(self.master, 3)
+        self.graph = GraphFrame(self.master)
 
         self.refresh()
 
     # CONTROL OPTIONS
-
     def refresh(self):
-        self.refresh_main_frame()
         self.refresh_labels()
-        self.refresh_info_frames()
+        self.graph.refresh(self.mode)
 
-    def refresh_main_frame(self):
-        self.packet_info_frame.destroy()
-        self.packet_info_frame.set_widgets()
+        # self.refresh_info_frames()
 
     def refresh_info_frames(self):
         if not self.relays_info_frame is None:
@@ -128,20 +137,27 @@ class MainFrame(Frame):
         self.period_label_text.set('Period Count: ' + str(self.control.get_period_count()+1))
 
     def on_play(self):
+        self.mode = Inventory.PLAY_MODE
+        if self.threads_stop:
+            self.threads_stop = False
+            _thread.start_new_thread(self.main_loop, ())
+
         self.play_button.configure(text='Stop', command=self.on_stop)
         self.playing = True
-        _thread.start_new_thread(self.main_loop, ())
 
     def on_stop(self):
-        self.play_button.configure(text='>', command=self.on_play)
+        self.mode = Inventory.NEUTRAL_MODE
+        self.play_button.configure(text='Play', command=self.on_play)
         self.playing = False
 
     def on_next_period(self):
+        self.mode = Inventory.PERIOD_MODE
         if not self.playing:
             self.control.fire()
             self.refresh()
 
     def on_step(self):
+        self.mode = Inventory.STEP_THROUGH_MODE
         if not self.playing:
             try:
                 self.control.step_through()
@@ -152,10 +168,11 @@ class MainFrame(Frame):
     # THREAD OPTIONS
 
     def main_loop(self):
-        while self.playing:
-            self.control.fire()
-            self.refresh()
-            time.sleep(Inventory.REFRESH_DELAY)
+        while not self.threads_stop:
+            if self.playing:
+                self.control.fire()
+                self.refresh()
+                time.sleep(Inventory.REFRESH_DELAY)
 
     # MENU OPTIONS
 
@@ -211,3 +228,6 @@ class MainFrame(Frame):
 
     def export_data(self):
         self.control.export_data()
+
+    def generate_nodes(self):
+        GenerateNodesFrame()

@@ -8,7 +8,6 @@ from gui.MainFrame import *
 
 import unittest
 
-
 if Inventory.TEST_SWITCH is 1:
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(TestCore)
     unittest.TextTestRunner().run(suite)

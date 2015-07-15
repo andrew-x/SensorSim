@@ -37,9 +37,9 @@ class Controller():
 
         Constructor
         """
-        self.load_settings()
-        self.load_nodes()
-        self.load_schedule()
+        Inventory.load_settings()
+        Inventory.load_nodes()
+        Inventory.load_schedule()
 
         Inventory.SCHEDULED = Inventory.SCHEDULE[0]
         Inventory.PACKETS = []
@@ -147,7 +147,12 @@ class Controller():
 
         Runs scheduled slot.
         """
+        # TODO: Make more efficient
         slot = self.scheduled
+
+        Inventory.FAILED_LINKS = []
+        Inventory.SUCCESSFUL_LINKS = []
+
         self.schedule_run_count += 1
         for node in slot:
             node.increment_energy_count()
@@ -160,6 +165,8 @@ class Controller():
                     node.increment_lifetime()
                 except NotEnoughEnergyException:
                     self.dead_nodes += [node.get_id()]
+                    Inventory.FAILED_LINKS += [node]
+
                     node.increment_send_lost_count()
                     continue
                 except EmptyQueueException:
@@ -167,145 +174,25 @@ class Controller():
 
                 #Receive
                 if parent_id[0] == Inventory.TYPE_SINK:
-                    Inventory.PACKETS[self.find_packet(packet_id)].set_delivered()
-                    Inventory.PACKETS[self.find_packet(packet_id)].set_current(parent_id)
-                    Inventory.PACKETS[self.find_packet(packet_id)].increment_hop_count()
+                    Inventory.PACKETS[Inventory.find_packet(packet_id)].set_delivered()
+                    Inventory.PACKETS[Inventory.find_packet(packet_id)].set_current(parent_id)
+                    Inventory.PACKETS[Inventory.find_packet(packet_id)].increment_hop_count()
+
+                    Inventory.SUCCESSFUL_LINKS += [node]
                 else:
                     try:
-                        Inventory.RELAYS[self.find_relay(parent_id)].receive(packet_id)
-                        Inventory.PACKETS[self.find_packet(packet_id)].set_current(parent_id)
-                        Inventory.PACKETS[self.find_packet(packet_id)].increment_hop_count()
+                        Inventory.RELAYS[Inventory.find_relay(parent_id)].receive(packet_id)
+                        Inventory.PACKETS[Inventory.find_packet(packet_id)].set_current(parent_id)
+                        Inventory.PACKETS[Inventory.find_packet(packet_id)].increment_hop_count()
+
+                        Inventory.SUCCESSFUL_LINKS += [node]
                     except NotEnoughEnergyException:
                         self.dead_nodes += [parent_id]
-                        Inventory.RELAYS[self.find_relay(parent_id)].increment_receive_lost_count()
-                        Inventory.PACKETS[self.find_packet(packet_id)].set_lost()
+                        Inventory.FAILED_LINKS += [node]
 
-    def find_relay(self, target):
-        """
-        (Controller, string) -> int
+                        Inventory.RELAYS[Inventory.find_relay(parent_id)].increment_receive_lost_count()
+                        Inventory.PACKETS[Inventory.find_packet(packet_id)].set_lost()
 
-        Returns the index of the relay that matches the input id;
-        returns -1 if relay cannot be found
-        """
-        # TODO: switch to forgiveness.
-        for i in range(0, len(Inventory.RELAYS)):
-            if Inventory.RELAYS[i].get_id() == target:
-                return i
-        return -1
-
-    def find_packet(self, target):
-        """
-        (Controller, string) -> int
-
-        Returns the index of the packet that matches the input id;
-        returns -1 if packet cannot be found
-        """
-        # TODO: switch to forgiveness.
-        for i in range(0, len(Inventory.PACKETS)):
-            if Inventory.PACKETS[i].get_id() == target:
-                return i
-        return -1
-
-    def find_sensor(self, target):
-        """
-        (Controller, string) -> int
-
-        Returns the index of the sensor that matches the input id;
-        returns -1 if sensor cannot be found
-        """
-        # TODO: switch to forgiveness.
-        for i in range(0, len(Inventory.SENSORS)):
-            if Inventory.SENSORS[i].get_id() == target:
-                return i
-        return -1
-
-    # INITIALIZE METHODS
-
-    def load_settings(self):
-        """
-        (Controller) -> None
-
-        Loads the settings file values
-        """
-        x_size = -1
-        y_size = -1
-        seed = -1
-        refresh_delay = -1
-        with open(Inventory.SETTINGS_FILENAME) as f:
-            content = f.readlines()
-        for l in content:
-            l = l.strip()
-            val = Decimal(l[l.index(':') + 1:])
-            if 'X_SIZE' in l:
-                x_size = val
-            elif 'Y_SIZE' in l:
-                y_size = val
-            elif 'SEED' in l:
-                seed = val
-            elif 'REFRESH_DELAY' in l:
-                refresh_delay = val
-        if x_size is not -1 and y_size is not -1 and seed is not -1 and refresh_delay is not -1:
-            Inventory.SEED = seed
-            Inventory.REFRESH_DELAY = refresh_delay
-            Inventory.X_SIZE = x_size
-            Inventory.Y_SIZE = y_size
-        else:
-            print('IMPROPER SETTINGS FILE')
-
-    def load_nodes(self):
-        """
-        (Controller) -> None
-
-        Loads nodes from input file.
-        """
-
-        '''
-        INPUT PROTOCOL:
-        SINKS:      I id x y
-        ENERGIZERS: E id x y range battery rate
-        RELAY:      R id x y range battery energy_use_in energy_use_out parent_id
-        SENSOR:     S id x y range battery energy_use_out parent_id
-        '''
-        with open(Inventory.NODES_FILENAME) as f:
-            content = f.readlines()
-        try:
-            for l in content:
-                arr = l.split()
-                if arr[0] is 'I':
-                    Inventory.SINK = Sink(arr[1], int(arr[2]), int(arr[3]))
-                elif arr[0] is 'E':
-                    Inventory.ENERGIZERS += [
-                        Energizer(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]))]
-                elif arr[0] is 'R':
-                    Inventory.RELAYS += [
-                        Relay(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]), int(arr[7]),
-                              arr[8])]
-                elif arr[0] is 'S':
-                    Inventory.SENSORS += [
-                        Sensor(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]),
-                               arr[7])]
-        except IndexError:
-            print("INVALID NODES FILE")
-
-    def load_schedule(self):
-        """
-        (Controller) -> None
-
-        Loads schedule from input file.
-        """
-        with open(Inventory.SCHEDULE_FILENAME) as f:
-            content = f.readlines()
-        for l in content:
-            arr = l.split()
-            slot = []
-            for a in arr:
-                if a[0] == Inventory.TYPE_RELAY:
-                    slot += [Inventory.RELAYS[self.find_relay(a)]]
-                elif a[0] == Inventory.TYPE_SENSOR:
-                    slot += [Inventory.SENSORS[self.find_sensor(a)]]
-            Inventory.SCHEDULE += [slot]
-
-    @PendingDeprecationWarning
     def export_data(self):
         """
         (Controller) -> None
@@ -314,13 +201,61 @@ class Controller():
         """
         print('Export')
         data = []
-        data += [['Id', 'Origin', 'Current', 'Delivered', 'Lost']]
+        data += [['Id', 'Origin', 'Current', 'Delivered', 'Lost', 'Lost at', 'Hop Count']]
         for p in Inventory.PACKETS:
-            data += [[p.get_id(), p.get_origin(), p.get_current(), str(p.get_delivered()), str(p.get_lost())]]
+            data += [[p.get_id(), p.get_origin(), p.get_current(), str(p.get_delivered()),
+                      str(p.get_lost()), p.get_lost_at(), str(p.get_hop_count())]]
+
         with open(Inventory.EXPORT_ROOT + 'packets.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
+
         data = []
+        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Rate']]
+        for e in Inventory.ENERGIZERS:
+            data += [[e.get_id(), e.get_x(), e.get_y(), e.get_range(), e.get_battery(), e.get_rate()]]
+        with open(Inventory.EXPORT_ROOT + 'energizers.csv', 'w', newline='') as f:
+            writer = csv.writer(f, delimiter=',')
+            writer.writerows(data)
+
+        data = []
+        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use in', 'Energy use out', 'Parent',
+                  'Send tries', 'Send fails', 'Send success rate', 'Receive tries', 'Receive fails',
+                  'Receive success rate', 'Battery average']]
+        for r in Inventory.RELAYS:
+            data += [[r.get_id(), r.get_x(), r.get_y(), r.get_battery(), r.get_e_use_in(), r.get_e_use_out(),
+                      r.get_parent(), r.get_send_count(), r.get_send_lost_count(), r.get_send_success_rate(),
+                      r.get_receive_count(), r.get_receive_lost_count(), r.get_receive_success_rate(),
+                      r.get_energy_average()]]
+        with open(Inventory.EXPORT_ROOT + 'relays.csv', 'w', newline='') as f:
+            writer = csv.writer(f, delimiter=',')
+            writer.writerows(data)
+
+        data = []
+        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use out', 'Parent', 'Send tries', 'Send fails',
+                  'Send success rate', 'Battery average']]
+        for s in Inventory.SENSORS:
+            data += [[s.get_id(), s.get_x(), s.get_y(), s.get_range(), s.get_battery(), s.get_parent(),
+                      s.get_send_count(), s.get_send_lost_count(), s.get_send_success_rate(), s.get_energy_average()]]
+        with open(Inventory.EXPORT_ROOT + 'sensors.csv', 'w', newline='') as f:
+            writer = csv.writer(f, delimiter=',')
+            writer.writerows(data)
+
+        data = []
+        data += [['Id', 'X', 'Y']]
+        for s in Inventory.SINKS:
+            data += [[s.get_id(), s.get_x(), s.get_y()]]
+        with open(Inventory.EXPORT_ROOT + 'sensors.csv', 'w', newline='') as f:
+            writer = csv.writer(f, delimiter=',')
+            writer.writerows(data)
+
+        data = []
+        data += [['Average Period Length']]
+        avg_period_length = self.schedule_run_count / self.period_count
+        data += [[avg_period_length]]
+        with open(Inventory.EXPORT_ROOT + 'simulation.csv', 'w', newline='') as f:
+            writer = csv.writer(f, delimiter=',')
+            writer.writerows(data)
 
     # SETTERS AND GETTERS
 
@@ -343,8 +278,8 @@ class Controller():
         Inventory.SENSORS = sensors
 
     @staticmethod
-    def set_sink(sink):
-        Inventory.SINK = sink
+    def set_sinks(sinks):
+        Inventory.SINKS = sinks
 
     @staticmethod
     def get_energizers():
@@ -359,8 +294,8 @@ class Controller():
         return Inventory.SENSORS
 
     @staticmethod
-    def get_sink():
-        return Inventory.SINK
+    def get_sinks():
+        return Inventory.SINKS
 
     @staticmethod
     def get_packets():
