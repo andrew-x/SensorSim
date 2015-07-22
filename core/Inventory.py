@@ -1,11 +1,11 @@
 __author__ = 'Andrew'
 import os
 from exceptions.Exceptions import *
-from datatypes.Energizer import Energizer
-from datatypes.Sink import Sink
-from datatypes.Relay import Relay
-from datatypes.Sensor import Sensor
-from datatypes.Packet import Packet
+from datatypes.Energizer import *
+from datatypes.Sink import *
+from datatypes.Relay import *
+from datatypes.Sensor import *
+from datatypes.Packet import *
 from decimal import Decimal
 
 class Inventory():
@@ -14,6 +14,7 @@ class Inventory():
     """
 
     TEST_SWITCH = 2
+    AUDIT_MODE = True
 
     ROOT = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
     EXPORT_ROOT = ROOT + '//Generated//'
@@ -21,8 +22,14 @@ class Inventory():
     NODES_FILENAME = os.path.join(ROOT, "input//NODES.txt")
     SCHEDULE_FILENAME = os.path.join(ROOT, "input//SCHEDULE.txt")
 
-    GENERATE_NODES_PROTOCOL_FILENAME = os.path.join(ROOT, "protocols//GenerateNodesProtocol.py")
-    GENERATE_NODES_PROTOCOL_PYC_FILENAME = os.path.join(ROOT, "protocols//__pycache__//GenerateNodesProtocol.cpython-34.pyc")
+    GENERATE_NODES_PROTOCOL_FILENAME = os.path.join(ROOT,
+                                                    "protocols//GenerateNodesProtocol.py")
+    GENERATE_SCHEDULE_PROTOCOL_FILENAME = os.path.join(ROOT,
+                                                    "protocols//GenerateScheduleProtocol.py")
+    GENERATE_NODES_PROTOCOL_PYC_FILENAME = os.path.join(ROOT,
+                                                        "protocols//__pycache__//GenerateNodesProtocol.cpython-34.pyc")
+
+    # Settings
 
     SCALE_FACTOR = 5
 
@@ -35,6 +42,8 @@ class Inventory():
     PLAY_MODE = 1
     STEP_THROUGH_MODE = 2
     PERIOD_MODE = 3
+
+    # Constants
 
     TYPE_SINK = 'i'
     TYPE_RELAY = 'r'
@@ -55,6 +64,8 @@ class Inventory():
     UPDATE_TYPE_RECEIVE_SUCCESS = 3
     UPDATE_TYPE_RECEIVE_FAIL = 4
 
+    # Model
+
     SCHEDULE = []
     SUCCESSFUL_LINKS = []
     FAILED_LINKS = []
@@ -65,6 +76,9 @@ class Inventory():
     RELAYS = []
 
     PACKETS = []
+
+    PERIOD_COUNT = 0
+    SCHEDULE_INDEX = 0
 
     @staticmethod
     def load_settings():
@@ -108,9 +122,9 @@ class Inventory():
         '''
         INPUT PROTOCOL:
         SINKS:      I id x y
-        ENERGIZERS: E id x y range battery rate
+        ENERGIZERS: E id x y range battery gather_rate recharge_rate
         RELAY:      R id x y range battery energy_use_in energy_use_out parent_id
-        SENSOR:     S id x y range battery energy_use_out parent_id
+        SENSOR:     S id x y range battery energy_use_out energy_use_generate parent_id
         '''
         with open(Inventory.NODES_FILENAME) as f:
             content = f.readlines()
@@ -121,7 +135,7 @@ class Inventory():
                     Inventory.SINKS += [Sink(arr[1], int(arr[2]), int(arr[3]))]
                 elif arr[0] is 'E':
                     Inventory.ENERGIZERS += [
-                        Energizer(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]))]
+                        Energizer(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]), int(arr[7]))]
                 elif arr[0] is 'R':
                     Inventory.RELAYS += [
                         Relay(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]), int(arr[7]),
@@ -129,7 +143,7 @@ class Inventory():
                 elif arr[0] is 'S':
                     Inventory.SENSORS += [
                         Sensor(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]),
-                               arr[7])]
+                               int(arr[7]), arr[8])]
         except IndexError:
             print("INVALID NODES FILE")
 
@@ -146,11 +160,19 @@ class Inventory():
             arr = l.split()
             slot = []
             for a in arr:
-                if a[0] == Inventory.TYPE_RELAY:
-                    slot += [Inventory.RELAYS[Inventory.find_relay(a)]]
-                elif a[0] == Inventory.TYPE_SENSOR:
-                    slot += [Inventory.SENSORS[Inventory.find_sensor(a)]]
+                slot += [a]
             Inventory.SCHEDULE += [slot]
+
+    @staticmethod
+    def find_node(target):
+        if target[0] == Inventory.TYPE_SINK:
+            return Inventory.SINKS[Inventory.find_sink(target)]
+        if target[0] == Inventory.TYPE_ENERGIZER:
+            return Inventory.ENERGIZERS[Inventory.find_energizer(target)]
+        if target[0] == Inventory.TYPE_RELAY:
+            return Inventory.RELAYS[Inventory.find_relay(target)]
+        if target[0] == Inventory.TYPE_SENSOR:
+            return Inventory.SENSORS[Inventory.find_sensor(target)]
 
     @staticmethod
     def find_sink(target):
@@ -158,12 +180,12 @@ class Inventory():
         (Controller, string) -> int
 
         Returns the index of the sensor that matches the input id;
-        returns -1 if sensor cannot be found
+        raises NotFoundException if cannot be found
         """
         for i in range(0, len(Inventory.SINKS)):
             if Inventory.SINKS[i].get_id() == target:
                 return i
-        return -1
+        raise NotFoundException
 
     @staticmethod
     def find_energizer(target):
@@ -171,7 +193,7 @@ class Inventory():
         (Controller, string) -> int
 
         Returns the index of the sensor that matches the input id;
-        returns -1 if sensor cannot be found
+        raises NotFoundException if cannot be found
         """
         for i in range(0, len(Inventory.ENERGIZERS)):
             if Inventory.ENERGIZERS[i].get_id() == target:
@@ -184,7 +206,7 @@ class Inventory():
         (Controller, string) -> int
 
         Returns the index of the relay that matches the input id;
-        returns -1 if relay cannot be found
+        raises NotFoundException if cannot be found
         """
         for i in range(0, len(Inventory.RELAYS)):
             if Inventory.RELAYS[i].get_id() == target:
@@ -197,7 +219,7 @@ class Inventory():
         (Controller, string) -> int
 
         Returns the index of the sensor that matches the input id;
-        returns -1 if sensor cannot be found
+        raises NotFoundException if cannot be found
         """
         for i in range(0, len(Inventory.SENSORS)):
             if Inventory.SENSORS[i].get_id() == target:
@@ -207,16 +229,24 @@ class Inventory():
     @staticmethod
     def find_packet(target):
         """
-        (Controller, string) -> int
+        (Controller, string) -> Packet
 
-        Returns the index of the packet that matches the input id;
-        returns -1 if packet cannot be found
+        Returns the packet that matches the input id;
+        raises NotFoundException if cannot be found
         """
+        pos = -1
         for i in range(0, len(Inventory.PACKETS)):
             if Inventory.PACKETS[i].get_id() == target:
-                return i
-        raise NotFoundException
+                pos = i
+                break
+        else:
+            raise NotFoundException
+        return Inventory.PACKETS[pos]
 
     @staticmethod
     def convert_values(to_convert):
         return to_convert * Inventory.SCALE_FACTOR
+
+    @staticmethod
+    def f_str(to_convert):
+        return "{0:.2f}".format(to_convert)

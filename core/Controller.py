@@ -7,8 +7,10 @@ from datatypes.Relay import Relay
 from datatypes.Sensor import Sensor
 from datatypes.Packet import Packet
 from exceptions.Exceptions import *
+from core.Debug import *
+from core.Audit import *
 from decimal import Decimal
-import csv
+import csv, math, random
 
 
 class Controller():
@@ -23,13 +25,10 @@ class Controller():
     dead_nodes = []
     dropped_packets = []
 
-    schedule_run_count = 0
-    period_count = 0
     period_limit = -1
 
     scheduled = []
     period_initialized = False
-    schedule_index = 0
 
     def __init__(self):
         """
@@ -41,16 +40,17 @@ class Controller():
         Inventory.load_nodes()
         Inventory.load_schedule()
 
+        Audit.set_up()
+
         Inventory.SCHEDULED = Inventory.SCHEDULE[0]
         Inventory.PACKETS = []
-        self.period_count = 0
+        Inventory.PERIOD_COUNT = 0
+
         self.packet_count = 0
         self.dead_nodes = []
-
-        self.period_count = 0
         self.period_initialized = False
-        self.schedule_index = 0
-        self.scheduled = Inventory.SCHEDULE[self.schedule_index]
+        self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
+        self.schedule_run_count = 0
 
     def fire(self):
         """
@@ -58,17 +58,17 @@ class Controller():
 
         Runs a period
         """
-        if self.schedule_index is 0:
+        if Inventory.SCHEDULE_INDEX is 0:
             self.period_initialized = False
-            self.schedule_index = 0
-            self.scheduled = Inventory.SCHEDULE[self.schedule_index]
+            Inventory.SCHEDULE_INDEX = 0
+            self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
             while True:
                 try:
                     self.step_through()
                 except DoneScheduleException:
                     break
         else:
-            for i in range(self.schedule_index, len(Inventory.SCHEDULE)):
+            for i in range(Inventory.SCHEDULE_INDEX, len(Inventory.SCHEDULE)):
                 self.step_through()
             self.fire()
 
@@ -85,16 +85,16 @@ class Controller():
             self.period_initialized = True
         if not self.done_schedule():
             self.run_slot()
-            self.schedule_index += 1
-            if self.schedule_index >= len(Inventory.SCHEDULE):
-                self.schedule_index = 0
-            self.scheduled = Inventory.SCHEDULE[self.schedule_index]
+            Inventory.SCHEDULE_INDEX += 1
+            if Inventory.SCHEDULE_INDEX >= len(Inventory.SCHEDULE):
+                Inventory.SCHEDULE_INDEX = 0
+            self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
         if self.done_schedule():
             self.collect_energy()
-            self.period_count += 1
+            Inventory.PERIOD_COUNT += 1
             self.period_initialized = False
-            self.schedule_index = 0
-            self.scheduled = Inventory.SCHEDULE[self.schedule_index]
+            Inventory.SCHEDULE_INDEX = 0
+            self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
             raise DoneScheduleException
 
     def done_schedule(self):
@@ -114,9 +114,17 @@ class Controller():
 
         Energizes all nodes
         """
-        # TODO: improve.
         for e in Inventory.ENERGIZERS:
-            e.energize()
+            for r in Inventory.RELAYS:
+                dist = math.sqrt(abs(r.get_x() - e.get_x()) ** 2 + abs(r.get_x() - e.get_y()) ** 2)
+                to_charge = e.energize(dist)
+                r.recharge(to_charge)
+                Audit.audit_recharge(r.get_id(), e.get_id(), to_charge, dist)
+            for s in Inventory.SENSORS:
+                dist = math.sqrt(abs(s.get_x() - e.get_x()) ** 2 + abs(s.get_x() - e.get_y()) ** 2)
+                to_charge = e.energize(dist)
+                s.recharge(to_charge)
+                Audit.audit_recharge(s.get_id(), e.get_id(), to_charge, dist)
 
     def collect_energy(self):
         """
@@ -124,9 +132,9 @@ class Controller():
 
         Recharge energizers
         """
-        # TODO: improve.
         for e in Inventory.ENERGIZERS:
-            e.gather_energy()
+            gather_amount = e.gather_energy(Inventory.SEED)
+            Audit.audit_energy_gather(e.get_id(), gather_amount, e.get_battery())
 
     def generate_packets(self):
         """
@@ -134,12 +142,14 @@ class Controller():
 
         Generates packets from sensors.
         """
-        # TODO: improve.
         for s in Inventory.SENSORS:
             packet_id = "p" + str(self.packet_count+1)
-            if s.generate_packet(packet_id):
-                Inventory.PACKETS += [Packet(packet_id, s.get_id())]
-                self.packet_count += 1
+            try:
+                if s.generate_packet(packet_id):
+                    Inventory.PACKETS += [Packet(packet_id, s.get_id())]
+                    self.packet_count += 1
+            except NotEnoughEnergyException:
+                continue
 
     def run_slot(self):
         """
@@ -147,51 +157,67 @@ class Controller():
 
         Runs scheduled slot.
         """
-        # TODO: Make more efficient
         slot = self.scheduled
 
         Inventory.FAILED_LINKS = []
         Inventory.SUCCESSFUL_LINKS = []
 
         self.schedule_run_count += 1
-        for node in slot:
-            node.increment_energy_count()
-            if node.get_id() not in self.dead_nodes:
+        for sender_id in slot:
+            sender = Inventory.find_node(sender_id)
+            sender.increment_energy_count()
+            if sender.get_id() not in self.dead_nodes:
                 packet_id = ''
                 parent_id = ''
                 #Send
                 try:
-                    packet_id, parent_id = node.send()
-                    node.increment_lifetime()
-                except NotEnoughEnergyException:
-                    self.dead_nodes += [node.get_id()]
-                    Inventory.FAILED_LINKS += [node]
-
-                    node.increment_send_lost_count()
-                    continue
+                    packet_id, parent_id = sender.send()
+                    sender.increment_lifetime()
                 except EmptyQueueException:
                     continue
+                except NotEnoughEnergyException:
+                    self.dead_nodes += [sender_id]
+                    Inventory.FAILED_LINKS += [sender_id]
+                    sender.increment_send_lost_count()
+                    try:
+                        Audit.audit_send_fail(sender_id, sender.get_battery(),
+                            sender.get_e_use_out(), sender.get_to_send())
+                    except EmptyQueueException:
+                        Audit.audit_send_fail(sender_id, sender.get_battery(),
+                            sender.get_e_use_out())
+                    continue
+
+                #Hand Off
+                receiver = Inventory.find_node(parent_id)
+                packet = Inventory.find_packet(packet_id)
 
                 #Receive
                 if parent_id[0] == Inventory.TYPE_SINK:
-                    Inventory.PACKETS[Inventory.find_packet(packet_id)].set_delivered()
-                    Inventory.PACKETS[Inventory.find_packet(packet_id)].set_current(parent_id)
-                    Inventory.PACKETS[Inventory.find_packet(packet_id)].increment_hop_count()
+                    packet.set_delivered()
+                    packet.set_current(parent_id)
+                    packet.increment_hop_count()
 
-                    Inventory.SUCCESSFUL_LINKS += [node]
+                    Audit.audit_transmission(packet_id, sender_id, parent_id)
+
+                    Inventory.SUCCESSFUL_LINKS += [sender_id]
                 else:
                     try:
-                        Inventory.RELAYS[Inventory.find_relay(parent_id)].receive(packet_id)
-                        Inventory.PACKETS[Inventory.find_packet(packet_id)].set_current(parent_id)
-                        Inventory.PACKETS[Inventory.find_packet(packet_id)].increment_hop_count()
+                        receiver.receive(packet_id)
+                        packet.set_current(parent_id)
+                        packet.increment_hop_count()
 
-                        Inventory.SUCCESSFUL_LINKS += [node]
+                        Audit.audit_transmission(packet_id, sender_id, parent_id)
+
+                        Inventory.SUCCESSFUL_LINKS += [sender_id]
                     except NotEnoughEnergyException:
                         self.dead_nodes += [parent_id]
-                        Inventory.FAILED_LINKS += [node]
+                        Inventory.FAILED_LINKS += [sender_id]
 
-                        Inventory.RELAYS[Inventory.find_relay(parent_id)].increment_receive_lost_count()
-                        Inventory.PACKETS[Inventory.find_packet(packet_id)].set_lost()
+                        Audit.audit_receive_fail(parent_id, receiver.get_battery(),
+                                                 receiver.get_e_use_in(), packet_id)
+
+                        receiver.increment_receive_lost_count()
+                        packet.set_lost()
 
     def export_data(self):
         """
@@ -199,7 +225,9 @@ class Controller():
 
         Exports data to csv files.
         """
-        print('Export')
+        if Inventory.PERIOD_COUNT <= 0:
+            raise NullPeriodException
+
         data = []
         data += [['Id', 'Origin', 'Current', 'Delivered', 'Lost', 'Lost at', 'Hop Count']]
         for p in Inventory.PACKETS:
@@ -211,9 +239,10 @@ class Controller():
             writer.writerows(data)
 
         data = []
-        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Rate']]
+        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Gather Rate', 'Recharge Rate']]
         for e in Inventory.ENERGIZERS:
-            data += [[e.get_id(), e.get_x(), e.get_y(), e.get_range(), e.get_battery(), e.get_rate()]]
+            data += [[e.get_id(), e.get_x(), e.get_y(), e.get_range(), Inventory.f_str(e.get_battery()),
+                      e.get_gather_rate(), e.get_recharge_rate()]]
         with open(Inventory.EXPORT_ROOT + 'energizers.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
@@ -221,22 +250,28 @@ class Controller():
         data = []
         data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use in', 'Energy use out', 'Parent',
                   'Send tries', 'Send fails', 'Send success rate', 'Receive tries', 'Receive fails',
-                  'Receive success rate', 'Battery average']]
+                  'Receive success rate', 'Battery average', 'Lifetime']]
         for r in Inventory.RELAYS:
-            data += [[r.get_id(), r.get_x(), r.get_y(), r.get_battery(), r.get_e_use_in(), r.get_e_use_out(),
-                      r.get_parent(), r.get_send_count(), r.get_send_lost_count(), r.get_send_success_rate(),
-                      r.get_receive_count(), r.get_receive_lost_count(), r.get_receive_success_rate(),
-                      r.get_energy_average()]]
+            data += [[r.get_id(), r.get_x(), r.get_y(), r.get_range(), Inventory.f_str(r.get_battery()),
+                      r.get_e_use_in(),
+                      r.get_e_use_out(), r.get_parent(), r.get_send_count(), r.get_send_lost_count(),
+                      Inventory.f_str(r.get_send_success_rate()),
+                      r.get_receive_count(), r.get_receive_lost_count(), Inventory.f_str(r.get_receive_success_rate()),
+                      Inventory.f_str(r.get_energy_average()), r.get_lifetime()]]
         with open(Inventory.EXPORT_ROOT + 'relays.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
 
         data = []
         data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use out', 'Parent', 'Send tries', 'Send fails',
-                  'Send success rate', 'Battery average']]
+                  'Send success rate', 'Battery average', 'Lifetime']]
         for s in Inventory.SENSORS:
-            data += [[s.get_id(), s.get_x(), s.get_y(), s.get_range(), s.get_battery(), s.get_parent(),
-                      s.get_send_count(), s.get_send_lost_count(), s.get_send_success_rate(), s.get_energy_average()]]
+            data += [[s.get_id(), s.get_x(), s.get_y(), s.get_range(), Inventory.f_str(s.get_battery()),
+                      s.get_e_use_out(),
+                      s.get_parent(),
+                      s.get_send_count(), s.get_send_lost_count(), Inventory.f_str(s.get_send_success_rate()),
+                      s.get_energy_average(),
+                      s.get_lifetime()]]
         with open(Inventory.EXPORT_ROOT + 'sensors.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
@@ -245,14 +280,14 @@ class Controller():
         data += [['Id', 'X', 'Y']]
         for s in Inventory.SINKS:
             data += [[s.get_id(), s.get_x(), s.get_y()]]
-        with open(Inventory.EXPORT_ROOT + 'sensors.csv', 'w', newline='') as f:
+        with open(Inventory.EXPORT_ROOT + 'sinks.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
 
         data = []
         data += [['Average Period Length']]
-        avg_period_length = self.schedule_run_count / self.period_count
-        data += [[avg_period_length]]
+        avg_period_length = self.schedule_run_count / Inventory.PERIOD_COUNT
+        data += [[Inventory.f_str(avg_period_length)]]
         with open(Inventory.EXPORT_ROOT + 'simulation.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
@@ -262,8 +297,9 @@ class Controller():
     def get_scheduled(self):
         return self.scheduled
 
-    def get_period_count(self):
-        return self.period_count
+    @staticmethod
+    def get_period_count():
+        return Inventory.PERIOD_COUNT
 
     @staticmethod
     def set_energizers(energizers):
@@ -280,23 +316,3 @@ class Controller():
     @staticmethod
     def set_sinks(sinks):
         Inventory.SINKS = sinks
-
-    @staticmethod
-    def get_energizers():
-        return Inventory.ENERGIZERS
-
-    @staticmethod
-    def get_relays():
-        return Inventory.RELAYS
-
-    @staticmethod
-    def get_sensors():
-        return Inventory.SENSORS
-
-    @staticmethod
-    def get_sinks():
-        return Inventory.SINKS
-
-    @staticmethod
-    def get_packets():
-        return Inventory.PACKETS

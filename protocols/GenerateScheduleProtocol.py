@@ -1,12 +1,13 @@
 __author__ = 'Andrew'
+
 import os
 
 from random import randint
 
 
-class GenerateNodesProtocol:
+class GenerateScheduleProtocol:
 
-    nodes = []
+    schedule = []
 
     def OUT(self):
         '''
@@ -14,8 +15,8 @@ class GenerateNodesProtocol:
 
         DO NOT MODIFY
         '''
-        with open(os.path.split(os.path.abspath(os.path.dirname(__file__)))[0] + "//NODES.txt", "w") as f:
-            [f.write(n) for n in self.nodes]
+        with open(os.path.split(os.path.abspath(os.path.dirname(__file__)))[0] + "//SCHEDULE.txt", "w") as f:
+            [f.write(n) for n in self.schedule]
             f.close()
 
     def GENERATE(self):
@@ -31,4 +32,4 @@ class GenerateNodesProtocol:
         self.OUT()
 
 if __name__ == '__main__':
-    GenerateNodesProtocol().GENERATE()
+    GenerateScheduleProtocol().GENERATE()

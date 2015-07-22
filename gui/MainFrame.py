@@ -10,7 +10,11 @@ from gui.infoFrames.SinkInfoFrame import *
 from gui.infoFrames.RelaysInfoFrame import *
 from gui.infoFrames.SensorsInfoFrame import *
 from gui.infoFrames.EnergizersInfoFrame import *
+
+from gui.modals.StandardModals import *
+
 from gui.generateFrames.GenerateNodesFrame import *
+from gui.generateFrames.GenerateScheduleFrame import *
 from core.Controller import *
 from gui.GraphFrame import *
 
@@ -92,6 +96,7 @@ class MainFrame(Frame):
 
         generate_menu = Menu(menubar, tearoff=1)
         generate_menu.add_command(label='Generate Nodes', command=self.generate_nodes)
+        generate_menu.add_command(label='Generate Schedule', command=self.generate_schedule)
         menubar.add_cascade(label='Generate', menu=generate_menu)
 
         try:
@@ -100,12 +105,12 @@ class MainFrame(Frame):
             self.master.tk.call(self.master, "config", "-menu", menubar)
 
         self.scheduled_label_text = StringVar()
-        self.scheduled_label = Label(self.master, textvariable=self.scheduled_label_text)
-        self.scheduled_label.grid(row=0, columnspan=3)
+        self.scheduled_label = Label(self.master, textvariable=self.scheduled_label_text, justify=CENTER, anchor=CENTER)
+        self.scheduled_label.grid(row=0, column=0, columnspan=3)
 
         self.period_label_text = StringVar()
-        self.period_label = Label(self.master, textvariable=self.period_label_text)
-        self.period_label.grid(row=1, columnspan=3)
+        self.period_label = Label(self.master, textvariable=self.period_label_text, justify=CENTER, anchor=CENTER)
+        self.period_label.grid(row=1, column=0, columnspan=3)
 
         self.play_button = Button(self.master, text='Play', command=self.on_play)
         self.play_button.grid(row=2, column=0, pady=10, padx=5)
@@ -124,7 +129,6 @@ class MainFrame(Frame):
     def refresh(self):
         self.refresh_labels()
         self.graph.refresh(self.mode)
-
         # self.refresh_info_frames()
 
     def refresh_info_frames(self):
@@ -133,8 +137,8 @@ class MainFrame(Frame):
             self.relays_info_frame.set_widgets()
 
     def refresh_labels(self):
-        self.scheduled_label_text.set('Scheduled: ' + ', '.join(x.get_id() for x in self.control.get_scheduled()))
-        self.period_label_text.set('Period Count: ' + str(self.control.get_period_count()+1))
+        self.scheduled_label_text.set('Scheduled: ' + ', '.join(x for x in self.control.get_scheduled()))
+        self.period_label_text.set('Completed Periods: ' + str(Inventory.PERIOD_COUNT))
 
     def on_play(self):
         self.mode = Inventory.PLAY_MODE
@@ -189,6 +193,7 @@ class MainFrame(Frame):
         self.sensors_info_frame = SensorsInfoFrame()
 
     def edit_sink_info(self):
+        # todo: update
         root = Tk()
         sink_info = SinkEditFrame(master=root)
         sink_info.set_widgets()
@@ -227,7 +232,16 @@ class MainFrame(Frame):
         self.refresh()
 
     def export_data(self):
-        self.control.export_data()
+        try:
+            self.control.export_data()
+            StandardModals.message('Generated')
+        except NullPeriodException:
+            StandardModals.error_message("Cannot export when no periods have been completed")
+        except PermissionError:
+            StandardModals.error_message("Invalid permission to write to output location")
 
     def generate_nodes(self):
         GenerateNodesFrame()
+
+    def generate_schedule(self):
+        GenerateScheduleFrame()

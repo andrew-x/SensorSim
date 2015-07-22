@@ -7,7 +7,7 @@ import sys
 import py_compile
 
 
-class GenerateNodesFrame(Frame):
+class GenerateScheduleFrame(Frame):
     master = None
 
     textArea = None
@@ -16,7 +16,7 @@ class GenerateNodesFrame(Frame):
 
     def __init__(self):
         self.master = Tk()
-        super(GenerateNodesFrame, self).__init__(self.master)
+        super(GenerateScheduleFrame, self).__init__(self.master)
 
         self.init_window()
         self.set_widgets()
@@ -24,7 +24,7 @@ class GenerateNodesFrame(Frame):
     def init_window(self):
         self.master.protocol('WM_DELETE_WINDOW', self.exit)
         self.master.update_idletasks()
-        self.master.title('Generate Nodes')
+        self.master.title('Generate Schedule')
 
     def exit(self):
         self.master.destroy()
@@ -34,9 +34,9 @@ class GenerateNodesFrame(Frame):
         Button(self.master, text='Edit', command=self.on_edit).grid()
 
     def on_run(self):
-        os.system("python " + Inventory.GENERATE_NODES_PROTOCOL_FILENAME)
-        Inventory.load_nodes()
+        os.system("python " + Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)
+        Inventory.load_schedule()
 
 
     def on_edit(self):
-        os.system("start " + Inventory.GENERATE_NODES_PROTOCOL_FILENAME)
+        os.system("start " + Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)

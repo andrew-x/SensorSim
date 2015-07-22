@@ -28,12 +28,19 @@ class Relay(Node):
     def __init__(self, id, x, y, relay_range, battery, e_use_in, e_use_out, parent):
         super(Relay, self).__init__(id, x, y)
 
-        self.range = range
+        self.range = relay_range
         self.battery = battery
         self.e_use_in = e_use_in
         self.e_use_out = e_use_out
         self.parent = parent
         self.packets = []
+
+        self.send_count = 0
+        self.receive_count = 0
+        self.send_lost_count = 0
+        self.receive_lost_count = 0
+        self.send_success_rate = 100
+        self.receive_success_rate = 100
 
     def receive(self, packet):
         """
@@ -58,35 +65,39 @@ class Relay(Node):
         Raises NotEnoughEnergyException if this relay does not have the
         amount of energy needed.
         """
-        if self.battery < self.e_use_out:
-            raise NotEnoughEnergyException
-
-        self.battery -= self.e_use_out
         if len(self.packets) > 0:
             self.send_count += 1
+            if self.battery < self.e_use_out:
+                raise NotEnoughEnergyException
+            self.battery -= self.e_use_out
             return self.packets.pop(0), self.parent
         else:
             raise EmptyQueueException
 
+    def recharge(self, recharge_amount):
+        self.battery += recharge_amount
+
     def increment_send_lost_count(self):
         self.send_lost_count += 1
-        self.send_success_rate = float("{0:.2f}".format((
-            self.send_count - self.send_lost_count) / self.send_count * 100))
+        self.send_success_rate = (self.send_count - self.send_lost_count) / self.send_count * 100
 
     def increment_receive_lost_count(self):
         self.receive_lost_count += 1
-        self.receive_success_rate = float("{0:.2f}".format((self.receive_count -
-                                                            self.receive_lost_count) / self.receive_count * 100))
+        self.receive_success_rate = (self.receive_count - self.receive_lost_count) / self.receive_count * 100
 
     def increment_energy_count(self):
         self.energy_count += self.battery
         self.energy_count_count += 1
-        self.energy_average = float("{0:.2f}".format(self.energy_count / self.energy_count_count))
+        self.energy_average = self.energy_count / self.energy_count_count
 
     def __str__(self):
         return super(Relay, self).__str__() + " | range: " + str(self.range) + " | battery: " + str(
             self.battery) + " | e_use_in: " + str(self.e_use_in) + " | e_use_out: " + str(self.e_use_out) + \
-            " | parent: " + self.parent
+            " | parent: " + self.parent + ' | send_count: ' + str(self.send_count) + ' | send_lost_count: ' +\
+            str(self.send_lost_count) + ' | receive_count: ' + str(self.receive_count) + ' | receive_lost_count: ' +\
+            str(self.receive_lost_count) + ' | send_success_rate: ' + str(self.send_success_rate) + \
+            ' | receive_send_success_rate: ' + str(self.receive_success_rate) + ' | energy_average: ' + \
+            str(self.energy_average)
 
     # GETTERS AND SETTERS
 
@@ -128,3 +139,6 @@ class Relay(Node):
 
     def get_energy_average(self):
         return self.energy_average
+
+    def get_to_send(self):
+        return self.packets[-1]

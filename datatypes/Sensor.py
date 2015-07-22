@@ -7,6 +7,7 @@ class Sensor(Node):
     range = -1
     battery = -1
     e_use_out = -1
+    e_use_generate = -1
     parent = None
     packet = ''
 
@@ -18,19 +19,22 @@ class Sensor(Node):
     send_lost_count = 0
     send_success_rate = 0
 
-    def __init__(self, id, x, y, range, battery, e_use_out, parent):
+    def __init__(self, id, x, y, sensor_range, battery, e_use_out, e_use_generate, parent):
         super(Sensor, self).__init__(id, x, y)
 
         self.id = id
         self.x = x
         self.y = y
-        self.range = range
+        self.range = sensor_range
         self.battery = battery
         self.e_use_out = e_use_out
+        self.e_use_generate = e_use_generate
         self.parent = parent
         self.packets = []
 
-        self.lost_count = 0
+        self.send_count = 0
+        self.send_lost_count = 0
+        self.send_success_rate = 100
 
     def generate_packet(self, packet_id):
         """
@@ -38,7 +42,9 @@ class Sensor(Node):
 
         Generates a packet
         """
-        # TODO: Add energy loss.
+        if self.battery < self.e_use_generate:
+            raise NotEnoughEnergyException
+        self.battery -= self.e_use_generate
         self.packets += [packet_id]
         return True
 
@@ -59,10 +65,12 @@ class Sensor(Node):
         else:
             raise EmptyQueueException
 
+    def recharge(self, recharge_amount):
+        self.battery += recharge_amount
+
     def increment_send_lost_count(self):
         self.send_lost_count += 1
-        self.send_success_rate = float("{0:.2f}".format(
-            (self.send_count - self.send_lost_count) / self.send_count * 100))
+        self.send_success_rate = (self.send_count - self.send_lost_count) / self.send_count * 100
 
     def increment_energy_count(self):
         self.energy_count += self.battery
@@ -71,8 +79,10 @@ class Sensor(Node):
 
     def __str__(self):
         return super(Sensor, self).__str__() + " | range: " + str(self.range) + " | battery: " + str(
-            self.battery) + " | e_use_in: " + str(
-                self.e_use_out) + " | parent: " + self.parent
+            self.battery) + " | e_use_in: " + \
+               str(self.e_use_out) + " | parent: " + self.parent + '| send_count: ' + str(self.send_count) \
+            + ' | send_lost_count: ' + str(self.send_lost_count) + ' | send_success_average: ' + \
+               str(self.send_success_rate) + ' | battery_average: ' + str(self.energy_average)
 
     # GETTERS AND SETTERS
 
@@ -102,3 +112,8 @@ class Sensor(Node):
 
     def get_energy_average(self):
         return self.energy_average
+
+    def get_to_send(self):
+        if len(self.packets) > 0:
+            return self.packets[-1]
+        raise EmptyQueueException

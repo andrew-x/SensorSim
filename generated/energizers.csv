@@ -1,2 +1,2 @@
-Id,X,Y,Range,Battery,Rate
-e1,25,25,100,10,10
+Id,X,Y,Range,Battery,Gather Rate,Recharge Rate
+e1,25,25,100,9.56,10,10

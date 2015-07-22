@@ -15,3 +15,7 @@ class EmptyQueueException(Exception):
 
 class NotFoundException(Exception):
     pass
+
+
+class NullPeriodException(Exception):
+    pass

@@ -44,12 +44,12 @@ class GraphFrame(Frame):
 
     def render_links(self):
         for r in Inventory.RELAYS:
-            link_dimensions = self.get_link_dimensions(r)
+            link_dimensions = self.get_link_dimensions(r.get_id())
             self.canvas.create_line(link_dimensions[0], link_dimensions[1], link_dimensions[2],
                                     link_dimensions[3], fill=Inventory.COLOR_LINK_DEFAULT)
 
         for s in Inventory.SENSORS:
-            link_dimensions = self.get_link_dimensions(s)
+            link_dimensions = self.get_link_dimensions(s.get_id())
             self.canvas.create_line(link_dimensions[0], link_dimensions[1], link_dimensions[2],
                                     link_dimensions[3], fill=Inventory.COLOR_LINK_DEFAULT)
 
@@ -78,21 +78,11 @@ class GraphFrame(Frame):
         return Inventory.convert_values(x)-Inventory.SCALE_FACTOR, Inventory.convert_values(y)-Inventory.SCALE_FACTOR,\
             Inventory.convert_values(x)+Inventory.SCALE_FACTOR, Inventory.convert_values(y)+Inventory.SCALE_FACTOR
 
-    def get_link_dimensions(self, node):
-        parent = None
-        parentId = node.get_parent()
-        if parentId[0] == Inventory.TYPE_SINK:
-            parent = Inventory.SINKS[Inventory.find_sink(parentId)]
-        elif parentId[0] == Inventory.TYPE_SENSOR:
-            parent = Inventory.SENSORS[Inventory.find_sensor(parentId)]
-        elif parentId[0] == Inventory.TYPE_RELAY:
-            parent = Inventory.RELAYS[Inventory.find_relay(parentId)]
-
-        if parent is None:
-            raise NotFoundException
-
+    def get_link_dimensions(self, node_id):
+        node = Inventory.find_node(node_id)
+        parent = Inventory.find_node(node.get_parent())
         return Inventory.convert_values(node.get_x()), Inventory.convert_values(node.get_y()), \
-               Inventory.convert_values(parent.get_x()), Inventory.convert_values(parent.get_y())
+            Inventory.convert_values(parent.get_x()), Inventory.convert_values(parent.get_y())
 
 
 

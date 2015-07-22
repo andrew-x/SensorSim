@@ -35,8 +35,8 @@ class Packet():
         self.hop_count += 1
 
     def __str__(self):
-        return 'ID: ' + self.id + ' ORIGIN: ' + self.origin + ' CURRENT: ' + self.current + ' DELIVERED: ' + str(
-            self.delivered)
+        return 'id: ' + self.id + ' | origin: ' + self.origin + ' | current: ' + self.current + ' | delivered: ' + str(
+            self.delivered) + ' | lost: ' + str(self.lost) + ' | lost at: ' + self.lost_at
 
     # GETTERS AND SETTERS
 
