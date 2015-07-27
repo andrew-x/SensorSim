@@ -219,13 +219,13 @@ class MainFrame(Frame):
         root.destroy()
 
     def open_nodes(self):
-        os.system("start " + Inventory.NODES_FILENAME)
+        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.NODES_FILENAME)
 
     def open_schedule(self):
-        os.system("start " + Inventory.SCHEDULE_FILENAME)
+        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.SCHEDULE_FILENAME)
 
     def open_settings(self):
-        os.system("start " + Inventory.SETTINGS_FILENAME)
+        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.SETTINGS_FILENAME)
 
     def reset(self):
         self.control = Controller()

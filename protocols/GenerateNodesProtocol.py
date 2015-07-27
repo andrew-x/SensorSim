@@ -14,7 +14,8 @@ class GenerateNodesProtocol:
 
         DO NOT MODIFY
         '''
-        with open(os.path.split(os.path.abspath(os.path.dirname(__file__)))[0] + "//NODES.txt", "w") as f:
+
+        with open(os.path.split(os.path.abspath(os.path.dirname(__file__)))[0] + ("//input//NODES.txt" if os.name == 'nt' else "/input/NODES.txt"), "w") as f:
             [f.write(n) for n in self.nodes]
             f.close()
 
