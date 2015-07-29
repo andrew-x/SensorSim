@@ -1,6 +1,7 @@
 __author__ = 'Andrew'
 from exceptions.Exceptions import *
 from datatypes.Node import Node
+from core.Inventory import *
 
 
 class Relay(Node):
@@ -51,6 +52,7 @@ class Relay(Node):
         amount of energy needed.
         """
         if self.battery < self.e_use_in:
+            self.battery = 0
             raise NotEnoughEnergyException
 
         self.receive_count += 1
@@ -66,11 +68,17 @@ class Relay(Node):
         amount of energy needed.
         """
         if len(self.packets) > 0:
-            self.send_count += 1
-            if self.battery < self.e_use_out:
-                raise NotEnoughEnergyException
-            self.battery -= self.e_use_out
-            return self.packets.pop(0), self.parent
+            packet = self.packets.pop(0)
+            try:
+                if self.battery < self.e_use_out:
+                    Inventory.find_packet(packet).set_lost()
+                    self.battery = 0
+                    raise NotEnoughEnergyException
+                else:
+                    self.battery -= self.e_use_out
+            finally:
+                self.send_count += 1
+                return packet, self.parent
         else:
             raise EmptyQueueException
 

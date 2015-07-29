@@ -231,6 +231,15 @@ class MainFrame(Frame):
         root.destroy()
 
     def open_nodes(self):
+<<<<<<< HEAD
+        os.startfile(Inventory.NODES_FILENAME)
+
+    def open_schedule(self):
+        os.startfile(Inventory.SCHEDULE_FILENAME)
+
+    def open_settings(self):
+        os.startfile(Inventory.SETTINGS_FILENAME)
+=======
         os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.NODES_FILENAME)
 
     def open_schedule(self):
@@ -238,6 +247,7 @@ class MainFrame(Frame):
 
     def open_settings(self):
         os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.SETTINGS_FILENAME)
+>>>>>>> origin/development
 
     def reset(self):
         self.control = Controller()

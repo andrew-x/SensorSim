@@ -1,7 +1,7 @@
 __author__ = 'Andrew'
 from exceptions.Exceptions import *
 from datatypes.Node import Node
-
+from core.Inventory import *
 
 class Sensor(Node):
     range = -1
@@ -56,12 +56,18 @@ class Sensor(Node):
         Raises NotEnoughEnergyException if it does not have
         the energy required.
         """
-        if self.battery < self.e_use_out:
-            raise NotEnoughEnergyException
-        self.battery -= self.e_use_out
         if len(self.packets) > 0:
-            self.send_count += 1
-            return self.packets.pop(0), self.parent
+            packet = self.packets.pop(0)
+            try:
+                if self.battery < self.e_use_out:
+                    Inventory.find_packet(packet).set_lost()
+                    self.battery = 0
+                    raise NotEnoughEnergyException
+                else:
+                    self.battery -= self.e_use_out
+            finally:
+                self.send_count += 1
+                return packet, self.parent
         else:
             raise EmptyQueueException
 

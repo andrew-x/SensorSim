@@ -1,7 +1,7 @@
 __author__ = 'Andrew'
 
 from core.Inventory import *
-import os
+import os, csv
 
 
 class Audit():
@@ -52,6 +52,41 @@ class Audit():
 
     @staticmethod
     def audit_energy_gather(energizer_id, recharge_amount, power):
-        line = energizer_id + ' recharged by ' + str(recharge_amount) + \
+        line = energizer_id + ' recharged by ' + Inventory.f_str(recharge_amount) + \
             ' now has ' + Inventory.f_str(power)
         Audit.to_log(line)
+
+    @staticmethod
+    def audit_nodes_history():
+        for a in Inventory.NODES_TO_AUDIT:
+            node = Inventory.find_node(a)
+            out = []
+            filename = Inventory.EXPORT_ROOT + node.get_id()+'_log.csv'
+            try:
+                num_lines = sum(1 for line in open(filename))
+            except FileNotFoundError:
+                num_lines = 0
+            if a[0] is Inventory.TYPE_ENERGIZER:
+                if num_lines is 0:
+                    out += [['Period', 'Schedule run'] + Inventory.get_energizer_export_index()]
+                out += [[str(Inventory.PERIOD_COUNT), str(Inventory.SCHEDULE_INDEX)] +\
+                        Inventory.get_energizer_export(node)]
+            elif a[0] is Inventory.TYPE_SENSOR:
+                if num_lines is 0:
+                    out += [['Period', 'Schedule run'] + Inventory.get_sensor_export_index()]
+                out += [[str(Inventory.PERIOD_COUNT), str(Inventory.SCHEDULE_INDEX)] + \
+                        Inventory.get_sensor_export(node)]
+            elif a[0] is Inventory.TYPE_RELAY:
+                if num_lines is 0:
+                    out += [['Period', 'Schedule run'] + Inventory.get_relay_export_index()]
+                out += [[str(Inventory.PERIOD_COUNT), str(Inventory.SCHEDULE_INDEX)] + \
+                        Inventory.get_relay_export(node)]
+            elif a[0] is Inventory.TYPE_SINK:
+                if num_lines is 0:
+                    out += [['Period', 'Schedule run'] + Inventory.get_sink_export_index()]
+                out += [[str(Inventory.PERIOD_COUNT), str(Inventory.SCHEDULE_INDEX)] + \
+                        Inventory.get_sink_export(node)]
+            with open(filename, 'a', newline='') as f:
+                writer = csv.writer(f, delimiter=',')
+                writer.writerows(out)
+                f.close()

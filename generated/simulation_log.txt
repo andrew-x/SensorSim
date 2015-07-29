@@ -1,0 +1,2582 @@
+0:0 r1 gained 1.41 from e1 at a distance of 14.14
+0:0 r2 gained 0.71 from e1 at a distance of 7.07
+0:0 s1 gained 2.83 from e1 at a distance of 28.28
+0:0 s2 gained 2.12 from e1 at a distance of 21.21
+0:0 s1 sent p1 to r1
+0:0 s2 sent p2 to r1
+0:1 r1 sent p1 to i1
+0:1 r1 sent p2 to i1
+0:0 e1 recharged by 9.56 now has 9.56
+1:0 r1 gained 1.41 from e1 at a distance of 14.14
+1:0 r2 gained 0.71 from e1 at a distance of 7.07
+1:0 s1 gained 2.83 from e1 at a distance of 28.28
+1:0 s2 gained 2.12 from e1 at a distance of 21.21
+1:0 s1 sent p3 to r1
+1:0 s2 sent p4 to r1
+1:1 r1 sent p3 to i1
+1:1 r1 sent p4 to i1
+1:0 e1 recharged by 9.56 now has 9.56
+2:0 r1 gained 1.41 from e1 at a distance of 14.14
+2:0 r2 gained 0.71 from e1 at a distance of 7.07
+2:0 s1 gained 2.83 from e1 at a distance of 28.28
+2:0 s2 gained 2.12 from e1 at a distance of 21.21
+2:0 s1 sent p5 to r1
+2:0 s2 sent p6 to r1
+2:1 r1 sent p5 to i1
+2:1 r1 sent p6 to i1
+2:0 e1 recharged by 9.56 now has 9.56
+3:0 r1 gained 1.41 from e1 at a distance of 14.14
+3:0 r2 gained 0.71 from e1 at a distance of 7.07
+3:0 s1 gained 2.83 from e1 at a distance of 28.28
+3:0 s2 gained 2.12 from e1 at a distance of 21.21
+3:0 r1 failed to receive p7 because it needed 10 but had 0.00
+3:0 r1 failed to receive p8 because it needed 10 but had 0.00
+3:1 e1 recharged by 9.56 now has 9.56
+4:0 r1 gained 1.41 from e1 at a distance of 14.14
+4:0 r2 gained 0.71 from e1 at a distance of 7.07
+4:0 s1 gained 2.83 from e1 at a distance of 28.28
+4:0 s2 gained 2.12 from e1 at a distance of 21.21
+4:0 r1 failed to receive p9 because it needed 10 but had 0.00
+4:0 r1 failed to receive p10 because it needed 10 but had 0.00
+4:1 e1 recharged by 9.56 now has 9.56
+5:0 r1 gained 1.41 from e1 at a distance of 14.14
+5:0 r2 gained 0.71 from e1 at a distance of 7.07
+5:0 s1 gained 2.83 from e1 at a distance of 28.28
+5:0 s2 gained 2.12 from e1 at a distance of 21.21
+5:0 r1 failed to receive p11 because it needed 10 but had 0.00
+5:0 r1 failed to receive p12 because it needed 10 but had 0.00
+5:1 e1 recharged by 9.56 now has 9.56
+6:0 r1 gained 1.41 from e1 at a distance of 14.14
+6:0 r2 gained 0.71 from e1 at a distance of 7.07
+6:0 s1 gained 2.83 from e1 at a distance of 28.28
+6:0 s2 gained 2.12 from e1 at a distance of 21.21
+6:0 e1 recharged by 9.56 now has 9.56
+7:0 r1 gained 1.41 from e1 at a distance of 14.14
+7:0 r2 gained 0.71 from e1 at a distance of 7.07
+7:0 s1 gained 2.83 from e1 at a distance of 28.28
+7:0 s2 gained 2.12 from e1 at a distance of 21.21
+7:0 r1 failed to receive p13 because it needed 10 but had 0.00
+7:1 e1 recharged by 9.56 now has 9.56
+8:0 r1 gained 1.41 from e1 at a distance of 14.14
+8:0 r2 gained 0.71 from e1 at a distance of 7.07
+8:0 s1 gained 2.83 from e1 at a distance of 28.28
+8:0 s2 gained 2.12 from e1 at a distance of 21.21
+8:0 e1 recharged by 9.56 now has 9.56
+9:0 r1 gained 1.41 from e1 at a distance of 14.14
+9:0 r2 gained 0.71 from e1 at a distance of 7.07
+9:0 s1 gained 2.83 from e1 at a distance of 28.28
+9:0 s2 gained 2.12 from e1 at a distance of 21.21
+9:0 r1 failed to receive p14 because it needed 10 but had 0.00
+9:1 e1 recharged by 9.56 now has 9.56
+10:0 r1 gained 1.41 from e1 at a distance of 14.14
+10:0 r2 gained 0.71 from e1 at a distance of 7.07
+10:0 s1 gained 2.83 from e1 at a distance of 28.28
+10:0 s2 gained 2.12 from e1 at a distance of 21.21
+10:0 r1 failed to receive p15 because it needed 10 but had 0.00
+10:1 e1 recharged by 9.56 now has 9.56
+11:0 r1 gained 1.41 from e1 at a distance of 14.14
+11:0 r2 gained 0.71 from e1 at a distance of 7.07
+11:0 s1 gained 2.83 from e1 at a distance of 28.28
+11:0 s2 gained 2.12 from e1 at a distance of 21.21
+11:0 e1 recharged by 9.56 now has 9.56
+12:0 r1 gained 1.41 from e1 at a distance of 14.14
+12:0 r2 gained 0.71 from e1 at a distance of 7.07
+12:0 s1 gained 2.83 from e1 at a distance of 28.28
+12:0 s2 gained 2.12 from e1 at a distance of 21.21
+12:0 e1 recharged by 9.56 now has 9.56
+13:0 r1 gained 1.41 from e1 at a distance of 14.14
+13:0 r2 gained 0.71 from e1 at a distance of 7.07
+13:0 s1 gained 2.83 from e1 at a distance of 28.28
+13:0 s2 gained 2.12 from e1 at a distance of 21.21
+13:0 e1 recharged by 9.56 now has 9.56
+14:0 r1 gained 1.41 from e1 at a distance of 14.14
+14:0 r2 gained 0.71 from e1 at a distance of 7.07
+14:0 s1 gained 2.83 from e1 at a distance of 28.28
+14:0 s2 gained 2.12 from e1 at a distance of 21.21
+14:0 r1 failed to receive p16 because it needed 10 but had 0.00
+14:0 r1 failed to receive p17 because it needed 10 but had 0.00
+14:1 e1 recharged by 9.56 now has 9.56
+15:0 r1 gained 1.41 from e1 at a distance of 14.14
+15:0 r2 gained 0.71 from e1 at a distance of 7.07
+15:0 s1 gained 2.83 from e1 at a distance of 28.28
+15:0 s2 gained 2.12 from e1 at a distance of 21.21
+15:0 e1 recharged by 9.56 now has 9.56
+16:0 r1 gained 1.41 from e1 at a distance of 14.14
+16:0 r2 gained 0.71 from e1 at a distance of 7.07
+16:0 s1 gained 2.83 from e1 at a distance of 28.28
+16:0 s2 gained 2.12 from e1 at a distance of 21.21
+16:0 e1 recharged by 9.56 now has 9.56
+17:0 r1 gained 1.41 from e1 at a distance of 14.14
+17:0 r2 gained 0.71 from e1 at a distance of 7.07
+17:0 s1 gained 2.83 from e1 at a distance of 28.28
+17:0 s2 gained 2.12 from e1 at a distance of 21.21
+17:0 r1 failed to receive p18 because it needed 10 but had 0.00
+17:1 e1 recharged by 9.56 now has 9.56
+18:0 r1 gained 1.41 from e1 at a distance of 14.14
+18:0 r2 gained 0.71 from e1 at a distance of 7.07
+18:0 s1 gained 2.83 from e1 at a distance of 28.28
+18:0 s2 gained 2.12 from e1 at a distance of 21.21
+18:0 r1 failed to receive p19 because it needed 10 but had 0.00
+18:1 e1 recharged by 9.56 now has 9.56
+19:0 r1 gained 1.41 from e1 at a distance of 14.14
+19:0 r2 gained 0.71 from e1 at a distance of 7.07
+19:0 s1 gained 2.83 from e1 at a distance of 28.28
+19:0 s2 gained 2.12 from e1 at a distance of 21.21
+19:0 e1 recharged by 9.56 now has 9.56
+20:0 r1 gained 1.41 from e1 at a distance of 14.14
+20:0 r2 gained 0.71 from e1 at a distance of 7.07
+20:0 s1 gained 2.83 from e1 at a distance of 28.28
+20:0 s2 gained 2.12 from e1 at a distance of 21.21
+20:0 e1 recharged by 9.56 now has 9.56
+21:0 r1 gained 1.41 from e1 at a distance of 14.14
+21:0 r2 gained 0.71 from e1 at a distance of 7.07
+21:0 s1 gained 2.83 from e1 at a distance of 28.28
+21:0 s2 gained 2.12 from e1 at a distance of 21.21
+21:0 r1 failed to receive p20 because it needed 10 but had 0.00
+21:1 e1 recharged by 9.56 now has 9.56
+22:0 r1 gained 1.41 from e1 at a distance of 14.14
+22:0 r2 gained 0.71 from e1 at a distance of 7.07
+22:0 s1 gained 2.83 from e1 at a distance of 28.28
+22:0 s2 gained 2.12 from e1 at a distance of 21.21
+22:0 e1 recharged by 9.56 now has 9.56
+23:0 r1 gained 1.41 from e1 at a distance of 14.14
+23:0 r2 gained 0.71 from e1 at a distance of 7.07
+23:0 s1 gained 2.83 from e1 at a distance of 28.28
+23:0 s2 gained 2.12 from e1 at a distance of 21.21
+23:0 r1 failed to receive p21 because it needed 10 but had 0.00
+23:1 e1 recharged by 9.56 now has 9.56
+24:0 r1 gained 1.41 from e1 at a distance of 14.14
+24:0 r2 gained 0.71 from e1 at a distance of 7.07
+24:0 s1 gained 2.83 from e1 at a distance of 28.28
+24:0 s2 gained 2.12 from e1 at a distance of 21.21
+24:0 r1 failed to receive p22 because it needed 10 but had 0.00
+24:1 e1 recharged by 9.56 now has 9.56
+25:0 r1 gained 1.41 from e1 at a distance of 14.14
+25:0 r2 gained 0.71 from e1 at a distance of 7.07
+25:0 s1 gained 2.83 from e1 at a distance of 28.28
+25:0 s2 gained 2.12 from e1 at a distance of 21.21
+25:0 e1 recharged by 9.56 now has 9.56
+26:0 r1 gained 1.41 from e1 at a distance of 14.14
+26:0 r2 gained 0.71 from e1 at a distance of 7.07
+26:0 s1 gained 2.83 from e1 at a distance of 28.28
+26:0 s2 gained 2.12 from e1 at a distance of 21.21
+26:0 e1 recharged by 9.56 now has 9.56
+27:0 r1 gained 1.41 from e1 at a distance of 14.14
+27:0 r2 gained 0.71 from e1 at a distance of 7.07
+27:0 s1 gained 2.83 from e1 at a distance of 28.28
+27:0 s2 gained 2.12 from e1 at a distance of 21.21
+27:0 e1 recharged by 9.56 now has 9.56
+28:0 r1 gained 1.41 from e1 at a distance of 14.14
+28:0 r2 gained 0.71 from e1 at a distance of 7.07
+28:0 s1 gained 2.83 from e1 at a distance of 28.28
+28:0 s2 gained 2.12 from e1 at a distance of 21.21
+28:0 r1 failed to receive p23 because it needed 10 but had 0.00
+28:0 r1 failed to receive p24 because it needed 10 but had 0.00
+28:1 e1 recharged by 9.56 now has 9.56
+29:0 r1 gained 1.41 from e1 at a distance of 14.14
+29:0 r2 gained 0.71 from e1 at a distance of 7.07
+29:0 s1 gained 2.83 from e1 at a distance of 28.28
+29:0 s2 gained 2.12 from e1 at a distance of 21.21
+29:0 e1 recharged by 9.56 now has 9.56
+30:0 r1 gained 1.41 from e1 at a distance of 14.14
+30:0 r2 gained 0.71 from e1 at a distance of 7.07
+30:0 s1 gained 2.83 from e1 at a distance of 28.28
+30:0 s2 gained 2.12 from e1 at a distance of 21.21
+30:0 e1 recharged by 9.56 now has 9.56
+31:0 r1 gained 1.41 from e1 at a distance of 14.14
+31:0 r2 gained 0.71 from e1 at a distance of 7.07
+31:0 s1 gained 2.83 from e1 at a distance of 28.28
+31:0 s2 gained 2.12 from e1 at a distance of 21.21
+31:0 r1 failed to receive p25 because it needed 10 but had 0.00
+31:1 e1 recharged by 9.56 now has 9.56
+32:0 r1 gained 1.41 from e1 at a distance of 14.14
+32:0 r2 gained 0.71 from e1 at a distance of 7.07
+32:0 s1 gained 2.83 from e1 at a distance of 28.28
+32:0 s2 gained 2.12 from e1 at a distance of 21.21
+32:0 r1 failed to receive p26 because it needed 10 but had 0.00
+32:1 e1 recharged by 9.56 now has 9.56
+33:0 r1 gained 1.41 from e1 at a distance of 14.14
+33:0 r2 gained 0.71 from e1 at a distance of 7.07
+33:0 s1 gained 2.83 from e1 at a distance of 28.28
+33:0 s2 gained 2.12 from e1 at a distance of 21.21
+33:0 e1 recharged by 9.56 now has 9.56
+34:0 r1 gained 1.41 from e1 at a distance of 14.14
+34:0 r2 gained 0.71 from e1 at a distance of 7.07
+34:0 s1 gained 2.83 from e1 at a distance of 28.28
+34:0 s2 gained 2.12 from e1 at a distance of 21.21
+34:0 e1 recharged by 9.56 now has 9.56
+35:0 r1 gained 1.41 from e1 at a distance of 14.14
+35:0 r2 gained 0.71 from e1 at a distance of 7.07
+35:0 s1 gained 2.83 from e1 at a distance of 28.28
+35:0 s2 gained 2.12 from e1 at a distance of 21.21
+35:0 r1 failed to receive p27 because it needed 10 but had 0.00
+35:1 e1 recharged by 9.56 now has 9.56
+36:0 r1 gained 1.41 from e1 at a distance of 14.14
+36:0 r2 gained 0.71 from e1 at a distance of 7.07
+36:0 s1 gained 2.83 from e1 at a distance of 28.28
+36:0 s2 gained 2.12 from e1 at a distance of 21.21
+36:0 e1 recharged by 9.56 now has 9.56
+37:0 r1 gained 1.41 from e1 at a distance of 14.14
+37:0 r2 gained 0.71 from e1 at a distance of 7.07
+37:0 s1 gained 2.83 from e1 at a distance of 28.28
+37:0 s2 gained 2.12 from e1 at a distance of 21.21
+37:0 r1 failed to receive p28 because it needed 10 but had 0.00
+37:1 e1 recharged by 9.56 now has 9.56
+38:0 r1 gained 1.41 from e1 at a distance of 14.14
+38:0 r2 gained 0.71 from e1 at a distance of 7.07
+38:0 s1 gained 2.83 from e1 at a distance of 28.28
+38:0 s2 gained 2.12 from e1 at a distance of 21.21
+38:0 r1 failed to receive p29 because it needed 10 but had 0.00
+38:1 e1 recharged by 9.56 now has 9.56
+39:0 r1 gained 1.41 from e1 at a distance of 14.14
+39:0 r2 gained 0.71 from e1 at a distance of 7.07
+39:0 s1 gained 2.83 from e1 at a distance of 28.28
+39:0 s2 gained 2.12 from e1 at a distance of 21.21
+39:0 e1 recharged by 9.56 now has 9.56
+40:0 r1 gained 1.41 from e1 at a distance of 14.14
+40:0 r2 gained 0.71 from e1 at a distance of 7.07
+40:0 s1 gained 2.83 from e1 at a distance of 28.28
+40:0 s2 gained 2.12 from e1 at a distance of 21.21
+40:0 e1 recharged by 9.56 now has 9.56
+41:0 r1 gained 1.41 from e1 at a distance of 14.14
+41:0 r2 gained 0.71 from e1 at a distance of 7.07
+41:0 s1 gained 2.83 from e1 at a distance of 28.28
+41:0 s2 gained 2.12 from e1 at a distance of 21.21
+41:0 e1 recharged by 9.56 now has 9.56
+42:0 r1 gained 1.41 from e1 at a distance of 14.14
+42:0 r2 gained 0.71 from e1 at a distance of 7.07
+42:0 s1 gained 2.83 from e1 at a distance of 28.28
+42:0 s2 gained 2.12 from e1 at a distance of 21.21
+42:0 r1 failed to receive p30 because it needed 10 but had 0.00
+42:0 r1 failed to receive p31 because it needed 10 but had 0.00
+42:1 e1 recharged by 9.56 now has 9.56
+43:0 r1 gained 1.41 from e1 at a distance of 14.14
+43:0 r2 gained 0.71 from e1 at a distance of 7.07
+43:0 s1 gained 2.83 from e1 at a distance of 28.28
+43:0 s2 gained 2.12 from e1 at a distance of 21.21
+43:0 e1 recharged by 9.56 now has 9.56
+44:0 r1 gained 1.41 from e1 at a distance of 14.14
+44:0 r2 gained 0.71 from e1 at a distance of 7.07
+44:0 s1 gained 2.83 from e1 at a distance of 28.28
+44:0 s2 gained 2.12 from e1 at a distance of 21.21
+44:0 e1 recharged by 9.56 now has 9.56
+45:0 r1 gained 1.41 from e1 at a distance of 14.14
+45:0 r2 gained 0.71 from e1 at a distance of 7.07
+45:0 s1 gained 2.83 from e1 at a distance of 28.28
+45:0 s2 gained 2.12 from e1 at a distance of 21.21
+45:0 r1 failed to receive p32 because it needed 10 but had 0.00
+45:1 e1 recharged by 9.56 now has 9.56
+46:0 r1 gained 1.41 from e1 at a distance of 14.14
+46:0 r2 gained 0.71 from e1 at a distance of 7.07
+46:0 s1 gained 2.83 from e1 at a distance of 28.28
+46:0 s2 gained 2.12 from e1 at a distance of 21.21
+46:0 e1 recharged by 9.56 now has 9.56
+47:0 r1 gained 1.41 from e1 at a distance of 14.14
+47:0 r2 gained 0.71 from e1 at a distance of 7.07
+47:0 s1 gained 2.83 from e1 at a distance of 28.28
+47:0 s2 gained 2.12 from e1 at a distance of 21.21
+47:0 r1 failed to receive p33 because it needed 10 but had 0.00
+47:1 e1 recharged by 9.56 now has 9.56
+48:0 r1 gained 1.41 from e1 at a distance of 14.14
+48:0 r2 gained 0.71 from e1 at a distance of 7.07
+48:0 s1 gained 2.83 from e1 at a distance of 28.28
+48:0 s2 gained 2.12 from e1 at a distance of 21.21
+48:0 e1 recharged by 9.56 now has 9.56
+49:0 r1 gained 1.41 from e1 at a distance of 14.14
+49:0 r2 gained 0.71 from e1 at a distance of 7.07
+49:0 s1 gained 2.83 from e1 at a distance of 28.28
+49:0 s2 gained 2.12 from e1 at a distance of 21.21
+49:0 r1 failed to receive p34 because it needed 10 but had 0.00
+49:1 e1 recharged by 9.56 now has 9.56
+50:0 r1 gained 1.41 from e1 at a distance of 14.14
+50:0 r2 gained 0.71 from e1 at a distance of 7.07
+50:0 s1 gained 2.83 from e1 at a distance of 28.28
+50:0 s2 gained 2.12 from e1 at a distance of 21.21
+50:0 e1 recharged by 9.56 now has 9.56
+51:0 r1 gained 1.41 from e1 at a distance of 14.14
+51:0 r2 gained 0.71 from e1 at a distance of 7.07
+51:0 s1 gained 2.83 from e1 at a distance of 28.28
+51:0 s2 gained 2.12 from e1 at a distance of 21.21
+51:0 r1 failed to receive p35 because it needed 10 but had 0.00
+51:1 e1 recharged by 9.56 now has 9.56
+52:0 r1 gained 1.41 from e1 at a distance of 14.14
+52:0 r2 gained 0.71 from e1 at a distance of 7.07
+52:0 s1 gained 2.83 from e1 at a distance of 28.28
+52:0 s2 gained 2.12 from e1 at a distance of 21.21
+52:0 e1 recharged by 9.56 now has 9.56
+53:0 r1 gained 1.41 from e1 at a distance of 14.14
+53:0 r2 gained 0.71 from e1 at a distance of 7.07
+53:0 s1 gained 2.83 from e1 at a distance of 28.28
+53:0 s2 gained 2.12 from e1 at a distance of 21.21
+53:0 r1 failed to receive p36 because it needed 10 but had 0.00
+53:1 e1 recharged by 9.56 now has 9.56
+54:0 r1 gained 1.41 from e1 at a distance of 14.14
+54:0 r2 gained 0.71 from e1 at a distance of 7.07
+54:0 s1 gained 2.83 from e1 at a distance of 28.28
+54:0 s2 gained 2.12 from e1 at a distance of 21.21
+54:0 e1 recharged by 9.56 now has 9.56
+55:0 r1 gained 1.41 from e1 at a distance of 14.14
+55:0 r2 gained 0.71 from e1 at a distance of 7.07
+55:0 s1 gained 2.83 from e1 at a distance of 28.28
+55:0 s2 gained 2.12 from e1 at a distance of 21.21
+55:0 e1 recharged by 9.56 now has 9.56
+56:0 r1 gained 1.41 from e1 at a distance of 14.14
+56:0 r2 gained 0.71 from e1 at a distance of 7.07
+56:0 s1 gained 2.83 from e1 at a distance of 28.28
+56:0 s2 gained 2.12 from e1 at a distance of 21.21
+56:0 r1 failed to receive p37 because it needed 10 but had 0.00
+56:0 r1 failed to receive p38 because it needed 10 but had 0.00
+56:1 e1 recharged by 9.56 now has 9.56
+57:0 r1 gained 1.41 from e1 at a distance of 14.14
+57:0 r2 gained 0.71 from e1 at a distance of 7.07
+57:0 s1 gained 2.83 from e1 at a distance of 28.28
+57:0 s2 gained 2.12 from e1 at a distance of 21.21
+57:0 e1 recharged by 9.56 now has 9.56
+58:0 r1 gained 1.41 from e1 at a distance of 14.14
+58:0 r2 gained 0.71 from e1 at a distance of 7.07
+58:0 s1 gained 2.83 from e1 at a distance of 28.28
+58:0 s2 gained 2.12 from e1 at a distance of 21.21
+58:0 e1 recharged by 9.56 now has 9.56
+59:0 r1 gained 1.41 from e1 at a distance of 14.14
+59:0 r2 gained 0.71 from e1 at a distance of 7.07
+59:0 s1 gained 2.83 from e1 at a distance of 28.28
+59:0 s2 gained 2.12 from e1 at a distance of 21.21
+59:0 e1 recharged by 9.56 now has 9.56
+60:0 r1 gained 1.41 from e1 at a distance of 14.14
+60:0 r2 gained 0.71 from e1 at a distance of 7.07
+60:0 s1 gained 2.83 from e1 at a distance of 28.28
+60:0 s2 gained 2.12 from e1 at a distance of 21.21
+60:0 r1 failed to receive p39 because it needed 10 but had 0.00
+60:1 e1 recharged by 9.56 now has 9.56
+61:0 r1 gained 1.41 from e1 at a distance of 14.14
+61:0 r2 gained 0.71 from e1 at a distance of 7.07
+61:0 s1 gained 2.83 from e1 at a distance of 28.28
+61:0 s2 gained 2.12 from e1 at a distance of 21.21
+61:0 r1 failed to receive p40 because it needed 10 but had 0.00
+61:1 e1 recharged by 9.56 now has 9.56
+62:0 r1 gained 1.41 from e1 at a distance of 14.14
+62:0 r2 gained 0.71 from e1 at a distance of 7.07
+62:0 s1 gained 2.83 from e1 at a distance of 28.28
+62:0 s2 gained 2.12 from e1 at a distance of 21.21
+62:0 e1 recharged by 9.56 now has 9.56
+63:0 r1 gained 1.41 from e1 at a distance of 14.14
+63:0 r2 gained 0.71 from e1 at a distance of 7.07
+63:0 s1 gained 2.83 from e1 at a distance of 28.28
+63:0 s2 gained 2.12 from e1 at a distance of 21.21
+63:0 r1 failed to receive p41 because it needed 10 but had 0.00
+63:1 e1 recharged by 9.56 now has 9.56
+64:0 r1 gained 1.41 from e1 at a distance of 14.14
+64:0 r2 gained 0.71 from e1 at a distance of 7.07
+64:0 s1 gained 2.83 from e1 at a distance of 28.28
+64:0 s2 gained 2.12 from e1 at a distance of 21.21
+64:0 e1 recharged by 9.56 now has 9.56
+65:0 r1 gained 1.41 from e1 at a distance of 14.14
+65:0 r2 gained 0.71 from e1 at a distance of 7.07
+65:0 s1 gained 2.83 from e1 at a distance of 28.28
+65:0 s2 gained 2.12 from e1 at a distance of 21.21
+65:0 r1 failed to receive p42 because it needed 10 but had 0.00
+65:1 e1 recharged by 9.56 now has 9.56
+66:0 r1 gained 1.41 from e1 at a distance of 14.14
+66:0 r2 gained 0.71 from e1 at a distance of 7.07
+66:0 s1 gained 2.83 from e1 at a distance of 28.28
+66:0 s2 gained 2.12 from e1 at a distance of 21.21
+66:0 e1 recharged by 9.56 now has 9.56
+67:0 r1 gained 1.41 from e1 at a distance of 14.14
+67:0 r2 gained 0.71 from e1 at a distance of 7.07
+67:0 s1 gained 2.83 from e1 at a distance of 28.28
+67:0 s2 gained 2.12 from e1 at a distance of 21.21
+67:0 r1 failed to receive p43 because it needed 10 but had 0.00
+67:1 e1 recharged by 9.56 now has 9.56
+68:0 r1 gained 1.41 from e1 at a distance of 14.14
+68:0 r2 gained 0.71 from e1 at a distance of 7.07
+68:0 s1 gained 2.83 from e1 at a distance of 28.28
+68:0 s2 gained 2.12 from e1 at a distance of 21.21
+68:0 e1 recharged by 9.56 now has 9.56
+69:0 r1 gained 1.41 from e1 at a distance of 14.14
+69:0 r2 gained 0.71 from e1 at a distance of 7.07
+69:0 s1 gained 2.83 from e1 at a distance of 28.28
+69:0 s2 gained 2.12 from e1 at a distance of 21.21
+69:0 e1 recharged by 9.56 now has 9.56
+70:0 r1 gained 1.41 from e1 at a distance of 14.14
+70:0 r2 gained 0.71 from e1 at a distance of 7.07
+70:0 s1 gained 2.83 from e1 at a distance of 28.28
+70:0 s2 gained 2.12 from e1 at a distance of 21.21
+70:0 r1 failed to receive p44 because it needed 10 but had 0.00
+70:0 r1 failed to receive p45 because it needed 10 but had 0.00
+70:1 e1 recharged by 9.56 now has 9.56
+71:0 r1 gained 1.41 from e1 at a distance of 14.14
+71:0 r2 gained 0.71 from e1 at a distance of 7.07
+71:0 s1 gained 2.83 from e1 at a distance of 28.28
+71:0 s2 gained 2.12 from e1 at a distance of 21.21
+71:0 e1 recharged by 9.56 now has 9.56
+72:0 r1 gained 1.41 from e1 at a distance of 14.14
+72:0 r2 gained 0.71 from e1 at a distance of 7.07
+72:0 s1 gained 2.83 from e1 at a distance of 28.28
+72:0 s2 gained 2.12 from e1 at a distance of 21.21
+72:0 e1 recharged by 9.56 now has 9.56
+73:0 r1 gained 1.41 from e1 at a distance of 14.14
+73:0 r2 gained 0.71 from e1 at a distance of 7.07
+73:0 s1 gained 2.83 from e1 at a distance of 28.28
+73:0 s2 gained 2.12 from e1 at a distance of 21.21
+73:0 e1 recharged by 9.56 now has 9.56
+74:0 r1 gained 1.41 from e1 at a distance of 14.14
+74:0 r2 gained 0.71 from e1 at a distance of 7.07
+74:0 s1 gained 2.83 from e1 at a distance of 28.28
+74:0 s2 gained 2.12 from e1 at a distance of 21.21
+74:0 r1 failed to receive p46 because it needed 10 but had 0.00
+74:1 e1 recharged by 9.56 now has 9.56
+75:0 r1 gained 1.41 from e1 at a distance of 14.14
+75:0 r2 gained 0.71 from e1 at a distance of 7.07
+75:0 s1 gained 2.83 from e1 at a distance of 28.28
+75:0 s2 gained 2.12 from e1 at a distance of 21.21
+75:0 r1 failed to receive p47 because it needed 10 but had 0.00
+75:1 e1 recharged by 9.56 now has 9.56
+76:0 r1 gained 1.41 from e1 at a distance of 14.14
+76:0 r2 gained 0.71 from e1 at a distance of 7.07
+76:0 s1 gained 2.83 from e1 at a distance of 28.28
+76:0 s2 gained 2.12 from e1 at a distance of 21.21
+76:0 e1 recharged by 9.56 now has 9.56
+77:0 r1 gained 1.41 from e1 at a distance of 14.14
+77:0 r2 gained 0.71 from e1 at a distance of 7.07
+77:0 s1 gained 2.83 from e1 at a distance of 28.28
+77:0 s2 gained 2.12 from e1 at a distance of 21.21
+77:0 r1 failed to receive p48 because it needed 10 but had 0.00
+77:1 e1 recharged by 9.56 now has 9.56
+78:0 r1 gained 1.41 from e1 at a distance of 14.14
+78:0 r2 gained 0.71 from e1 at a distance of 7.07
+78:0 s1 gained 2.83 from e1 at a distance of 28.28
+78:0 s2 gained 2.12 from e1 at a distance of 21.21
+78:0 e1 recharged by 9.56 now has 9.56
+79:0 r1 gained 1.41 from e1 at a distance of 14.14
+79:0 r2 gained 0.71 from e1 at a distance of 7.07
+79:0 s1 gained 2.83 from e1 at a distance of 28.28
+79:0 s2 gained 2.12 from e1 at a distance of 21.21
+79:0 e1 recharged by 9.56 now has 9.56
+80:0 r1 gained 1.41 from e1 at a distance of 14.14
+80:0 r2 gained 0.71 from e1 at a distance of 7.07
+80:0 s1 gained 2.83 from e1 at a distance of 28.28
+80:0 s2 gained 2.12 from e1 at a distance of 21.21
+80:0 r1 failed to receive p49 because it needed 10 but had 0.00
+80:1 e1 recharged by 9.56 now has 9.56
+81:0 r1 gained 1.41 from e1 at a distance of 14.14
+81:0 r2 gained 0.71 from e1 at a distance of 7.07
+81:0 s1 gained 2.83 from e1 at a distance of 28.28
+81:0 s2 gained 2.12 from e1 at a distance of 21.21
+81:0 r1 failed to receive p50 because it needed 10 but had 0.00
+81:1 e1 recharged by 9.56 now has 9.56
+82:0 r1 gained 1.41 from e1 at a distance of 14.14
+82:0 r2 gained 0.71 from e1 at a distance of 7.07
+82:0 s1 gained 2.83 from e1 at a distance of 28.28
+82:0 s2 gained 2.12 from e1 at a distance of 21.21
+82:0 e1 recharged by 9.56 now has 9.56
+83:0 r1 gained 1.41 from e1 at a distance of 14.14
+83:0 r2 gained 0.71 from e1 at a distance of 7.07
+83:0 s1 gained 2.83 from e1 at a distance of 28.28
+83:0 s2 gained 2.12 from e1 at a distance of 21.21
+83:0 e1 recharged by 9.56 now has 9.56
+84:0 r1 gained 1.41 from e1 at a distance of 14.14
+84:0 r2 gained 0.71 from e1 at a distance of 7.07
+84:0 s1 gained 2.83 from e1 at a distance of 28.28
+84:0 s2 gained 2.12 from e1 at a distance of 21.21
+84:0 r1 failed to receive p51 because it needed 10 but had 0.00
+84:0 r1 failed to receive p52 because it needed 10 but had 0.00
+84:1 e1 recharged by 9.56 now has 9.56
+85:0 r1 gained 1.41 from e1 at a distance of 14.14
+85:0 r2 gained 0.71 from e1 at a distance of 7.07
+85:0 s1 gained 2.83 from e1 at a distance of 28.28
+85:0 s2 gained 2.12 from e1 at a distance of 21.21
+85:0 e1 recharged by 9.56 now has 9.56
+86:0 r1 gained 1.41 from e1 at a distance of 14.14
+86:0 r2 gained 0.71 from e1 at a distance of 7.07
+86:0 s1 gained 2.83 from e1 at a distance of 28.28
+86:0 s2 gained 2.12 from e1 at a distance of 21.21
+86:0 e1 recharged by 9.56 now has 9.56
+87:0 r1 gained 1.41 from e1 at a distance of 14.14
+87:0 r2 gained 0.71 from e1 at a distance of 7.07
+87:0 s1 gained 2.83 from e1 at a distance of 28.28
+87:0 s2 gained 2.12 from e1 at a distance of 21.21
+87:0 e1 recharged by 9.56 now has 9.56
+88:0 r1 gained 1.41 from e1 at a distance of 14.14
+88:0 r2 gained 0.71 from e1 at a distance of 7.07
+88:0 s1 gained 2.83 from e1 at a distance of 28.28
+88:0 s2 gained 2.12 from e1 at a distance of 21.21
+88:0 r1 failed to receive p53 because it needed 10 but had 0.00
+88:1 e1 recharged by 9.56 now has 9.56
+89:0 r1 gained 1.41 from e1 at a distance of 14.14
+89:0 r2 gained 0.71 from e1 at a distance of 7.07
+89:0 s1 gained 2.83 from e1 at a distance of 28.28
+89:0 s2 gained 2.12 from e1 at a distance of 21.21
+89:0 r1 failed to receive p54 because it needed 10 but had 0.00
+89:1 e1 recharged by 9.56 now has 9.56
+90:0 r1 gained 1.41 from e1 at a distance of 14.14
+90:0 r2 gained 0.71 from e1 at a distance of 7.07
+90:0 s1 gained 2.83 from e1 at a distance of 28.28
+90:0 s2 gained 2.12 from e1 at a distance of 21.21
+90:0 e1 recharged by 9.56 now has 9.56
+91:0 r1 gained 1.41 from e1 at a distance of 14.14
+91:0 r2 gained 0.71 from e1 at a distance of 7.07
+91:0 s1 gained 2.83 from e1 at a distance of 28.28
+91:0 s2 gained 2.12 from e1 at a distance of 21.21
+91:0 r1 failed to receive p55 because it needed 10 but had 0.00
+91:1 e1 recharged by 9.56 now has 9.56
+92:0 r1 gained 1.41 from e1 at a distance of 14.14
+92:0 r2 gained 0.71 from e1 at a distance of 7.07
+92:0 s1 gained 2.83 from e1 at a distance of 28.28
+92:0 s2 gained 2.12 from e1 at a distance of 21.21
+92:0 e1 recharged by 9.56 now has 9.56
+93:0 r1 gained 1.41 from e1 at a distance of 14.14
+93:0 r2 gained 0.71 from e1 at a distance of 7.07
+93:0 s1 gained 2.83 from e1 at a distance of 28.28
+93:0 s2 gained 2.12 from e1 at a distance of 21.21
+93:0 e1 recharged by 9.56 now has 9.56
+94:0 r1 gained 1.41 from e1 at a distance of 14.14
+94:0 r2 gained 0.71 from e1 at a distance of 7.07
+94:0 s1 gained 2.83 from e1 at a distance of 28.28
+94:0 s2 gained 2.12 from e1 at a distance of 21.21
+94:0 r1 failed to receive p56 because it needed 10 but had 0.00
+94:1 e1 recharged by 9.56 now has 9.56
+95:0 r1 gained 1.41 from e1 at a distance of 14.14
+95:0 r2 gained 0.71 from e1 at a distance of 7.07
+95:0 s1 gained 2.83 from e1 at a distance of 28.28
+95:0 s2 gained 2.12 from e1 at a distance of 21.21
+95:0 r1 failed to receive p57 because it needed 10 but had 0.00
+95:1 e1 recharged by 9.56 now has 9.56
+96:0 r1 gained 1.41 from e1 at a distance of 14.14
+96:0 r2 gained 0.71 from e1 at a distance of 7.07
+96:0 s1 gained 2.83 from e1 at a distance of 28.28
+96:0 s2 gained 2.12 from e1 at a distance of 21.21
+96:0 e1 recharged by 9.56 now has 9.56
+97:0 r1 gained 1.41 from e1 at a distance of 14.14
+97:0 r2 gained 0.71 from e1 at a distance of 7.07
+97:0 s1 gained 2.83 from e1 at a distance of 28.28
+97:0 s2 gained 2.12 from e1 at a distance of 21.21
+97:0 e1 recharged by 9.56 now has 9.56
+98:0 r1 gained 1.41 from e1 at a distance of 14.14
+98:0 r2 gained 0.71 from e1 at a distance of 7.07
+98:0 s1 gained 2.83 from e1 at a distance of 28.28
+98:0 s2 gained 2.12 from e1 at a distance of 21.21
+98:0 r1 failed to receive p58 because it needed 10 but had 0.00
+98:0 r1 failed to receive p59 because it needed 10 but had 0.00
+98:1 e1 recharged by 9.56 now has 9.56
+99:0 r1 gained 1.41 from e1 at a distance of 14.14
+99:0 r2 gained 0.71 from e1 at a distance of 7.07
+99:0 s1 gained 2.83 from e1 at a distance of 28.28
+99:0 s2 gained 2.12 from e1 at a distance of 21.21
+99:0 e1 recharged by 9.56 now has 9.56
+100:0 r1 gained 1.41 from e1 at a distance of 14.14
+100:0 r2 gained 0.71 from e1 at a distance of 7.07
+100:0 s1 gained 2.83 from e1 at a distance of 28.28
+100:0 s2 gained 2.12 from e1 at a distance of 21.21
+100:0 e1 recharged by 9.56 now has 9.56
+101:0 r1 gained 1.41 from e1 at a distance of 14.14
+101:0 r2 gained 0.71 from e1 at a distance of 7.07
+101:0 s1 gained 2.83 from e1 at a distance of 28.28
+101:0 s2 gained 2.12 from e1 at a distance of 21.21
+101:0 e1 recharged by 9.56 now has 9.56
+102:0 r1 gained 1.41 from e1 at a distance of 14.14
+102:0 r2 gained 0.71 from e1 at a distance of 7.07
+102:0 s1 gained 2.83 from e1 at a distance of 28.28
+102:0 s2 gained 2.12 from e1 at a distance of 21.21
+102:0 r1 failed to receive p60 because it needed 10 but had 0.00
+102:1 e1 recharged by 9.56 now has 9.56
+103:0 r1 gained 1.41 from e1 at a distance of 14.14
+103:0 r2 gained 0.71 from e1 at a distance of 7.07
+103:0 s1 gained 2.83 from e1 at a distance of 28.28
+103:0 s2 gained 2.12 from e1 at a distance of 21.21
+103:0 r1 failed to receive p61 because it needed 10 but had 0.00
+103:1 e1 recharged by 9.56 now has 9.56
+104:0 r1 gained 1.41 from e1 at a distance of 14.14
+104:0 r2 gained 0.71 from e1 at a distance of 7.07
+104:0 s1 gained 2.83 from e1 at a distance of 28.28
+104:0 s2 gained 2.12 from e1 at a distance of 21.21
+104:0 e1 recharged by 9.56 now has 9.56
+105:0 r1 gained 1.41 from e1 at a distance of 14.14
+105:0 r2 gained 0.71 from e1 at a distance of 7.07
+105:0 s1 gained 2.83 from e1 at a distance of 28.28
+105:0 s2 gained 2.12 from e1 at a distance of 21.21
+105:0 e1 recharged by 9.56 now has 9.56
+106:0 r1 gained 1.41 from e1 at a distance of 14.14
+106:0 r2 gained 0.71 from e1 at a distance of 7.07
+106:0 s1 gained 2.83 from e1 at a distance of 28.28
+106:0 s2 gained 2.12 from e1 at a distance of 21.21
+106:0 r1 failed to receive p62 because it needed 10 but had 0.00
+106:1 e1 recharged by 9.56 now has 9.56
+107:0 r1 gained 1.41 from e1 at a distance of 14.14
+107:0 r2 gained 0.71 from e1 at a distance of 7.07
+107:0 s1 gained 2.83 from e1 at a distance of 28.28
+107:0 s2 gained 2.12 from e1 at a distance of 21.21
+107:0 e1 recharged by 9.56 now has 9.56
+108:0 r1 gained 1.41 from e1 at a distance of 14.14
+108:0 r2 gained 0.71 from e1 at a distance of 7.07
+108:0 s1 gained 2.83 from e1 at a distance of 28.28
+108:0 s2 gained 2.12 from e1 at a distance of 21.21
+108:0 r1 failed to receive p63 because it needed 10 but had 0.00
+108:1 e1 recharged by 9.56 now has 9.56
+109:0 r1 gained 1.41 from e1 at a distance of 14.14
+109:0 r2 gained 0.71 from e1 at a distance of 7.07
+109:0 s1 gained 2.83 from e1 at a distance of 28.28
+109:0 s2 gained 2.12 from e1 at a distance of 21.21
+109:0 r1 failed to receive p64 because it needed 10 but had 0.00
+109:1 e1 recharged by 9.56 now has 9.56
+110:0 r1 gained 1.41 from e1 at a distance of 14.14
+110:0 r2 gained 0.71 from e1 at a distance of 7.07
+110:0 s1 gained 2.83 from e1 at a distance of 28.28
+110:0 s2 gained 2.12 from e1 at a distance of 21.21
+110:0 e1 recharged by 9.56 now has 9.56
+111:0 r1 gained 1.41 from e1 at a distance of 14.14
+111:0 r2 gained 0.71 from e1 at a distance of 7.07
+111:0 s1 gained 2.83 from e1 at a distance of 28.28
+111:0 s2 gained 2.12 from e1 at a distance of 21.21
+111:0 e1 recharged by 9.56 now has 9.56
+112:0 r1 gained 1.41 from e1 at a distance of 14.14
+112:0 r2 gained 0.71 from e1 at a distance of 7.07
+112:0 s1 gained 2.83 from e1 at a distance of 28.28
+112:0 s2 gained 2.12 from e1 at a distance of 21.21
+112:0 e1 recharged by 9.56 now has 9.56
+113:0 r1 gained 1.41 from e1 at a distance of 14.14
+113:0 r2 gained 0.71 from e1 at a distance of 7.07
+113:0 s1 gained 2.83 from e1 at a distance of 28.28
+113:0 s2 gained 2.12 from e1 at a distance of 21.21
+113:0 r1 failed to receive p65 because it needed 10 but had 0.00
+113:0 r1 failed to receive p66 because it needed 10 but had 0.00
+113:1 e1 recharged by 9.56 now has 9.56
+114:0 r1 gained 1.41 from e1 at a distance of 14.14
+114:0 r2 gained 0.71 from e1 at a distance of 7.07
+114:0 s1 gained 2.83 from e1 at a distance of 28.28
+114:0 s2 gained 2.12 from e1 at a distance of 21.21
+114:0 e1 recharged by 9.56 now has 9.56
+115:0 r1 gained 1.41 from e1 at a distance of 14.14
+115:0 r2 gained 0.71 from e1 at a distance of 7.07
+115:0 s1 gained 2.83 from e1 at a distance of 28.28
+115:0 s2 gained 2.12 from e1 at a distance of 21.21
+115:0 e1 recharged by 9.56 now has 9.56
+116:0 r1 gained 1.41 from e1 at a distance of 14.14
+116:0 r2 gained 0.71 from e1 at a distance of 7.07
+116:0 s1 gained 2.83 from e1 at a distance of 28.28
+116:0 s2 gained 2.12 from e1 at a distance of 21.21
+116:0 r1 failed to receive p67 because it needed 10 but had 0.00
+116:1 e1 recharged by 9.56 now has 9.56
+117:0 r1 gained 1.41 from e1 at a distance of 14.14
+117:0 r2 gained 0.71 from e1 at a distance of 7.07
+117:0 s1 gained 2.83 from e1 at a distance of 28.28
+117:0 s2 gained 2.12 from e1 at a distance of 21.21
+117:0 r1 failed to receive p68 because it needed 10 but had 0.00
+117:1 e1 recharged by 9.56 now has 9.56
+118:0 r1 gained 1.41 from e1 at a distance of 14.14
+118:0 r2 gained 0.71 from e1 at a distance of 7.07
+118:0 s1 gained 2.83 from e1 at a distance of 28.28
+118:0 s2 gained 2.12 from e1 at a distance of 21.21
+118:0 e1 recharged by 9.56 now has 9.56
+119:0 r1 gained 1.41 from e1 at a distance of 14.14
+119:0 r2 gained 0.71 from e1 at a distance of 7.07
+119:0 s1 gained 2.83 from e1 at a distance of 28.28
+119:0 s2 gained 2.12 from e1 at a distance of 21.21
+119:0 e1 recharged by 9.56 now has 9.56
+120:0 r1 gained 1.41 from e1 at a distance of 14.14
+120:0 r2 gained 0.71 from e1 at a distance of 7.07
+120:0 s1 gained 2.83 from e1 at a distance of 28.28
+120:0 s2 gained 2.12 from e1 at a distance of 21.21
+120:0 r1 failed to receive p69 because it needed 10 but had 0.00
+120:1 e1 recharged by 9.56 now has 9.56
+121:0 r1 gained 1.41 from e1 at a distance of 14.14
+121:0 r2 gained 0.71 from e1 at a distance of 7.07
+121:0 s1 gained 2.83 from e1 at a distance of 28.28
+121:0 s2 gained 2.12 from e1 at a distance of 21.21
+121:0 e1 recharged by 9.56 now has 9.56
+122:0 r1 gained 1.41 from e1 at a distance of 14.14
+122:0 r2 gained 0.71 from e1 at a distance of 7.07
+122:0 s1 gained 2.83 from e1 at a distance of 28.28
+122:0 s2 gained 2.12 from e1 at a distance of 21.21
+122:0 r1 failed to receive p70 because it needed 10 but had 0.00
+122:1 e1 recharged by 9.56 now has 9.56
+123:0 r1 gained 1.41 from e1 at a distance of 14.14
+123:0 r2 gained 0.71 from e1 at a distance of 7.07
+123:0 s1 gained 2.83 from e1 at a distance of 28.28
+123:0 s2 gained 2.12 from e1 at a distance of 21.21
+123:0 r1 failed to receive p71 because it needed 10 but had 0.00
+123:1 e1 recharged by 9.56 now has 9.56
+124:0 r1 gained 1.41 from e1 at a distance of 14.14
+124:0 r2 gained 0.71 from e1 at a distance of 7.07
+124:0 s1 gained 2.83 from e1 at a distance of 28.28
+124:0 s2 gained 2.12 from e1 at a distance of 21.21
+124:0 e1 recharged by 9.56 now has 9.56
+125:0 r1 gained 1.41 from e1 at a distance of 14.14
+125:0 r2 gained 0.71 from e1 at a distance of 7.07
+125:0 s1 gained 2.83 from e1 at a distance of 28.28
+125:0 s2 gained 2.12 from e1 at a distance of 21.21
+125:0 e1 recharged by 9.56 now has 9.56
+126:0 r1 gained 1.41 from e1 at a distance of 14.14
+126:0 r2 gained 0.71 from e1 at a distance of 7.07
+126:0 s1 gained 2.83 from e1 at a distance of 28.28
+126:0 s2 gained 2.12 from e1 at a distance of 21.21
+126:0 e1 recharged by 9.56 now has 9.56
+127:0 r1 gained 1.41 from e1 at a distance of 14.14
+127:0 r2 gained 0.71 from e1 at a distance of 7.07
+127:0 s1 gained 2.83 from e1 at a distance of 28.28
+127:0 s2 gained 2.12 from e1 at a distance of 21.21
+127:0 r1 failed to receive p72 because it needed 10 but had 0.00
+127:0 r1 failed to receive p73 because it needed 10 but had 0.00
+127:1 e1 recharged by 9.56 now has 9.56
+128:0 r1 gained 1.41 from e1 at a distance of 14.14
+128:0 r2 gained 0.71 from e1 at a distance of 7.07
+128:0 s1 gained 2.83 from e1 at a distance of 28.28
+128:0 s2 gained 2.12 from e1 at a distance of 21.21
+128:0 e1 recharged by 9.56 now has 9.56
+129:0 r1 gained 1.41 from e1 at a distance of 14.14
+129:0 r2 gained 0.71 from e1 at a distance of 7.07
+129:0 s1 gained 2.83 from e1 at a distance of 28.28
+129:0 s2 gained 2.12 from e1 at a distance of 21.21
+129:0 e1 recharged by 9.56 now has 9.56
+130:0 r1 gained 1.41 from e1 at a distance of 14.14
+130:0 r2 gained 0.71 from e1 at a distance of 7.07
+130:0 s1 gained 2.83 from e1 at a distance of 28.28
+130:0 s2 gained 2.12 from e1 at a distance of 21.21
+130:0 r1 failed to receive p74 because it needed 10 but had 0.00
+130:1 e1 recharged by 9.56 now has 9.56
+131:0 r1 gained 1.41 from e1 at a distance of 14.14
+131:0 r2 gained 0.71 from e1 at a distance of 7.07
+131:0 s1 gained 2.83 from e1 at a distance of 28.28
+131:0 s2 gained 2.12 from e1 at a distance of 21.21
+131:0 r1 failed to receive p75 because it needed 10 but had 0.00
+131:1 e1 recharged by 9.56 now has 9.56
+132:0 r1 gained 1.41 from e1 at a distance of 14.14
+132:0 r2 gained 0.71 from e1 at a distance of 7.07
+132:0 s1 gained 2.83 from e1 at a distance of 28.28
+132:0 s2 gained 2.12 from e1 at a distance of 21.21
+132:0 e1 recharged by 9.56 now has 9.56
+133:0 r1 gained 1.41 from e1 at a distance of 14.14
+133:0 r2 gained 0.71 from e1 at a distance of 7.07
+133:0 s1 gained 2.83 from e1 at a distance of 28.28
+133:0 s2 gained 2.12 from e1 at a distance of 21.21
+133:0 e1 recharged by 9.56 now has 9.56
+134:0 r1 gained 1.41 from e1 at a distance of 14.14
+134:0 r2 gained 0.71 from e1 at a distance of 7.07
+134:0 s1 gained 2.83 from e1 at a distance of 28.28
+134:0 s2 gained 2.12 from e1 at a distance of 21.21
+134:0 r1 failed to receive p76 because it needed 10 but had 0.00
+134:1 e1 recharged by 9.56 now has 9.56
+135:0 r1 gained 1.41 from e1 at a distance of 14.14
+135:0 r2 gained 0.71 from e1 at a distance of 7.07
+135:0 s1 gained 2.83 from e1 at a distance of 28.28
+135:0 s2 gained 2.12 from e1 at a distance of 21.21
+135:0 e1 recharged by 9.56 now has 9.56
+136:0 r1 gained 1.41 from e1 at a distance of 14.14
+136:0 r2 gained 0.71 from e1 at a distance of 7.07
+136:0 s1 gained 2.83 from e1 at a distance of 28.28
+136:0 s2 gained 2.12 from e1 at a distance of 21.21
+136:0 r1 failed to receive p77 because it needed 10 but had 0.00
+136:1 e1 recharged by 9.56 now has 9.56
+137:0 r1 gained 1.41 from e1 at a distance of 14.14
+137:0 r2 gained 0.71 from e1 at a distance of 7.07
+137:0 s1 gained 2.83 from e1 at a distance of 28.28
+137:0 s2 gained 2.12 from e1 at a distance of 21.21
+137:0 r1 failed to receive p78 because it needed 10 but had 0.00
+137:1 e1 recharged by 9.56 now has 9.56
+138:0 r1 gained 1.41 from e1 at a distance of 14.14
+138:0 r2 gained 0.71 from e1 at a distance of 7.07
+138:0 s1 gained 2.83 from e1 at a distance of 28.28
+138:0 s2 gained 2.12 from e1 at a distance of 21.21
+138:0 e1 recharged by 9.56 now has 9.56
+139:0 r1 gained 1.41 from e1 at a distance of 14.14
+139:0 r2 gained 0.71 from e1 at a distance of 7.07
+139:0 s1 gained 2.83 from e1 at a distance of 28.28
+139:0 s2 gained 2.12 from e1 at a distance of 21.21
+139:0 e1 recharged by 9.56 now has 9.56
+140:0 r1 gained 1.41 from e1 at a distance of 14.14
+140:0 r2 gained 0.71 from e1 at a distance of 7.07
+140:0 s1 gained 2.83 from e1 at a distance of 28.28
+140:0 s2 gained 2.12 from e1 at a distance of 21.21
+140:0 e1 recharged by 9.56 now has 9.56
+141:0 r1 gained 1.41 from e1 at a distance of 14.14
+141:0 r2 gained 0.71 from e1 at a distance of 7.07
+141:0 s1 gained 2.83 from e1 at a distance of 28.28
+141:0 s2 gained 2.12 from e1 at a distance of 21.21
+141:0 r1 failed to receive p79 because it needed 10 but had 0.00
+141:0 r1 failed to receive p80 because it needed 10 but had 0.00
+141:1 e1 recharged by 9.56 now has 9.56
+142:0 r1 gained 1.41 from e1 at a distance of 14.14
+142:0 r2 gained 0.71 from e1 at a distance of 7.07
+142:0 s1 gained 2.83 from e1 at a distance of 28.28
+142:0 s2 gained 2.12 from e1 at a distance of 21.21
+142:0 e1 recharged by 9.56 now has 9.56
+143:0 r1 gained 1.41 from e1 at a distance of 14.14
+143:0 r2 gained 0.71 from e1 at a distance of 7.07
+143:0 s1 gained 2.83 from e1 at a distance of 28.28
+143:0 s2 gained 2.12 from e1 at a distance of 21.21
+143:0 e1 recharged by 9.56 now has 9.56
+144:0 r1 gained 1.41 from e1 at a distance of 14.14
+144:0 r2 gained 0.71 from e1 at a distance of 7.07
+144:0 s1 gained 2.83 from e1 at a distance of 28.28
+144:0 s2 gained 2.12 from e1 at a distance of 21.21
+144:0 r1 failed to receive p81 because it needed 10 but had 0.00
+144:1 e1 recharged by 9.56 now has 9.56
+145:0 r1 gained 1.41 from e1 at a distance of 14.14
+145:0 r2 gained 0.71 from e1 at a distance of 7.07
+145:0 s1 gained 2.83 from e1 at a distance of 28.28
+145:0 s2 gained 2.12 from e1 at a distance of 21.21
+145:0 e1 recharged by 9.56 now has 9.56
+146:0 r1 gained 1.41 from e1 at a distance of 14.14
+146:0 r2 gained 0.71 from e1 at a distance of 7.07
+146:0 s1 gained 2.83 from e1 at a distance of 28.28
+146:0 s2 gained 2.12 from e1 at a distance of 21.21
+146:0 r1 failed to receive p82 because it needed 10 but had 0.00
+146:1 e1 recharged by 9.56 now has 9.56
+147:0 r1 gained 1.41 from e1 at a distance of 14.14
+147:0 r2 gained 0.71 from e1 at a distance of 7.07
+147:0 s1 gained 2.83 from e1 at a distance of 28.28
+147:0 s2 gained 2.12 from e1 at a distance of 21.21
+147:0 e1 recharged by 9.56 now has 9.56
+148:0 r1 gained 1.41 from e1 at a distance of 14.14
+148:0 r2 gained 0.71 from e1 at a distance of 7.07
+148:0 s1 gained 2.83 from e1 at a distance of 28.28
+148:0 s2 gained 2.12 from e1 at a distance of 21.21
+148:0 r1 failed to receive p83 because it needed 10 but had 0.00
+148:1 e1 recharged by 9.56 now has 9.56
+149:0 r1 gained 1.41 from e1 at a distance of 14.14
+149:0 r2 gained 0.71 from e1 at a distance of 7.07
+149:0 s1 gained 2.83 from e1 at a distance of 28.28
+149:0 s2 gained 2.12 from e1 at a distance of 21.21
+149:0 e1 recharged by 9.56 now has 9.56
+150:0 r1 gained 1.41 from e1 at a distance of 14.14
+150:0 r2 gained 0.71 from e1 at a distance of 7.07
+150:0 s1 gained 2.83 from e1 at a distance of 28.28
+150:0 s2 gained 2.12 from e1 at a distance of 21.21
+150:0 r1 failed to receive p84 because it needed 10 but had 0.00
+150:1 e1 recharged by 9.56 now has 9.56
+151:0 r1 gained 1.41 from e1 at a distance of 14.14
+151:0 r2 gained 0.71 from e1 at a distance of 7.07
+151:0 s1 gained 2.83 from e1 at a distance of 28.28
+151:0 s2 gained 2.12 from e1 at a distance of 21.21
+151:0 e1 recharged by 9.56 now has 9.56
+152:0 r1 gained 1.41 from e1 at a distance of 14.14
+152:0 r2 gained 0.71 from e1 at a distance of 7.07
+152:0 s1 gained 2.83 from e1 at a distance of 28.28
+152:0 s2 gained 2.12 from e1 at a distance of 21.21
+152:0 r1 failed to receive p85 because it needed 10 but had 0.00
+152:1 e1 recharged by 9.56 now has 9.56
+153:0 r1 gained 1.41 from e1 at a distance of 14.14
+153:0 r2 gained 0.71 from e1 at a distance of 7.07
+153:0 s1 gained 2.83 from e1 at a distance of 28.28
+153:0 s2 gained 2.12 from e1 at a distance of 21.21
+153:0 e1 recharged by 9.56 now has 9.56
+154:0 r1 gained 1.41 from e1 at a distance of 14.14
+154:0 r2 gained 0.71 from e1 at a distance of 7.07
+154:0 s1 gained 2.83 from e1 at a distance of 28.28
+154:0 s2 gained 2.12 from e1 at a distance of 21.21
+154:0 e1 recharged by 9.56 now has 9.56
+155:0 r1 gained 1.41 from e1 at a distance of 14.14
+155:0 r2 gained 0.71 from e1 at a distance of 7.07
+155:0 s1 gained 2.83 from e1 at a distance of 28.28
+155:0 s2 gained 2.12 from e1 at a distance of 21.21
+155:0 r1 failed to receive p86 because it needed 10 but had 0.00
+155:0 r1 failed to receive p87 because it needed 10 but had 0.00
+155:1 e1 recharged by 9.56 now has 9.56
+156:0 r1 gained 1.41 from e1 at a distance of 14.14
+156:0 r2 gained 0.71 from e1 at a distance of 7.07
+156:0 s1 gained 2.83 from e1 at a distance of 28.28
+156:0 s2 gained 2.12 from e1 at a distance of 21.21
+156:0 e1 recharged by 9.56 now has 9.56
+157:0 r1 gained 1.41 from e1 at a distance of 14.14
+157:0 r2 gained 0.71 from e1 at a distance of 7.07
+157:0 s1 gained 2.83 from e1 at a distance of 28.28
+157:0 s2 gained 2.12 from e1 at a distance of 21.21
+157:0 e1 recharged by 9.56 now has 9.56
+158:0 r1 gained 1.41 from e1 at a distance of 14.14
+158:0 r2 gained 0.71 from e1 at a distance of 7.07
+158:0 s1 gained 2.83 from e1 at a distance of 28.28
+158:0 s2 gained 2.12 from e1 at a distance of 21.21
+158:0 e1 recharged by 9.56 now has 9.56
+159:0 r1 gained 1.41 from e1 at a distance of 14.14
+159:0 r2 gained 0.71 from e1 at a distance of 7.07
+159:0 s1 gained 2.83 from e1 at a distance of 28.28
+159:0 s2 gained 2.12 from e1 at a distance of 21.21
+159:0 r1 failed to receive p88 because it needed 10 but had 0.00
+159:1 e1 recharged by 9.56 now has 9.56
+160:0 r1 gained 1.41 from e1 at a distance of 14.14
+160:0 r2 gained 0.71 from e1 at a distance of 7.07
+160:0 s1 gained 2.83 from e1 at a distance of 28.28
+160:0 s2 gained 2.12 from e1 at a distance of 21.21
+160:0 r1 failed to receive p89 because it needed 10 but had 0.00
+160:1 e1 recharged by 9.56 now has 9.56
+161:0 r1 gained 1.41 from e1 at a distance of 14.14
+161:0 r2 gained 0.71 from e1 at a distance of 7.07
+161:0 s1 gained 2.83 from e1 at a distance of 28.28
+161:0 s2 gained 2.12 from e1 at a distance of 21.21
+161:0 e1 recharged by 9.56 now has 9.56
+162:0 r1 gained 1.41 from e1 at a distance of 14.14
+162:0 r2 gained 0.71 from e1 at a distance of 7.07
+162:0 s1 gained 2.83 from e1 at a distance of 28.28
+162:0 s2 gained 2.12 from e1 at a distance of 21.21
+162:0 r1 failed to receive p90 because it needed 10 but had 0.00
+162:1 e1 recharged by 9.56 now has 9.56
+163:0 r1 gained 1.41 from e1 at a distance of 14.14
+163:0 r2 gained 0.71 from e1 at a distance of 7.07
+163:0 s1 gained 2.83 from e1 at a distance of 28.28
+163:0 s2 gained 2.12 from e1 at a distance of 21.21
+163:0 e1 recharged by 9.56 now has 9.56
+164:0 r1 gained 1.41 from e1 at a distance of 14.14
+164:0 r2 gained 0.71 from e1 at a distance of 7.07
+164:0 s1 gained 2.83 from e1 at a distance of 28.28
+164:0 s2 gained 2.12 from e1 at a distance of 21.21
+164:0 r1 failed to receive p91 because it needed 10 but had 0.00
+164:1 e1 recharged by 9.56 now has 9.56
+165:0 r1 gained 1.41 from e1 at a distance of 14.14
+165:0 r2 gained 0.71 from e1 at a distance of 7.07
+165:0 s1 gained 2.83 from e1 at a distance of 28.28
+165:0 s2 gained 2.12 from e1 at a distance of 21.21
+165:0 e1 recharged by 9.56 now has 9.56
+166:0 r1 gained 1.41 from e1 at a distance of 14.14
+166:0 r2 gained 0.71 from e1 at a distance of 7.07
+166:0 s1 gained 2.83 from e1 at a distance of 28.28
+166:0 s2 gained 2.12 from e1 at a distance of 21.21
+166:0 r1 failed to receive p92 because it needed 10 but had 0.00
+166:1 e1 recharged by 9.56 now has 9.56
+167:0 r1 gained 1.41 from e1 at a distance of 14.14
+167:0 r2 gained 0.71 from e1 at a distance of 7.07
+167:0 s1 gained 2.83 from e1 at a distance of 28.28
+167:0 s2 gained 2.12 from e1 at a distance of 21.21
+167:0 e1 recharged by 9.56 now has 9.56
+168:0 r1 gained 1.41 from e1 at a distance of 14.14
+168:0 r2 gained 0.71 from e1 at a distance of 7.07
+168:0 s1 gained 2.83 from e1 at a distance of 28.28
+168:0 s2 gained 2.12 from e1 at a distance of 21.21
+168:0 e1 recharged by 9.56 now has 9.56
+169:0 r1 gained 1.41 from e1 at a distance of 14.14
+169:0 r2 gained 0.71 from e1 at a distance of 7.07
+169:0 s1 gained 2.83 from e1 at a distance of 28.28
+169:0 s2 gained 2.12 from e1 at a distance of 21.21
+169:0 r1 failed to receive p93 because it needed 10 but had 0.00
+169:0 r1 failed to receive p94 because it needed 10 but had 0.00
+169:1 e1 recharged by 9.56 now has 9.56
+170:0 r1 gained 1.41 from e1 at a distance of 14.14
+170:0 r2 gained 0.71 from e1 at a distance of 7.07
+170:0 s1 gained 2.83 from e1 at a distance of 28.28
+170:0 s2 gained 2.12 from e1 at a distance of 21.21
+170:0 e1 recharged by 9.56 now has 9.56
+171:0 r1 gained 1.41 from e1 at a distance of 14.14
+171:0 r2 gained 0.71 from e1 at a distance of 7.07
+171:0 s1 gained 2.83 from e1 at a distance of 28.28
+171:0 s2 gained 2.12 from e1 at a distance of 21.21
+171:0 e1 recharged by 9.56 now has 9.56
+172:0 r1 gained 1.41 from e1 at a distance of 14.14
+172:0 r2 gained 0.71 from e1 at a distance of 7.07
+172:0 s1 gained 2.83 from e1 at a distance of 28.28
+172:0 s2 gained 2.12 from e1 at a distance of 21.21
+172:0 e1 recharged by 9.56 now has 9.56
+173:0 r1 gained 1.41 from e1 at a distance of 14.14
+173:0 r2 gained 0.71 from e1 at a distance of 7.07
+173:0 s1 gained 2.83 from e1 at a distance of 28.28
+173:0 s2 gained 2.12 from e1 at a distance of 21.21
+173:0 r1 failed to receive p95 because it needed 10 but had 0.00
+173:1 e1 recharged by 9.56 now has 9.56
+174:0 r1 gained 1.41 from e1 at a distance of 14.14
+174:0 r2 gained 0.71 from e1 at a distance of 7.07
+174:0 s1 gained 2.83 from e1 at a distance of 28.28
+174:0 s2 gained 2.12 from e1 at a distance of 21.21
+174:0 r1 failed to receive p96 because it needed 10 but had 0.00
+174:1 e1 recharged by 9.56 now has 9.56
+175:0 r1 gained 1.41 from e1 at a distance of 14.14
+175:0 r2 gained 0.71 from e1 at a distance of 7.07
+175:0 s1 gained 2.83 from e1 at a distance of 28.28
+175:0 s2 gained 2.12 from e1 at a distance of 21.21
+175:0 e1 recharged by 9.56 now has 9.56
+176:0 r1 gained 1.41 from e1 at a distance of 14.14
+176:0 r2 gained 0.71 from e1 at a distance of 7.07
+176:0 s1 gained 2.83 from e1 at a distance of 28.28
+176:0 s2 gained 2.12 from e1 at a distance of 21.21
+176:0 r1 failed to receive p97 because it needed 10 but had 0.00
+176:1 e1 recharged by 9.56 now has 9.56
+177:0 r1 gained 1.41 from e1 at a distance of 14.14
+177:0 r2 gained 0.71 from e1 at a distance of 7.07
+177:0 s1 gained 2.83 from e1 at a distance of 28.28
+177:0 s2 gained 2.12 from e1 at a distance of 21.21
+177:0 e1 recharged by 9.56 now has 9.56
+178:0 r1 gained 1.41 from e1 at a distance of 14.14
+178:0 r2 gained 0.71 from e1 at a distance of 7.07
+178:0 s1 gained 2.83 from e1 at a distance of 28.28
+178:0 s2 gained 2.12 from e1 at a distance of 21.21
+178:0 e1 recharged by 9.56 now has 9.56
+179:0 r1 gained 1.41 from e1 at a distance of 14.14
+179:0 r2 gained 0.71 from e1 at a distance of 7.07
+179:0 s1 gained 2.83 from e1 at a distance of 28.28
+179:0 s2 gained 2.12 from e1 at a distance of 21.21
+179:0 r1 failed to receive p98 because it needed 10 but had 0.00
+179:1 e1 recharged by 9.56 now has 9.56
+180:0 r1 gained 1.41 from e1 at a distance of 14.14
+180:0 r2 gained 0.71 from e1 at a distance of 7.07
+180:0 s1 gained 2.83 from e1 at a distance of 28.28
+180:0 s2 gained 2.12 from e1 at a distance of 21.21
+180:0 r1 failed to receive p99 because it needed 10 but had 0.00
+180:1 e1 recharged by 9.56 now has 9.56
+181:0 r1 gained 1.41 from e1 at a distance of 14.14
+181:0 r2 gained 0.71 from e1 at a distance of 7.07
+181:0 s1 gained 2.83 from e1 at a distance of 28.28
+181:0 s2 gained 2.12 from e1 at a distance of 21.21
+181:0 e1 recharged by 9.56 now has 9.56
+182:0 r1 gained 1.41 from e1 at a distance of 14.14
+182:0 r2 gained 0.71 from e1 at a distance of 7.07
+182:0 s1 gained 2.83 from e1 at a distance of 28.28
+182:0 s2 gained 2.12 from e1 at a distance of 21.21
+182:0 e1 recharged by 9.56 now has 9.56
+183:0 r1 gained 1.41 from e1 at a distance of 14.14
+183:0 r2 gained 0.71 from e1 at a distance of 7.07
+183:0 s1 gained 2.83 from e1 at a distance of 28.28
+183:0 s2 gained 2.12 from e1 at a distance of 21.21
+183:0 r1 failed to receive p100 because it needed 10 but had 0.00
+183:0 r1 failed to receive p101 because it needed 10 but had 0.00
+183:1 e1 recharged by 9.56 now has 9.56
+184:0 r1 gained 1.41 from e1 at a distance of 14.14
+184:0 r2 gained 0.71 from e1 at a distance of 7.07
+184:0 s1 gained 2.83 from e1 at a distance of 28.28
+184:0 s2 gained 2.12 from e1 at a distance of 21.21
+184:0 e1 recharged by 9.56 now has 9.56
+185:0 r1 gained 1.41 from e1 at a distance of 14.14
+185:0 r2 gained 0.71 from e1 at a distance of 7.07
+185:0 s1 gained 2.83 from e1 at a distance of 28.28
+185:0 s2 gained 2.12 from e1 at a distance of 21.21
+185:0 e1 recharged by 9.56 now has 9.56
+186:0 r1 gained 1.41 from e1 at a distance of 14.14
+186:0 r2 gained 0.71 from e1 at a distance of 7.07
+186:0 s1 gained 2.83 from e1 at a distance of 28.28
+186:0 s2 gained 2.12 from e1 at a distance of 21.21
+186:0 e1 recharged by 9.56 now has 9.56
+187:0 r1 gained 1.41 from e1 at a distance of 14.14
+187:0 r2 gained 0.71 from e1 at a distance of 7.07
+187:0 s1 gained 2.83 from e1 at a distance of 28.28
+187:0 s2 gained 2.12 from e1 at a distance of 21.21
+187:0 r1 failed to receive p102 because it needed 10 but had 0.00
+187:1 e1 recharged by 9.56 now has 9.56
+188:0 r1 gained 1.41 from e1 at a distance of 14.14
+188:0 r2 gained 0.71 from e1 at a distance of 7.07
+188:0 s1 gained 2.83 from e1 at a distance of 28.28
+188:0 s2 gained 2.12 from e1 at a distance of 21.21
+188:0 r1 failed to receive p103 because it needed 10 but had 0.00
+188:1 e1 recharged by 9.56 now has 9.56
+189:0 r1 gained 1.41 from e1 at a distance of 14.14
+189:0 r2 gained 0.71 from e1 at a distance of 7.07
+189:0 s1 gained 2.83 from e1 at a distance of 28.28
+189:0 s2 gained 2.12 from e1 at a distance of 21.21
+189:0 e1 recharged by 9.56 now has 9.56
+190:0 r1 gained 1.41 from e1 at a distance of 14.14
+190:0 r2 gained 0.71 from e1 at a distance of 7.07
+190:0 s1 gained 2.83 from e1 at a distance of 28.28
+190:0 s2 gained 2.12 from e1 at a distance of 21.21
+190:0 r1 failed to receive p104 because it needed 10 but had 0.00
+190:1 e1 recharged by 9.56 now has 9.56
+191:0 r1 gained 1.41 from e1 at a distance of 14.14
+191:0 r2 gained 0.71 from e1 at a distance of 7.07
+191:0 s1 gained 2.83 from e1 at a distance of 28.28
+191:0 s2 gained 2.12 from e1 at a distance of 21.21
+191:0 e1 recharged by 9.56 now has 9.56
+192:0 r1 gained 1.41 from e1 at a distance of 14.14
+192:0 r2 gained 0.71 from e1 at a distance of 7.07
+192:0 s1 gained 2.83 from e1 at a distance of 28.28
+192:0 s2 gained 2.12 from e1 at a distance of 21.21
+192:0 e1 recharged by 9.56 now has 9.56
+193:0 r1 gained 1.41 from e1 at a distance of 14.14
+193:0 r2 gained 0.71 from e1 at a distance of 7.07
+193:0 s1 gained 2.83 from e1 at a distance of 28.28
+193:0 s2 gained 2.12 from e1 at a distance of 21.21
+193:0 r1 failed to receive p105 because it needed 10 but had 0.00
+193:1 e1 recharged by 9.56 now has 9.56
+194:0 r1 gained 1.41 from e1 at a distance of 14.14
+194:0 r2 gained 0.71 from e1 at a distance of 7.07
+194:0 s1 gained 2.83 from e1 at a distance of 28.28
+194:0 s2 gained 2.12 from e1 at a distance of 21.21
+194:0 r1 failed to receive p106 because it needed 10 but had 0.00
+194:1 e1 recharged by 9.56 now has 9.56
+195:0 r1 gained 1.41 from e1 at a distance of 14.14
+195:0 r2 gained 0.71 from e1 at a distance of 7.07
+195:0 s1 gained 2.83 from e1 at a distance of 28.28
+195:0 s2 gained 2.12 from e1 at a distance of 21.21
+195:0 e1 recharged by 9.56 now has 9.56
+196:0 r1 gained 1.41 from e1 at a distance of 14.14
+196:0 r2 gained 0.71 from e1 at a distance of 7.07
+196:0 s1 gained 2.83 from e1 at a distance of 28.28
+196:0 s2 gained 2.12 from e1 at a distance of 21.21
+196:0 e1 recharged by 9.56 now has 9.56
+197:0 r1 gained 1.41 from e1 at a distance of 14.14
+197:0 r2 gained 0.71 from e1 at a distance of 7.07
+197:0 s1 gained 2.83 from e1 at a distance of 28.28
+197:0 s2 gained 2.12 from e1 at a distance of 21.21
+197:0 r1 failed to receive p107 because it needed 10 but had 0.00
+197:0 r1 failed to receive p108 because it needed 10 but had 0.00
+197:1 e1 recharged by 9.56 now has 9.56
+198:0 r1 gained 1.41 from e1 at a distance of 14.14
+198:0 r2 gained 0.71 from e1 at a distance of 7.07
+198:0 s1 gained 2.83 from e1 at a distance of 28.28
+198:0 s2 gained 2.12 from e1 at a distance of 21.21
+198:0 e1 recharged by 9.56 now has 9.56
+199:0 r1 gained 1.41 from e1 at a distance of 14.14
+199:0 r2 gained 0.71 from e1 at a distance of 7.07
+199:0 s1 gained 2.83 from e1 at a distance of 28.28
+199:0 s2 gained 2.12 from e1 at a distance of 21.21
+199:0 e1 recharged by 9.56 now has 9.56
+200:0 r1 gained 1.41 from e1 at a distance of 14.14
+200:0 r2 gained 0.71 from e1 at a distance of 7.07
+200:0 s1 gained 2.83 from e1 at a distance of 28.28
+200:0 s2 gained 2.12 from e1 at a distance of 21.21
+200:0 e1 recharged by 9.56 now has 9.56
+201:0 r1 gained 1.41 from e1 at a distance of 14.14
+201:0 r2 gained 0.71 from e1 at a distance of 7.07
+201:0 s1 gained 2.83 from e1 at a distance of 28.28
+201:0 s2 gained 2.12 from e1 at a distance of 21.21
+201:0 r1 failed to receive p109 because it needed 10 but had 0.00
+201:1 e1 recharged by 9.56 now has 9.56
+202:0 r1 gained 1.41 from e1 at a distance of 14.14
+202:0 r2 gained 0.71 from e1 at a distance of 7.07
+202:0 s1 gained 2.83 from e1 at a distance of 28.28
+202:0 s2 gained 2.12 from e1 at a distance of 21.21
+202:0 r1 failed to receive p110 because it needed 10 but had 0.00
+202:1 e1 recharged by 9.56 now has 9.56
+203:0 r1 gained 1.41 from e1 at a distance of 14.14
+203:0 r2 gained 0.71 from e1 at a distance of 7.07
+203:0 s1 gained 2.83 from e1 at a distance of 28.28
+203:0 s2 gained 2.12 from e1 at a distance of 21.21
+203:0 e1 recharged by 9.56 now has 9.56
+204:0 r1 gained 1.41 from e1 at a distance of 14.14
+204:0 r2 gained 0.71 from e1 at a distance of 7.07
+204:0 s1 gained 2.83 from e1 at a distance of 28.28
+204:0 s2 gained 2.12 from e1 at a distance of 21.21
+204:0 e1 recharged by 9.56 now has 9.56
+205:0 r1 gained 1.41 from e1 at a distance of 14.14
+205:0 r2 gained 0.71 from e1 at a distance of 7.07
+205:0 s1 gained 2.83 from e1 at a distance of 28.28
+205:0 s2 gained 2.12 from e1 at a distance of 21.21
+205:0 r1 failed to receive p111 because it needed 10 but had 0.00
+205:1 e1 recharged by 9.56 now has 9.56
+206:0 r1 gained 1.41 from e1 at a distance of 14.14
+206:0 r2 gained 0.71 from e1 at a distance of 7.07
+206:0 s1 gained 2.83 from e1 at a distance of 28.28
+206:0 s2 gained 2.12 from e1 at a distance of 21.21
+206:0 e1 recharged by 9.56 now has 9.56
+207:0 r1 gained 1.41 from e1 at a distance of 14.14
+207:0 r2 gained 0.71 from e1 at a distance of 7.07
+207:0 s1 gained 2.83 from e1 at a distance of 28.28
+207:0 s2 gained 2.12 from e1 at a distance of 21.21
+207:0 r1 failed to receive p112 because it needed 10 but had 0.00
+207:1 e1 recharged by 9.56 now has 9.56
+208:0 r1 gained 1.41 from e1 at a distance of 14.14
+208:0 r2 gained 0.71 from e1 at a distance of 7.07
+208:0 s1 gained 2.83 from e1 at a distance of 28.28
+208:0 s2 gained 2.12 from e1 at a distance of 21.21
+208:0 r1 failed to receive p113 because it needed 10 but had 0.00
+208:1 e1 recharged by 9.56 now has 9.56
+209:0 r1 gained 1.41 from e1 at a distance of 14.14
+209:0 r2 gained 0.71 from e1 at a distance of 7.07
+209:0 s1 gained 2.83 from e1 at a distance of 28.28
+209:0 s2 gained 2.12 from e1 at a distance of 21.21
+209:0 e1 recharged by 9.56 now has 9.56
+210:0 r1 gained 1.41 from e1 at a distance of 14.14
+210:0 r2 gained 0.71 from e1 at a distance of 7.07
+210:0 s1 gained 2.83 from e1 at a distance of 28.28
+210:0 s2 gained 2.12 from e1 at a distance of 21.21
+210:0 e1 recharged by 9.56 now has 9.56
+211:0 r1 gained 1.41 from e1 at a distance of 14.14
+211:0 r2 gained 0.71 from e1 at a distance of 7.07
+211:0 s1 gained 2.83 from e1 at a distance of 28.28
+211:0 s2 gained 2.12 from e1 at a distance of 21.21
+211:0 e1 recharged by 9.56 now has 9.56
+212:0 r1 gained 1.41 from e1 at a distance of 14.14
+212:0 r2 gained 0.71 from e1 at a distance of 7.07
+212:0 s1 gained 2.83 from e1 at a distance of 28.28
+212:0 s2 gained 2.12 from e1 at a distance of 21.21
+212:0 r1 failed to receive p114 because it needed 10 but had 0.00
+212:0 r1 failed to receive p115 because it needed 10 but had 0.00
+212:1 e1 recharged by 9.56 now has 9.56
+213:0 r1 gained 1.41 from e1 at a distance of 14.14
+213:0 r2 gained 0.71 from e1 at a distance of 7.07
+213:0 s1 gained 2.83 from e1 at a distance of 28.28
+213:0 s2 gained 2.12 from e1 at a distance of 21.21
+213:0 e1 recharged by 9.56 now has 9.56
+214:0 r1 gained 1.41 from e1 at a distance of 14.14
+214:0 r2 gained 0.71 from e1 at a distance of 7.07
+214:0 s1 gained 2.83 from e1 at a distance of 28.28
+214:0 s2 gained 2.12 from e1 at a distance of 21.21
+214:0 e1 recharged by 9.56 now has 9.56
+215:0 r1 gained 1.41 from e1 at a distance of 14.14
+215:0 r2 gained 0.71 from e1 at a distance of 7.07
+215:0 s1 gained 2.83 from e1 at a distance of 28.28
+215:0 s2 gained 2.12 from e1 at a distance of 21.21
+215:0 r1 failed to receive p116 because it needed 10 but had 0.00
+215:1 e1 recharged by 9.56 now has 9.56
+216:0 r1 gained 1.41 from e1 at a distance of 14.14
+216:0 r2 gained 0.71 from e1 at a distance of 7.07
+216:0 s1 gained 2.83 from e1 at a distance of 28.28
+216:0 s2 gained 2.12 from e1 at a distance of 21.21
+216:0 r1 failed to receive p117 because it needed 10 but had 0.00
+216:1 e1 recharged by 9.56 now has 9.56
+217:0 r1 gained 1.41 from e1 at a distance of 14.14
+217:0 r2 gained 0.71 from e1 at a distance of 7.07
+217:0 s1 gained 2.83 from e1 at a distance of 28.28
+217:0 s2 gained 2.12 from e1 at a distance of 21.21
+217:0 e1 recharged by 9.56 now has 9.56
+218:0 r1 gained 1.41 from e1 at a distance of 14.14
+218:0 r2 gained 0.71 from e1 at a distance of 7.07
+218:0 s1 gained 2.83 from e1 at a distance of 28.28
+218:0 s2 gained 2.12 from e1 at a distance of 21.21
+218:0 e1 recharged by 9.56 now has 9.56
+219:0 r1 gained 1.41 from e1 at a distance of 14.14
+219:0 r2 gained 0.71 from e1 at a distance of 7.07
+219:0 s1 gained 2.83 from e1 at a distance of 28.28
+219:0 s2 gained 2.12 from e1 at a distance of 21.21
+219:0 r1 failed to receive p118 because it needed 10 but had 0.00
+219:1 e1 recharged by 9.56 now has 9.56
+220:0 r1 gained 1.41 from e1 at a distance of 14.14
+220:0 r2 gained 0.71 from e1 at a distance of 7.07
+220:0 s1 gained 2.83 from e1 at a distance of 28.28
+220:0 s2 gained 2.12 from e1 at a distance of 21.21
+220:0 e1 recharged by 9.56 now has 9.56
+221:0 r1 gained 1.41 from e1 at a distance of 14.14
+221:0 r2 gained 0.71 from e1 at a distance of 7.07
+221:0 s1 gained 2.83 from e1 at a distance of 28.28
+221:0 s2 gained 2.12 from e1 at a distance of 21.21
+221:0 r1 failed to receive p119 because it needed 10 but had 0.00
+221:1 e1 recharged by 9.56 now has 9.56
+222:0 r1 gained 1.41 from e1 at a distance of 14.14
+222:0 r2 gained 0.71 from e1 at a distance of 7.07
+222:0 s1 gained 2.83 from e1 at a distance of 28.28
+222:0 s2 gained 2.12 from e1 at a distance of 21.21
+222:0 r1 failed to receive p120 because it needed 10 but had 0.00
+222:1 e1 recharged by 9.56 now has 9.56
+223:0 r1 gained 1.41 from e1 at a distance of 14.14
+223:0 r2 gained 0.71 from e1 at a distance of 7.07
+223:0 s1 gained 2.83 from e1 at a distance of 28.28
+223:0 s2 gained 2.12 from e1 at a distance of 21.21
+223:0 e1 recharged by 9.56 now has 9.56
+224:0 r1 gained 1.41 from e1 at a distance of 14.14
+224:0 r2 gained 0.71 from e1 at a distance of 7.07
+224:0 s1 gained 2.83 from e1 at a distance of 28.28
+224:0 s2 gained 2.12 from e1 at a distance of 21.21
+224:0 e1 recharged by 9.56 now has 9.56
+225:0 r1 gained 1.41 from e1 at a distance of 14.14
+225:0 r2 gained 0.71 from e1 at a distance of 7.07
+225:0 s1 gained 2.83 from e1 at a distance of 28.28
+225:0 s2 gained 2.12 from e1 at a distance of 21.21
+225:0 e1 recharged by 9.56 now has 9.56
+226:0 r1 gained 1.41 from e1 at a distance of 14.14
+226:0 r2 gained 0.71 from e1 at a distance of 7.07
+226:0 s1 gained 2.83 from e1 at a distance of 28.28
+226:0 s2 gained 2.12 from e1 at a distance of 21.21
+226:0 r1 failed to receive p121 because it needed 10 but had 0.00
+226:0 r1 failed to receive p122 because it needed 10 but had 0.00
+226:1 e1 recharged by 9.56 now has 9.56
+227:0 r1 gained 1.41 from e1 at a distance of 14.14
+227:0 r2 gained 0.71 from e1 at a distance of 7.07
+227:0 s1 gained 2.83 from e1 at a distance of 28.28
+227:0 s2 gained 2.12 from e1 at a distance of 21.21
+227:0 e1 recharged by 9.56 now has 9.56
+228:0 r1 gained 1.41 from e1 at a distance of 14.14
+228:0 r2 gained 0.71 from e1 at a distance of 7.07
+228:0 s1 gained 2.83 from e1 at a distance of 28.28
+228:0 s2 gained 2.12 from e1 at a distance of 21.21
+228:0 e1 recharged by 9.56 now has 9.56
+229:0 r1 gained 1.41 from e1 at a distance of 14.14
+229:0 r2 gained 0.71 from e1 at a distance of 7.07
+229:0 s1 gained 2.83 from e1 at a distance of 28.28
+229:0 s2 gained 2.12 from e1 at a distance of 21.21
+229:0 r1 failed to receive p123 because it needed 10 but had 0.00
+229:1 e1 recharged by 9.56 now has 9.56
+230:0 r1 gained 1.41 from e1 at a distance of 14.14
+230:0 r2 gained 0.71 from e1 at a distance of 7.07
+230:0 s1 gained 2.83 from e1 at a distance of 28.28
+230:0 s2 gained 2.12 from e1 at a distance of 21.21
+230:0 r1 failed to receive p124 because it needed 10 but had 0.00
+230:1 e1 recharged by 9.56 now has 9.56
+231:0 r1 gained 1.41 from e1 at a distance of 14.14
+231:0 r2 gained 0.71 from e1 at a distance of 7.07
+231:0 s1 gained 2.83 from e1 at a distance of 28.28
+231:0 s2 gained 2.12 from e1 at a distance of 21.21
+231:0 e1 recharged by 9.56 now has 9.56
+232:0 r1 gained 1.41 from e1 at a distance of 14.14
+232:0 r2 gained 0.71 from e1 at a distance of 7.07
+232:0 s1 gained 2.83 from e1 at a distance of 28.28
+232:0 s2 gained 2.12 from e1 at a distance of 21.21
+232:0 e1 recharged by 9.56 now has 9.56
+233:0 r1 gained 1.41 from e1 at a distance of 14.14
+233:0 r2 gained 0.71 from e1 at a distance of 7.07
+233:0 s1 gained 2.83 from e1 at a distance of 28.28
+233:0 s2 gained 2.12 from e1 at a distance of 21.21
+233:0 r1 failed to receive p125 because it needed 10 but had 0.00
+233:1 e1 recharged by 9.56 now has 9.56
+234:0 r1 gained 1.41 from e1 at a distance of 14.14
+234:0 r2 gained 0.71 from e1 at a distance of 7.07
+234:0 s1 gained 2.83 from e1 at a distance of 28.28
+234:0 s2 gained 2.12 from e1 at a distance of 21.21
+234:0 e1 recharged by 9.56 now has 9.56
+235:0 r1 gained 1.41 from e1 at a distance of 14.14
+235:0 r2 gained 0.71 from e1 at a distance of 7.07
+235:0 s1 gained 2.83 from e1 at a distance of 28.28
+235:0 s2 gained 2.12 from e1 at a distance of 21.21
+235:0 r1 failed to receive p126 because it needed 10 but had 0.00
+235:1 e1 recharged by 9.56 now has 9.56
+236:0 r1 gained 1.41 from e1 at a distance of 14.14
+236:0 r2 gained 0.71 from e1 at a distance of 7.07
+236:0 s1 gained 2.83 from e1 at a distance of 28.28
+236:0 s2 gained 2.12 from e1 at a distance of 21.21
+236:0 r1 failed to receive p127 because it needed 10 but had 0.00
+236:1 e1 recharged by 9.56 now has 9.56
+237:0 r1 gained 1.41 from e1 at a distance of 14.14
+237:0 r2 gained 0.71 from e1 at a distance of 7.07
+237:0 s1 gained 2.83 from e1 at a distance of 28.28
+237:0 s2 gained 2.12 from e1 at a distance of 21.21
+237:0 e1 recharged by 9.56 now has 9.56
+238:0 r1 gained 1.41 from e1 at a distance of 14.14
+238:0 r2 gained 0.71 from e1 at a distance of 7.07
+238:0 s1 gained 2.83 from e1 at a distance of 28.28
+238:0 s2 gained 2.12 from e1 at a distance of 21.21
+238:0 e1 recharged by 9.56 now has 9.56
+239:0 r1 gained 1.41 from e1 at a distance of 14.14
+239:0 r2 gained 0.71 from e1 at a distance of 7.07
+239:0 s1 gained 2.83 from e1 at a distance of 28.28
+239:0 s2 gained 2.12 from e1 at a distance of 21.21
+239:0 e1 recharged by 9.56 now has 9.56
+240:0 r1 gained 1.41 from e1 at a distance of 14.14
+240:0 r2 gained 0.71 from e1 at a distance of 7.07
+240:0 s1 gained 2.83 from e1 at a distance of 28.28
+240:0 s2 gained 2.12 from e1 at a distance of 21.21
+240:0 r1 failed to receive p128 because it needed 10 but had 0.00
+240:0 r1 failed to receive p129 because it needed 10 but had 0.00
+240:1 e1 recharged by 9.56 now has 9.56
+241:0 r1 gained 1.41 from e1 at a distance of 14.14
+241:0 r2 gained 0.71 from e1 at a distance of 7.07
+241:0 s1 gained 2.83 from e1 at a distance of 28.28
+241:0 s2 gained 2.12 from e1 at a distance of 21.21
+241:0 e1 recharged by 9.56 now has 9.56
+242:0 r1 gained 1.41 from e1 at a distance of 14.14
+242:0 r2 gained 0.71 from e1 at a distance of 7.07
+242:0 s1 gained 2.83 from e1 at a distance of 28.28
+242:0 s2 gained 2.12 from e1 at a distance of 21.21
+242:0 e1 recharged by 9.56 now has 9.56
+243:0 r1 gained 1.41 from e1 at a distance of 14.14
+243:0 r2 gained 0.71 from e1 at a distance of 7.07
+243:0 s1 gained 2.83 from e1 at a distance of 28.28
+243:0 s2 gained 2.12 from e1 at a distance of 21.21
+243:0 r1 failed to receive p130 because it needed 10 but had 0.00
+243:1 e1 recharged by 9.56 now has 9.56
+244:0 r1 gained 1.41 from e1 at a distance of 14.14
+244:0 r2 gained 0.71 from e1 at a distance of 7.07
+244:0 s1 gained 2.83 from e1 at a distance of 28.28
+244:0 s2 gained 2.12 from e1 at a distance of 21.21
+244:0 e1 recharged by 9.56 now has 9.56
+245:0 r1 gained 1.41 from e1 at a distance of 14.14
+245:0 r2 gained 0.71 from e1 at a distance of 7.07
+245:0 s1 gained 2.83 from e1 at a distance of 28.28
+245:0 s2 gained 2.12 from e1 at a distance of 21.21
+245:0 r1 failed to receive p131 because it needed 10 but had 0.00
+245:1 e1 recharged by 9.56 now has 9.56
+246:0 r1 gained 1.41 from e1 at a distance of 14.14
+246:0 r2 gained 0.71 from e1 at a distance of 7.07
+246:0 s1 gained 2.83 from e1 at a distance of 28.28
+246:0 s2 gained 2.12 from e1 at a distance of 21.21
+246:0 e1 recharged by 9.56 now has 9.56
+247:0 r1 gained 1.41 from e1 at a distance of 14.14
+247:0 r2 gained 0.71 from e1 at a distance of 7.07
+247:0 s1 gained 2.83 from e1 at a distance of 28.28
+247:0 s2 gained 2.12 from e1 at a distance of 21.21
+247:0 r1 failed to receive p132 because it needed 10 but had 0.00
+247:1 e1 recharged by 9.56 now has 9.56
+248:0 r1 gained 1.41 from e1 at a distance of 14.14
+248:0 r2 gained 0.71 from e1 at a distance of 7.07
+248:0 s1 gained 2.83 from e1 at a distance of 28.28
+248:0 s2 gained 2.12 from e1 at a distance of 21.21
+248:0 e1 recharged by 9.56 now has 9.56
+249:0 r1 gained 1.41 from e1 at a distance of 14.14
+249:0 r2 gained 0.71 from e1 at a distance of 7.07
+249:0 s1 gained 2.83 from e1 at a distance of 28.28
+249:0 s2 gained 2.12 from e1 at a distance of 21.21
+249:0 r1 failed to receive p133 because it needed 10 but had 0.00
+249:1 e1 recharged by 9.56 now has 9.56
+250:0 r1 gained 1.41 from e1 at a distance of 14.14
+250:0 r2 gained 0.71 from e1 at a distance of 7.07
+250:0 s1 gained 2.83 from e1 at a distance of 28.28
+250:0 s2 gained 2.12 from e1 at a distance of 21.21
+250:0 e1 recharged by 9.56 now has 9.56
+251:0 r1 gained 1.41 from e1 at a distance of 14.14
+251:0 r2 gained 0.71 from e1 at a distance of 7.07
+251:0 s1 gained 2.83 from e1 at a distance of 28.28
+251:0 s2 gained 2.12 from e1 at a distance of 21.21
+251:0 r1 failed to receive p134 because it needed 10 but had 0.00
+251:1 e1 recharged by 9.56 now has 9.56
+252:0 r1 gained 1.41 from e1 at a distance of 14.14
+252:0 r2 gained 0.71 from e1 at a distance of 7.07
+252:0 s1 gained 2.83 from e1 at a distance of 28.28
+252:0 s2 gained 2.12 from e1 at a distance of 21.21
+252:0 e1 recharged by 9.56 now has 9.56
+253:0 r1 gained 1.41 from e1 at a distance of 14.14
+253:0 r2 gained 0.71 from e1 at a distance of 7.07
+253:0 s1 gained 2.83 from e1 at a distance of 28.28
+253:0 s2 gained 2.12 from e1 at a distance of 21.21
+253:0 e1 recharged by 9.56 now has 9.56
+254:0 r1 gained 1.41 from e1 at a distance of 14.14
+254:0 r2 gained 0.71 from e1 at a distance of 7.07
+254:0 s1 gained 2.83 from e1 at a distance of 28.28
+254:0 s2 gained 2.12 from e1 at a distance of 21.21
+254:0 r1 failed to receive p135 because it needed 10 but had 0.00
+254:0 r1 failed to receive p136 because it needed 10 but had 0.00
+254:1 e1 recharged by 9.56 now has 9.56
+255:0 r1 gained 1.41 from e1 at a distance of 14.14
+255:0 r2 gained 0.71 from e1 at a distance of 7.07
+255:0 s1 gained 2.83 from e1 at a distance of 28.28
+255:0 s2 gained 2.12 from e1 at a distance of 21.21
+255:0 e1 recharged by 9.56 now has 9.56
+256:0 r1 gained 1.41 from e1 at a distance of 14.14
+256:0 r2 gained 0.71 from e1 at a distance of 7.07
+256:0 s1 gained 2.83 from e1 at a distance of 28.28
+256:0 s2 gained 2.12 from e1 at a distance of 21.21
+256:0 e1 recharged by 9.56 now has 9.56
+257:0 r1 gained 1.41 from e1 at a distance of 14.14
+257:0 r2 gained 0.71 from e1 at a distance of 7.07
+257:0 s1 gained 2.83 from e1 at a distance of 28.28
+257:0 s2 gained 2.12 from e1 at a distance of 21.21
+257:0 e1 recharged by 9.56 now has 9.56
+258:0 r1 gained 1.41 from e1 at a distance of 14.14
+258:0 r2 gained 0.71 from e1 at a distance of 7.07
+258:0 s1 gained 2.83 from e1 at a distance of 28.28
+258:0 s2 gained 2.12 from e1 at a distance of 21.21
+258:0 r1 failed to receive p137 because it needed 10 but had 0.00
+258:1 e1 recharged by 9.56 now has 9.56
+259:0 r1 gained 1.41 from e1 at a distance of 14.14
+259:0 r2 gained 0.71 from e1 at a distance of 7.07
+259:0 s1 gained 2.83 from e1 at a distance of 28.28
+259:0 s2 gained 2.12 from e1 at a distance of 21.21
+259:0 r1 failed to receive p138 because it needed 10 but had 0.00
+259:1 e1 recharged by 9.56 now has 9.56
+260:0 r1 gained 1.41 from e1 at a distance of 14.14
+260:0 r2 gained 0.71 from e1 at a distance of 7.07
+260:0 s1 gained 2.83 from e1 at a distance of 28.28
+260:0 s2 gained 2.12 from e1 at a distance of 21.21
+260:0 e1 recharged by 9.56 now has 9.56
+261:0 r1 gained 1.41 from e1 at a distance of 14.14
+261:0 r2 gained 0.71 from e1 at a distance of 7.07
+261:0 s1 gained 2.83 from e1 at a distance of 28.28
+261:0 s2 gained 2.12 from e1 at a distance of 21.21
+261:0 r1 failed to receive p139 because it needed 10 but had 0.00
+261:1 e1 recharged by 9.56 now has 9.56
+262:0 r1 gained 1.41 from e1 at a distance of 14.14
+262:0 r2 gained 0.71 from e1 at a distance of 7.07
+262:0 s1 gained 2.83 from e1 at a distance of 28.28
+262:0 s2 gained 2.12 from e1 at a distance of 21.21
+262:0 e1 recharged by 9.56 now has 9.56
+263:0 r1 gained 1.41 from e1 at a distance of 14.14
+263:0 r2 gained 0.71 from e1 at a distance of 7.07
+263:0 s1 gained 2.83 from e1 at a distance of 28.28
+263:0 s2 gained 2.12 from e1 at a distance of 21.21
+263:0 r1 failed to receive p140 because it needed 10 but had 0.00
+263:1 e1 recharged by 9.56 now has 9.56
+264:0 r1 gained 1.41 from e1 at a distance of 14.14
+264:0 r2 gained 0.71 from e1 at a distance of 7.07
+264:0 s1 gained 2.83 from e1 at a distance of 28.28
+264:0 s2 gained 2.12 from e1 at a distance of 21.21
+264:0 e1 recharged by 9.56 now has 9.56
+265:0 r1 gained 1.41 from e1 at a distance of 14.14
+265:0 r2 gained 0.71 from e1 at a distance of 7.07
+265:0 s1 gained 2.83 from e1 at a distance of 28.28
+265:0 s2 gained 2.12 from e1 at a distance of 21.21
+265:0 r1 failed to receive p141 because it needed 10 but had 0.00
+265:1 e1 recharged by 9.56 now has 9.56
+266:0 r1 gained 1.41 from e1 at a distance of 14.14
+266:0 r2 gained 0.71 from e1 at a distance of 7.07
+266:0 s1 gained 2.83 from e1 at a distance of 28.28
+266:0 s2 gained 2.12 from e1 at a distance of 21.21
+266:0 e1 recharged by 9.56 now has 9.56
+267:0 r1 gained 1.41 from e1 at a distance of 14.14
+267:0 r2 gained 0.71 from e1 at a distance of 7.07
+267:0 s1 gained 2.83 from e1 at a distance of 28.28
+267:0 s2 gained 2.12 from e1 at a distance of 21.21
+267:0 e1 recharged by 9.56 now has 9.56
+268:0 r1 gained 1.41 from e1 at a distance of 14.14
+268:0 r2 gained 0.71 from e1 at a distance of 7.07
+268:0 s1 gained 2.83 from e1 at a distance of 28.28
+268:0 s2 gained 2.12 from e1 at a distance of 21.21
+268:0 r1 failed to receive p142 because it needed 10 but had 0.00
+268:0 r1 failed to receive p143 because it needed 10 but had 0.00
+268:1 e1 recharged by 9.56 now has 9.56
+269:0 r1 gained 1.41 from e1 at a distance of 14.14
+269:0 r2 gained 0.71 from e1 at a distance of 7.07
+269:0 s1 gained 2.83 from e1 at a distance of 28.28
+269:0 s2 gained 2.12 from e1 at a distance of 21.21
+269:0 e1 recharged by 9.56 now has 9.56
+270:0 r1 gained 1.41 from e1 at a distance of 14.14
+270:0 r2 gained 0.71 from e1 at a distance of 7.07
+270:0 s1 gained 2.83 from e1 at a distance of 28.28
+270:0 s2 gained 2.12 from e1 at a distance of 21.21
+270:0 e1 recharged by 9.56 now has 9.56
+271:0 r1 gained 1.41 from e1 at a distance of 14.14
+271:0 r2 gained 0.71 from e1 at a distance of 7.07
+271:0 s1 gained 2.83 from e1 at a distance of 28.28
+271:0 s2 gained 2.12 from e1 at a distance of 21.21
+271:0 e1 recharged by 9.56 now has 9.56
+272:0 r1 gained 1.41 from e1 at a distance of 14.14
+272:0 r2 gained 0.71 from e1 at a distance of 7.07
+272:0 s1 gained 2.83 from e1 at a distance of 28.28
+272:0 s2 gained 2.12 from e1 at a distance of 21.21
+272:0 r1 failed to receive p144 because it needed 10 but had 0.00
+272:1 e1 recharged by 9.56 now has 9.56
+273:0 r1 gained 1.41 from e1 at a distance of 14.14
+273:0 r2 gained 0.71 from e1 at a distance of 7.07
+273:0 s1 gained 2.83 from e1 at a distance of 28.28
+273:0 s2 gained 2.12 from e1 at a distance of 21.21
+273:0 r1 failed to receive p145 because it needed 10 but had 0.00
+273:1 e1 recharged by 9.56 now has 9.56
+274:0 r1 gained 1.41 from e1 at a distance of 14.14
+274:0 r2 gained 0.71 from e1 at a distance of 7.07
+274:0 s1 gained 2.83 from e1 at a distance of 28.28
+274:0 s2 gained 2.12 from e1 at a distance of 21.21
+274:0 e1 recharged by 9.56 now has 9.56
+275:0 r1 gained 1.41 from e1 at a distance of 14.14
+275:0 r2 gained 0.71 from e1 at a distance of 7.07
+275:0 s1 gained 2.83 from e1 at a distance of 28.28
+275:0 s2 gained 2.12 from e1 at a distance of 21.21
+275:0 r1 failed to receive p146 because it needed 10 but had 0.00
+275:1 e1 recharged by 9.56 now has 9.56
+276:0 r1 gained 1.41 from e1 at a distance of 14.14
+276:0 r2 gained 0.71 from e1 at a distance of 7.07
+276:0 s1 gained 2.83 from e1 at a distance of 28.28
+276:0 s2 gained 2.12 from e1 at a distance of 21.21
+276:0 e1 recharged by 9.56 now has 9.56
+277:0 r1 gained 1.41 from e1 at a distance of 14.14
+277:0 r2 gained 0.71 from e1 at a distance of 7.07
+277:0 s1 gained 2.83 from e1 at a distance of 28.28
+277:0 s2 gained 2.12 from e1 at a distance of 21.21
+277:0 e1 recharged by 9.56 now has 9.56
+278:0 r1 gained 1.41 from e1 at a distance of 14.14
+278:0 r2 gained 0.71 from e1 at a distance of 7.07
+278:0 s1 gained 2.83 from e1 at a distance of 28.28
+278:0 s2 gained 2.12 from e1 at a distance of 21.21
+278:0 r1 failed to receive p147 because it needed 10 but had 0.00
+278:1 e1 recharged by 9.56 now has 9.56
+279:0 r1 gained 1.41 from e1 at a distance of 14.14
+279:0 r2 gained 0.71 from e1 at a distance of 7.07
+279:0 s1 gained 2.83 from e1 at a distance of 28.28
+279:0 s2 gained 2.12 from e1 at a distance of 21.21
+279:0 r1 failed to receive p148 because it needed 10 but had 0.00
+279:1 e1 recharged by 9.56 now has 9.56
+280:0 r1 gained 1.41 from e1 at a distance of 14.14
+280:0 r2 gained 0.71 from e1 at a distance of 7.07
+280:0 s1 gained 2.83 from e1 at a distance of 28.28
+280:0 s2 gained 2.12 from e1 at a distance of 21.21
+280:0 e1 recharged by 9.56 now has 9.56
+281:0 r1 gained 1.41 from e1 at a distance of 14.14
+281:0 r2 gained 0.71 from e1 at a distance of 7.07
+281:0 s1 gained 2.83 from e1 at a distance of 28.28
+281:0 s2 gained 2.12 from e1 at a distance of 21.21
+281:0 e1 recharged by 9.56 now has 9.56
+282:0 r1 gained 1.41 from e1 at a distance of 14.14
+282:0 r2 gained 0.71 from e1 at a distance of 7.07
+282:0 s1 gained 2.83 from e1 at a distance of 28.28
+282:0 s2 gained 2.12 from e1 at a distance of 21.21
+282:0 r1 failed to receive p149 because it needed 10 but had 0.00
+282:0 r1 failed to receive p150 because it needed 10 but had 0.00
+282:1 e1 recharged by 9.56 now has 9.56
+283:0 r1 gained 1.41 from e1 at a distance of 14.14
+283:0 r2 gained 0.71 from e1 at a distance of 7.07
+283:0 s1 gained 2.83 from e1 at a distance of 28.28
+283:0 s2 gained 2.12 from e1 at a distance of 21.21
+283:0 e1 recharged by 9.56 now has 9.56
+284:0 r1 gained 1.41 from e1 at a distance of 14.14
+284:0 r2 gained 0.71 from e1 at a distance of 7.07
+284:0 s1 gained 2.83 from e1 at a distance of 28.28
+284:0 s2 gained 2.12 from e1 at a distance of 21.21
+284:0 e1 recharged by 9.56 now has 9.56
+285:0 r1 gained 1.41 from e1 at a distance of 14.14
+285:0 r2 gained 0.71 from e1 at a distance of 7.07
+285:0 s1 gained 2.83 from e1 at a distance of 28.28
+285:0 s2 gained 2.12 from e1 at a distance of 21.21
+285:0 e1 recharged by 9.56 now has 9.56
+286:0 r1 gained 1.41 from e1 at a distance of 14.14
+286:0 r2 gained 0.71 from e1 at a distance of 7.07
+286:0 s1 gained 2.83 from e1 at a distance of 28.28
+286:0 s2 gained 2.12 from e1 at a distance of 21.21
+286:0 r1 failed to receive p151 because it needed 10 but had 0.00
+286:1 e1 recharged by 9.56 now has 9.56
+287:0 r1 gained 1.41 from e1 at a distance of 14.14
+287:0 r2 gained 0.71 from e1 at a distance of 7.07
+287:0 s1 gained 2.83 from e1 at a distance of 28.28
+287:0 s2 gained 2.12 from e1 at a distance of 21.21
+287:0 r1 failed to receive p152 because it needed 10 but had 0.00
+287:1 e1 recharged by 9.56 now has 9.56
+288:0 r1 gained 1.41 from e1 at a distance of 14.14
+288:0 r2 gained 0.71 from e1 at a distance of 7.07
+288:0 s1 gained 2.83 from e1 at a distance of 28.28
+288:0 s2 gained 2.12 from e1 at a distance of 21.21
+288:0 e1 recharged by 9.56 now has 9.56
+289:0 r1 gained 1.41 from e1 at a distance of 14.14
+289:0 r2 gained 0.71 from e1 at a distance of 7.07
+289:0 s1 gained 2.83 from e1 at a distance of 28.28
+289:0 s2 gained 2.12 from e1 at a distance of 21.21
+289:0 r1 failed to receive p153 because it needed 10 but had 0.00
+289:1 e1 recharged by 9.56 now has 9.56
+290:0 r1 gained 1.41 from e1 at a distance of 14.14
+290:0 r2 gained 0.71 from e1 at a distance of 7.07
+290:0 s1 gained 2.83 from e1 at a distance of 28.28
+290:0 s2 gained 2.12 from e1 at a distance of 21.21
+290:0 e1 recharged by 9.56 now has 9.56
+291:0 r1 gained 1.41 from e1 at a distance of 14.14
+291:0 r2 gained 0.71 from e1 at a distance of 7.07
+291:0 s1 gained 2.83 from e1 at a distance of 28.28
+291:0 s2 gained 2.12 from e1 at a distance of 21.21
+291:0 e1 recharged by 9.56 now has 9.56
+292:0 r1 gained 1.41 from e1 at a distance of 14.14
+292:0 r2 gained 0.71 from e1 at a distance of 7.07
+292:0 s1 gained 2.83 from e1 at a distance of 28.28
+292:0 s2 gained 2.12 from e1 at a distance of 21.21
+292:0 r1 failed to receive p154 because it needed 10 but had 0.00
+292:1 e1 recharged by 9.56 now has 9.56
+293:0 r1 gained 1.41 from e1 at a distance of 14.14
+293:0 r2 gained 0.71 from e1 at a distance of 7.07
+293:0 s1 gained 2.83 from e1 at a distance of 28.28
+293:0 s2 gained 2.12 from e1 at a distance of 21.21
+293:0 r1 failed to receive p155 because it needed 10 but had 0.00
+293:1 e1 recharged by 9.56 now has 9.56
+294:0 r1 gained 1.41 from e1 at a distance of 14.14
+294:0 r2 gained 0.71 from e1 at a distance of 7.07
+294:0 s1 gained 2.83 from e1 at a distance of 28.28
+294:0 s2 gained 2.12 from e1 at a distance of 21.21
+294:0 e1 recharged by 9.56 now has 9.56
+295:0 r1 gained 1.41 from e1 at a distance of 14.14
+295:0 r2 gained 0.71 from e1 at a distance of 7.07
+295:0 s1 gained 2.83 from e1 at a distance of 28.28
+295:0 s2 gained 2.12 from e1 at a distance of 21.21
+295:0 e1 recharged by 9.56 now has 9.56
+296:0 r1 gained 1.41 from e1 at a distance of 14.14
+296:0 r2 gained 0.71 from e1 at a distance of 7.07
+296:0 s1 gained 2.83 from e1 at a distance of 28.28
+296:0 s2 gained 2.12 from e1 at a distance of 21.21
+296:0 r1 failed to receive p156 because it needed 10 but had 0.00
+296:0 r1 failed to receive p157 because it needed 10 but had 0.00
+296:1 e1 recharged by 9.56 now has 9.56
+297:0 r1 gained 1.41 from e1 at a distance of 14.14
+297:0 r2 gained 0.71 from e1 at a distance of 7.07
+297:0 s1 gained 2.83 from e1 at a distance of 28.28
+297:0 s2 gained 2.12 from e1 at a distance of 21.21
+297:0 e1 recharged by 9.56 now has 9.56
+298:0 r1 gained 1.41 from e1 at a distance of 14.14
+298:0 r2 gained 0.71 from e1 at a distance of 7.07
+298:0 s1 gained 2.83 from e1 at a distance of 28.28
+298:0 s2 gained 2.12 from e1 at a distance of 21.21
+298:0 e1 recharged by 9.56 now has 9.56
+299:0 r1 gained 1.41 from e1 at a distance of 14.14
+299:0 r2 gained 0.71 from e1 at a distance of 7.07
+299:0 s1 gained 2.83 from e1 at a distance of 28.28
+299:0 s2 gained 2.12 from e1 at a distance of 21.21
+299:0 e1 recharged by 9.56 now has 9.56
+300:0 r1 gained 1.41 from e1 at a distance of 14.14
+300:0 r2 gained 0.71 from e1 at a distance of 7.07
+300:0 s1 gained 2.83 from e1 at a distance of 28.28
+300:0 s2 gained 2.12 from e1 at a distance of 21.21
+300:0 r1 failed to receive p158 because it needed 10 but had 0.00
+300:1 e1 recharged by 9.56 now has 9.56
+301:0 r1 gained 1.41 from e1 at a distance of 14.14
+301:0 r2 gained 0.71 from e1 at a distance of 7.07
+301:0 s1 gained 2.83 from e1 at a distance of 28.28
+301:0 s2 gained 2.12 from e1 at a distance of 21.21
+301:0 r1 failed to receive p159 because it needed 10 but had 0.00
+301:1 e1 recharged by 9.56 now has 9.56
+302:0 r1 gained 1.41 from e1 at a distance of 14.14
+302:0 r2 gained 0.71 from e1 at a distance of 7.07
+302:0 s1 gained 2.83 from e1 at a distance of 28.28
+302:0 s2 gained 2.12 from e1 at a distance of 21.21
+302:0 e1 recharged by 9.56 now has 9.56
+303:0 r1 gained 1.41 from e1 at a distance of 14.14
+303:0 r2 gained 0.71 from e1 at a distance of 7.07
+303:0 s1 gained 2.83 from e1 at a distance of 28.28
+303:0 s2 gained 2.12 from e1 at a distance of 21.21
+303:0 e1 recharged by 9.56 now has 9.56
+304:0 r1 gained 1.41 from e1 at a distance of 14.14
+304:0 r2 gained 0.71 from e1 at a distance of 7.07
+304:0 s1 gained 2.83 from e1 at a distance of 28.28
+304:0 s2 gained 2.12 from e1 at a distance of 21.21
+304:0 r1 failed to receive p160 because it needed 10 but had 0.00
+304:1 e1 recharged by 9.56 now has 9.56
+305:0 r1 gained 1.41 from e1 at a distance of 14.14
+305:0 r2 gained 0.71 from e1 at a distance of 7.07
+305:0 s1 gained 2.83 from e1 at a distance of 28.28
+305:0 s2 gained 2.12 from e1 at a distance of 21.21
+305:0 e1 recharged by 9.56 now has 9.56
+306:0 r1 gained 1.41 from e1 at a distance of 14.14
+306:0 r2 gained 0.71 from e1 at a distance of 7.07
+306:0 s1 gained 2.83 from e1 at a distance of 28.28
+306:0 s2 gained 2.12 from e1 at a distance of 21.21
+306:0 r1 failed to receive p161 because it needed 10 but had 0.00
+306:1 e1 recharged by 9.56 now has 9.56
+307:0 r1 gained 1.41 from e1 at a distance of 14.14
+307:0 r2 gained 0.71 from e1 at a distance of 7.07
+307:0 s1 gained 2.83 from e1 at a distance of 28.28
+307:0 s2 gained 2.12 from e1 at a distance of 21.21
+307:0 r1 failed to receive p162 because it needed 10 but had 0.00
+307:1 e1 recharged by 9.56 now has 9.56
+308:0 r1 gained 1.41 from e1 at a distance of 14.14
+308:0 r2 gained 0.71 from e1 at a distance of 7.07
+308:0 s1 gained 2.83 from e1 at a distance of 28.28
+308:0 s2 gained 2.12 from e1 at a distance of 21.21
+308:0 e1 recharged by 9.56 now has 9.56
+309:0 r1 gained 1.41 from e1 at a distance of 14.14
+309:0 r2 gained 0.71 from e1 at a distance of 7.07
+309:0 s1 gained 2.83 from e1 at a distance of 28.28
+309:0 s2 gained 2.12 from e1 at a distance of 21.21
+309:0 e1 recharged by 9.56 now has 9.56
+310:0 r1 gained 1.41 from e1 at a distance of 14.14
+310:0 r2 gained 0.71 from e1 at a distance of 7.07
+310:0 s1 gained 2.83 from e1 at a distance of 28.28
+310:0 s2 gained 2.12 from e1 at a distance of 21.21
+310:0 e1 recharged by 9.56 now has 9.56
+311:0 r1 gained 1.41 from e1 at a distance of 14.14
+311:0 r2 gained 0.71 from e1 at a distance of 7.07
+311:0 s1 gained 2.83 from e1 at a distance of 28.28
+311:0 s2 gained 2.12 from e1 at a distance of 21.21
+311:0 r1 failed to receive p163 because it needed 10 but had 0.00
+311:0 r1 failed to receive p164 because it needed 10 but had 0.00
+311:1 e1 recharged by 9.56 now has 9.56
+312:0 r1 gained 1.41 from e1 at a distance of 14.14
+312:0 r2 gained 0.71 from e1 at a distance of 7.07
+312:0 s1 gained 2.83 from e1 at a distance of 28.28
+312:0 s2 gained 2.12 from e1 at a distance of 21.21
+312:0 e1 recharged by 9.56 now has 9.56
+313:0 r1 gained 1.41 from e1 at a distance of 14.14
+313:0 r2 gained 0.71 from e1 at a distance of 7.07
+313:0 s1 gained 2.83 from e1 at a distance of 28.28
+313:0 s2 gained 2.12 from e1 at a distance of 21.21
+313:0 e1 recharged by 9.56 now has 9.56
+314:0 r1 gained 1.41 from e1 at a distance of 14.14
+314:0 r2 gained 0.71 from e1 at a distance of 7.07
+314:0 s1 gained 2.83 from e1 at a distance of 28.28
+314:0 s2 gained 2.12 from e1 at a distance of 21.21
+314:0 r1 failed to receive p165 because it needed 10 but had 0.00
+314:1 e1 recharged by 9.56 now has 9.56
+315:0 r1 gained 1.41 from e1 at a distance of 14.14
+315:0 r2 gained 0.71 from e1 at a distance of 7.07
+315:0 s1 gained 2.83 from e1 at a distance of 28.28
+315:0 s2 gained 2.12 from e1 at a distance of 21.21
+315:0 r1 failed to receive p166 because it needed 10 but had 0.00
+315:1 e1 recharged by 9.56 now has 9.56
+316:0 r1 gained 1.41 from e1 at a distance of 14.14
+316:0 r2 gained 0.71 from e1 at a distance of 7.07
+316:0 s1 gained 2.83 from e1 at a distance of 28.28
+316:0 s2 gained 2.12 from e1 at a distance of 21.21
+316:0 e1 recharged by 9.56 now has 9.56
+317:0 r1 gained 1.41 from e1 at a distance of 14.14
+317:0 r2 gained 0.71 from e1 at a distance of 7.07
+317:0 s1 gained 2.83 from e1 at a distance of 28.28
+317:0 s2 gained 2.12 from e1 at a distance of 21.21
+317:0 e1 recharged by 9.56 now has 9.56
+318:0 r1 gained 1.41 from e1 at a distance of 14.14
+318:0 r2 gained 0.71 from e1 at a distance of 7.07
+318:0 s1 gained 2.83 from e1 at a distance of 28.28
+318:0 s2 gained 2.12 from e1 at a distance of 21.21
+318:0 r1 failed to receive p167 because it needed 10 but had 0.00
+318:1 e1 recharged by 9.56 now has 9.56
+319:0 r1 gained 1.41 from e1 at a distance of 14.14
+319:0 r2 gained 0.71 from e1 at a distance of 7.07
+319:0 s1 gained 2.83 from e1 at a distance of 28.28
+319:0 s2 gained 2.12 from e1 at a distance of 21.21
+319:0 e1 recharged by 9.56 now has 9.56
+320:0 r1 gained 1.41 from e1 at a distance of 14.14
+320:0 r2 gained 0.71 from e1 at a distance of 7.07
+320:0 s1 gained 2.83 from e1 at a distance of 28.28
+320:0 s2 gained 2.12 from e1 at a distance of 21.21
+320:0 r1 failed to receive p168 because it needed 10 but had 0.00
+320:1 e1 recharged by 9.56 now has 9.56
+321:0 r1 gained 1.41 from e1 at a distance of 14.14
+321:0 r2 gained 0.71 from e1 at a distance of 7.07
+321:0 s1 gained 2.83 from e1 at a distance of 28.28
+321:0 s2 gained 2.12 from e1 at a distance of 21.21
+321:0 r1 failed to receive p169 because it needed 10 but had 0.00
+321:1 e1 recharged by 9.56 now has 9.56
+322:0 r1 gained 1.41 from e1 at a distance of 14.14
+322:0 r2 gained 0.71 from e1 at a distance of 7.07
+322:0 s1 gained 2.83 from e1 at a distance of 28.28
+322:0 s2 gained 2.12 from e1 at a distance of 21.21
+322:0 e1 recharged by 9.56 now has 9.56
+323:0 r1 gained 1.41 from e1 at a distance of 14.14
+323:0 r2 gained 0.71 from e1 at a distance of 7.07
+323:0 s1 gained 2.83 from e1 at a distance of 28.28
+323:0 s2 gained 2.12 from e1 at a distance of 21.21
+323:0 e1 recharged by 9.56 now has 9.56
+324:0 r1 gained 1.41 from e1 at a distance of 14.14
+324:0 r2 gained 0.71 from e1 at a distance of 7.07
+324:0 s1 gained 2.83 from e1 at a distance of 28.28
+324:0 s2 gained 2.12 from e1 at a distance of 21.21
+324:0 e1 recharged by 9.56 now has 9.56
+325:0 r1 gained 1.41 from e1 at a distance of 14.14
+325:0 r2 gained 0.71 from e1 at a distance of 7.07
+325:0 s1 gained 2.83 from e1 at a distance of 28.28
+325:0 s2 gained 2.12 from e1 at a distance of 21.21
+325:0 r1 failed to receive p170 because it needed 10 but had 0.00
+325:0 r1 failed to receive p171 because it needed 10 but had 0.00
+325:1 e1 recharged by 9.56 now has 9.56
+326:0 r1 gained 1.41 from e1 at a distance of 14.14
+326:0 r2 gained 0.71 from e1 at a distance of 7.07
+326:0 s1 gained 2.83 from e1 at a distance of 28.28
+326:0 s2 gained 2.12 from e1 at a distance of 21.21
+326:0 e1 recharged by 9.56 now has 9.56
+327:0 r1 gained 1.41 from e1 at a distance of 14.14
+327:0 r2 gained 0.71 from e1 at a distance of 7.07
+327:0 s1 gained 2.83 from e1 at a distance of 28.28
+327:0 s2 gained 2.12 from e1 at a distance of 21.21
+327:0 e1 recharged by 9.56 now has 9.56
+328:0 r1 gained 1.41 from e1 at a distance of 14.14
+328:0 r2 gained 0.71 from e1 at a distance of 7.07
+328:0 s1 gained 2.83 from e1 at a distance of 28.28
+328:0 s2 gained 2.12 from e1 at a distance of 21.21
+328:0 r1 failed to receive p172 because it needed 10 but had 0.00
+328:1 e1 recharged by 9.56 now has 9.56
+329:0 r1 gained 1.41 from e1 at a distance of 14.14
+329:0 r2 gained 0.71 from e1 at a distance of 7.07
+329:0 s1 gained 2.83 from e1 at a distance of 28.28
+329:0 s2 gained 2.12 from e1 at a distance of 21.21
+329:0 r1 failed to receive p173 because it needed 10 but had 0.00
+329:1 e1 recharged by 9.56 now has 9.56
+330:0 r1 gained 1.41 from e1 at a distance of 14.14
+330:0 r2 gained 0.71 from e1 at a distance of 7.07
+330:0 s1 gained 2.83 from e1 at a distance of 28.28
+330:0 s2 gained 2.12 from e1 at a distance of 21.21
+330:0 e1 recharged by 9.56 now has 9.56
+331:0 r1 gained 1.41 from e1 at a distance of 14.14
+331:0 r2 gained 0.71 from e1 at a distance of 7.07
+331:0 s1 gained 2.83 from e1 at a distance of 28.28
+331:0 s2 gained 2.12 from e1 at a distance of 21.21
+331:0 e1 recharged by 9.56 now has 9.56
+332:0 r1 gained 1.41 from e1 at a distance of 14.14
+332:0 r2 gained 0.71 from e1 at a distance of 7.07
+332:0 s1 gained 2.83 from e1 at a distance of 28.28
+332:0 s2 gained 2.12 from e1 at a distance of 21.21
+332:0 r1 failed to receive p174 because it needed 10 but had 0.00
+332:1 e1 recharged by 9.56 now has 9.56
+333:0 r1 gained 1.41 from e1 at a distance of 14.14
+333:0 r2 gained 0.71 from e1 at a distance of 7.07
+333:0 s1 gained 2.83 from e1 at a distance of 28.28
+333:0 s2 gained 2.12 from e1 at a distance of 21.21
+333:0 e1 recharged by 9.56 now has 9.56
+334:0 r1 gained 1.41 from e1 at a distance of 14.14
+334:0 r2 gained 0.71 from e1 at a distance of 7.07
+334:0 s1 gained 2.83 from e1 at a distance of 28.28
+334:0 s2 gained 2.12 from e1 at a distance of 21.21
+334:0 r1 failed to receive p175 because it needed 10 but had 0.00
+334:1 e1 recharged by 9.56 now has 9.56
+335:0 r1 gained 1.41 from e1 at a distance of 14.14
+335:0 r2 gained 0.71 from e1 at a distance of 7.07
+335:0 s1 gained 2.83 from e1 at a distance of 28.28
+335:0 s2 gained 2.12 from e1 at a distance of 21.21
+335:0 r1 failed to receive p176 because it needed 10 but had 0.00
+335:1 e1 recharged by 9.56 now has 9.56
+336:0 r1 gained 1.41 from e1 at a distance of 14.14
+336:0 r2 gained 0.71 from e1 at a distance of 7.07
+336:0 s1 gained 2.83 from e1 at a distance of 28.28
+336:0 s2 gained 2.12 from e1 at a distance of 21.21
+336:0 e1 recharged by 9.56 now has 9.56
+337:0 r1 gained 1.41 from e1 at a distance of 14.14
+337:0 r2 gained 0.71 from e1 at a distance of 7.07
+337:0 s1 gained 2.83 from e1 at a distance of 28.28
+337:0 s2 gained 2.12 from e1 at a distance of 21.21
+337:0 e1 recharged by 9.56 now has 9.56
+338:0 r1 gained 1.41 from e1 at a distance of 14.14
+338:0 r2 gained 0.71 from e1 at a distance of 7.07
+338:0 s1 gained 2.83 from e1 at a distance of 28.28
+338:0 s2 gained 2.12 from e1 at a distance of 21.21
+338:0 e1 recharged by 9.56 now has 9.56
+339:0 r1 gained 1.41 from e1 at a distance of 14.14
+339:0 r2 gained 0.71 from e1 at a distance of 7.07
+339:0 s1 gained 2.83 from e1 at a distance of 28.28
+339:0 s2 gained 2.12 from e1 at a distance of 21.21
+339:0 r1 failed to receive p177 because it needed 10 but had 0.00
+339:0 r1 failed to receive p178 because it needed 10 but had 0.00
+339:1 e1 recharged by 9.56 now has 9.56
+340:0 r1 gained 1.41 from e1 at a distance of 14.14
+340:0 r2 gained 0.71 from e1 at a distance of 7.07
+340:0 s1 gained 2.83 from e1 at a distance of 28.28
+340:0 s2 gained 2.12 from e1 at a distance of 21.21
+340:0 e1 recharged by 9.56 now has 9.56
+341:0 r1 gained 1.41 from e1 at a distance of 14.14
+341:0 r2 gained 0.71 from e1 at a distance of 7.07
+341:0 s1 gained 2.83 from e1 at a distance of 28.28
+341:0 s2 gained 2.12 from e1 at a distance of 21.21
+341:0 e1 recharged by 9.56 now has 9.56
+342:0 r1 gained 1.41 from e1 at a distance of 14.14
+342:0 r2 gained 0.71 from e1 at a distance of 7.07
+342:0 s1 gained 2.83 from e1 at a distance of 28.28
+342:0 s2 gained 2.12 from e1 at a distance of 21.21
+342:0 r1 failed to receive p179 because it needed 10 but had 0.00
+342:1 e1 recharged by 9.56 now has 9.56
+343:0 r1 gained 1.41 from e1 at a distance of 14.14
+343:0 r2 gained 0.71 from e1 at a distance of 7.07
+343:0 s1 gained 2.83 from e1 at a distance of 28.28
+343:0 s2 gained 2.12 from e1 at a distance of 21.21
+343:0 e1 recharged by 9.56 now has 9.56
+344:0 r1 gained 1.41 from e1 at a distance of 14.14
+344:0 r2 gained 0.71 from e1 at a distance of 7.07
+344:0 s1 gained 2.83 from e1 at a distance of 28.28
+344:0 s2 gained 2.12 from e1 at a distance of 21.21
+344:0 r1 failed to receive p180 because it needed 10 but had 0.00
+344:1 e1 recharged by 9.56 now has 9.56
+345:0 r1 gained 1.41 from e1 at a distance of 14.14
+345:0 r2 gained 0.71 from e1 at a distance of 7.07
+345:0 s1 gained 2.83 from e1 at a distance of 28.28
+345:0 s2 gained 2.12 from e1 at a distance of 21.21
+345:0 e1 recharged by 9.56 now has 9.56
+346:0 r1 gained 1.41 from e1 at a distance of 14.14
+346:0 r2 gained 0.71 from e1 at a distance of 7.07
+346:0 s1 gained 2.83 from e1 at a distance of 28.28
+346:0 s2 gained 2.12 from e1 at a distance of 21.21
+346:0 r1 failed to receive p181 because it needed 10 but had 0.00
+346:1 e1 recharged by 9.56 now has 9.56
+347:0 r1 gained 1.41 from e1 at a distance of 14.14
+347:0 r2 gained 0.71 from e1 at a distance of 7.07
+347:0 s1 gained 2.83 from e1 at a distance of 28.28
+347:0 s2 gained 2.12 from e1 at a distance of 21.21
+347:0 e1 recharged by 9.56 now has 9.56
+348:0 r1 gained 1.41 from e1 at a distance of 14.14
+348:0 r2 gained 0.71 from e1 at a distance of 7.07
+348:0 s1 gained 2.83 from e1 at a distance of 28.28
+348:0 s2 gained 2.12 from e1 at a distance of 21.21
+348:0 r1 failed to receive p182 because it needed 10 but had 0.00
+348:1 e1 recharged by 9.56 now has 9.56
+349:0 r1 gained 1.41 from e1 at a distance of 14.14
+349:0 r2 gained 0.71 from e1 at a distance of 7.07
+349:0 s1 gained 2.83 from e1 at a distance of 28.28
+349:0 s2 gained 2.12 from e1 at a distance of 21.21
+349:0 e1 recharged by 9.56 now has 9.56
+350:0 r1 gained 1.41 from e1 at a distance of 14.14
+350:0 r2 gained 0.71 from e1 at a distance of 7.07
+350:0 s1 gained 2.83 from e1 at a distance of 28.28
+350:0 s2 gained 2.12 from e1 at a distance of 21.21
+350:0 r1 failed to receive p183 because it needed 10 but had 0.00
+350:1 e1 recharged by 9.56 now has 9.56
+351:0 r1 gained 1.41 from e1 at a distance of 14.14
+351:0 r2 gained 0.71 from e1 at a distance of 7.07
+351:0 s1 gained 2.83 from e1 at a distance of 28.28
+351:0 s2 gained 2.12 from e1 at a distance of 21.21
+351:0 e1 recharged by 9.56 now has 9.56
+352:0 r1 gained 1.41 from e1 at a distance of 14.14
+352:0 r2 gained 0.71 from e1 at a distance of 7.07
+352:0 s1 gained 2.83 from e1 at a distance of 28.28
+352:0 s2 gained 2.12 from e1 at a distance of 21.21
+352:0 e1 recharged by 9.56 now has 9.56
+353:0 r1 gained 1.41 from e1 at a distance of 14.14
+353:0 r2 gained 0.71 from e1 at a distance of 7.07
+353:0 s1 gained 2.83 from e1 at a distance of 28.28
+353:0 s2 gained 2.12 from e1 at a distance of 21.21
+353:0 r1 failed to receive p184 because it needed 10 but had 0.00
+353:0 r1 failed to receive p185 because it needed 10 but had 0.00
+353:1 e1 recharged by 9.56 now has 9.56
+354:0 r1 gained 1.41 from e1 at a distance of 14.14
+354:0 r2 gained 0.71 from e1 at a distance of 7.07
+354:0 s1 gained 2.83 from e1 at a distance of 28.28
+354:0 s2 gained 2.12 from e1 at a distance of 21.21
+354:0 e1 recharged by 9.56 now has 9.56
+355:0 r1 gained 1.41 from e1 at a distance of 14.14
+355:0 r2 gained 0.71 from e1 at a distance of 7.07
+355:0 s1 gained 2.83 from e1 at a distance of 28.28
+355:0 s2 gained 2.12 from e1 at a distance of 21.21
+355:0 e1 recharged by 9.56 now has 9.56
+356:0 r1 gained 1.41 from e1 at a distance of 14.14
+356:0 r2 gained 0.71 from e1 at a distance of 7.07
+356:0 s1 gained 2.83 from e1 at a distance of 28.28
+356:0 s2 gained 2.12 from e1 at a distance of 21.21
+356:0 e1 recharged by 9.56 now has 9.56
+357:0 r1 gained 1.41 from e1 at a distance of 14.14
+357:0 r2 gained 0.71 from e1 at a distance of 7.07
+357:0 s1 gained 2.83 from e1 at a distance of 28.28
+357:0 s2 gained 2.12 from e1 at a distance of 21.21
+357:0 r1 failed to receive p186 because it needed 10 but had 0.00
+357:1 e1 recharged by 9.56 now has 9.56
+358:0 r1 gained 1.41 from e1 at a distance of 14.14
+358:0 r2 gained 0.71 from e1 at a distance of 7.07
+358:0 s1 gained 2.83 from e1 at a distance of 28.28
+358:0 s2 gained 2.12 from e1 at a distance of 21.21
+358:0 r1 failed to receive p187 because it needed 10 but had 0.00
+358:1 e1 recharged by 9.56 now has 9.56
+359:0 r1 gained 1.41 from e1 at a distance of 14.14
+359:0 r2 gained 0.71 from e1 at a distance of 7.07
+359:0 s1 gained 2.83 from e1 at a distance of 28.28
+359:0 s2 gained 2.12 from e1 at a distance of 21.21
+359:0 e1 recharged by 9.56 now has 9.56
+360:0 r1 gained 1.41 from e1 at a distance of 14.14
+360:0 r2 gained 0.71 from e1 at a distance of 7.07
+360:0 s1 gained 2.83 from e1 at a distance of 28.28
+360:0 s2 gained 2.12 from e1 at a distance of 21.21
+360:0 r1 failed to receive p188 because it needed 10 but had 0.00
+360:1 e1 recharged by 9.56 now has 9.56
+361:0 r1 gained 1.41 from e1 at a distance of 14.14
+361:0 r2 gained 0.71 from e1 at a distance of 7.07
+361:0 s1 gained 2.83 from e1 at a distance of 28.28
+361:0 s2 gained 2.12 from e1 at a distance of 21.21
+361:0 e1 recharged by 9.56 now has 9.56
+362:0 r1 gained 1.41 from e1 at a distance of 14.14
+362:0 r2 gained 0.71 from e1 at a distance of 7.07
+362:0 s1 gained 2.83 from e1 at a distance of 28.28
+362:0 s2 gained 2.12 from e1 at a distance of 21.21
+362:0 r1 failed to receive p189 because it needed 10 but had 0.00
+362:1 e1 recharged by 9.56 now has 9.56
+363:0 r1 gained 1.41 from e1 at a distance of 14.14
+363:0 r2 gained 0.71 from e1 at a distance of 7.07
+363:0 s1 gained 2.83 from e1 at a distance of 28.28
+363:0 s2 gained 2.12 from e1 at a distance of 21.21
+363:0 e1 recharged by 9.56 now has 9.56
+364:0 r1 gained 1.41 from e1 at a distance of 14.14
+364:0 r2 gained 0.71 from e1 at a distance of 7.07
+364:0 s1 gained 2.83 from e1 at a distance of 28.28
+364:0 s2 gained 2.12 from e1 at a distance of 21.21
+364:0 r1 failed to receive p190 because it needed 10 but had 0.00
+364:1 e1 recharged by 9.56 now has 9.56
+365:0 r1 gained 1.41 from e1 at a distance of 14.14
+365:0 r2 gained 0.71 from e1 at a distance of 7.07
+365:0 s1 gained 2.83 from e1 at a distance of 28.28
+365:0 s2 gained 2.12 from e1 at a distance of 21.21
+365:0 e1 recharged by 9.56 now has 9.56
+366:0 r1 gained 1.41 from e1 at a distance of 14.14
+366:0 r2 gained 0.71 from e1 at a distance of 7.07
+366:0 s1 gained 2.83 from e1 at a distance of 28.28
+366:0 s2 gained 2.12 from e1 at a distance of 21.21
+366:0 e1 recharged by 9.56 now has 9.56
+367:0 r1 gained 1.41 from e1 at a distance of 14.14
+367:0 r2 gained 0.71 from e1 at a distance of 7.07
+367:0 s1 gained 2.83 from e1 at a distance of 28.28
+367:0 s2 gained 2.12 from e1 at a distance of 21.21
+367:0 r1 failed to receive p191 because it needed 10 but had 0.00
+367:0 r1 failed to receive p192 because it needed 10 but had 0.00
+367:1 e1 recharged by 9.56 now has 9.56
+368:0 r1 gained 1.41 from e1 at a distance of 14.14
+368:0 r2 gained 0.71 from e1 at a distance of 7.07
+368:0 s1 gained 2.83 from e1 at a distance of 28.28
+368:0 s2 gained 2.12 from e1 at a distance of 21.21
+368:0 e1 recharged by 9.56 now has 9.56
+369:0 r1 gained 1.41 from e1 at a distance of 14.14
+369:0 r2 gained 0.71 from e1 at a distance of 7.07
+369:0 s1 gained 2.83 from e1 at a distance of 28.28
+369:0 s2 gained 2.12 from e1 at a distance of 21.21
+369:0 e1 recharged by 9.56 now has 9.56
+370:0 r1 gained 1.41 from e1 at a distance of 14.14
+370:0 r2 gained 0.71 from e1 at a distance of 7.07
+370:0 s1 gained 2.83 from e1 at a distance of 28.28
+370:0 s2 gained 2.12 from e1 at a distance of 21.21
+370:0 e1 recharged by 9.56 now has 9.56
+371:0 r1 gained 1.41 from e1 at a distance of 14.14
+371:0 r2 gained 0.71 from e1 at a distance of 7.07
+371:0 s1 gained 2.83 from e1 at a distance of 28.28
+371:0 s2 gained 2.12 from e1 at a distance of 21.21
+371:0 r1 failed to receive p193 because it needed 10 but had 0.00
+371:1 e1 recharged by 9.56 now has 9.56
+372:0 r1 gained 1.41 from e1 at a distance of 14.14
+372:0 r2 gained 0.71 from e1 at a distance of 7.07
+372:0 s1 gained 2.83 from e1 at a distance of 28.28
+372:0 s2 gained 2.12 from e1 at a distance of 21.21
+372:0 r1 failed to receive p194 because it needed 10 but had 0.00
+372:1 e1 recharged by 9.56 now has 9.56
+373:0 r1 gained 1.41 from e1 at a distance of 14.14
+373:0 r2 gained 0.71 from e1 at a distance of 7.07
+373:0 s1 gained 2.83 from e1 at a distance of 28.28
+373:0 s2 gained 2.12 from e1 at a distance of 21.21
+373:0 e1 recharged by 9.56 now has 9.56
+374:0 r1 gained 1.41 from e1 at a distance of 14.14
+374:0 r2 gained 0.71 from e1 at a distance of 7.07
+374:0 s1 gained 2.83 from e1 at a distance of 28.28
+374:0 s2 gained 2.12 from e1 at a distance of 21.21
+374:0 r1 failed to receive p195 because it needed 10 but had 0.00
+374:1 e1 recharged by 9.56 now has 9.56
+375:0 r1 gained 1.41 from e1 at a distance of 14.14
+375:0 r2 gained 0.71 from e1 at a distance of 7.07
+375:0 s1 gained 2.83 from e1 at a distance of 28.28
+375:0 s2 gained 2.12 from e1 at a distance of 21.21
+375:0 e1 recharged by 9.56 now has 9.56
+376:0 r1 gained 1.41 from e1 at a distance of 14.14
+376:0 r2 gained 0.71 from e1 at a distance of 7.07
+376:0 s1 gained 2.83 from e1 at a distance of 28.28
+376:0 s2 gained 2.12 from e1 at a distance of 21.21
+376:0 e1 recharged by 9.56 now has 9.56
+377:0 r1 gained 1.41 from e1 at a distance of 14.14
+377:0 r2 gained 0.71 from e1 at a distance of 7.07
+377:0 s1 gained 2.83 from e1 at a distance of 28.28
+377:0 s2 gained 2.12 from e1 at a distance of 21.21
+377:0 r1 failed to receive p196 because it needed 10 but had 0.00
+377:1 e1 recharged by 9.56 now has 9.56
+378:0 r1 gained 1.41 from e1 at a distance of 14.14
+378:0 r2 gained 0.71 from e1 at a distance of 7.07
+378:0 s1 gained 2.83 from e1 at a distance of 28.28
+378:0 s2 gained 2.12 from e1 at a distance of 21.21
+378:0 r1 failed to receive p197 because it needed 10 but had 0.00
+378:1 e1 recharged by 9.56 now has 9.56
+379:0 r1 gained 1.41 from e1 at a distance of 14.14
+379:0 r2 gained 0.71 from e1 at a distance of 7.07
+379:0 s1 gained 2.83 from e1 at a distance of 28.28
+379:0 s2 gained 2.12 from e1 at a distance of 21.21
+379:0 e1 recharged by 9.56 now has 9.56
+380:0 r1 gained 1.41 from e1 at a distance of 14.14
+380:0 r2 gained 0.71 from e1 at a distance of 7.07
+380:0 s1 gained 2.83 from e1 at a distance of 28.28
+380:0 s2 gained 2.12 from e1 at a distance of 21.21
+380:0 e1 recharged by 9.56 now has 9.56
+381:0 r1 gained 1.41 from e1 at a distance of 14.14
+381:0 r2 gained 0.71 from e1 at a distance of 7.07
+381:0 s1 gained 2.83 from e1 at a distance of 28.28
+381:0 s2 gained 2.12 from e1 at a distance of 21.21
+381:0 r1 failed to receive p198 because it needed 10 but had 0.00
+381:0 r1 failed to receive p199 because it needed 10 but had 0.00
+381:1 e1 recharged by 9.56 now has 9.56
+382:0 r1 gained 1.41 from e1 at a distance of 14.14
+382:0 r2 gained 0.71 from e1 at a distance of 7.07
+382:0 s1 gained 2.83 from e1 at a distance of 28.28
+382:0 s2 gained 2.12 from e1 at a distance of 21.21
+382:0 e1 recharged by 9.56 now has 9.56
+383:0 r1 gained 1.41 from e1 at a distance of 14.14
+383:0 r2 gained 0.71 from e1 at a distance of 7.07
+383:0 s1 gained 2.83 from e1 at a distance of 28.28
+383:0 s2 gained 2.12 from e1 at a distance of 21.21
+383:0 e1 recharged by 9.56 now has 9.56
+384:0 r1 gained 1.41 from e1 at a distance of 14.14
+384:0 r2 gained 0.71 from e1 at a distance of 7.07
+384:0 s1 gained 2.83 from e1 at a distance of 28.28
+384:0 s2 gained 2.12 from e1 at a distance of 21.21
+384:0 e1 recharged by 9.56 now has 9.56
+385:0 r1 gained 1.41 from e1 at a distance of 14.14
+385:0 r2 gained 0.71 from e1 at a distance of 7.07
+385:0 s1 gained 2.83 from e1 at a distance of 28.28
+385:0 s2 gained 2.12 from e1 at a distance of 21.21
+385:0 r1 failed to receive p200 because it needed 10 but had 0.00
+385:1 e1 recharged by 9.56 now has 9.56
+386:0 r1 gained 1.41 from e1 at a distance of 14.14
+386:0 r2 gained 0.71 from e1 at a distance of 7.07
+386:0 s1 gained 2.83 from e1 at a distance of 28.28
+386:0 s2 gained 2.12 from e1 at a distance of 21.21
+386:0 r1 failed to receive p201 because it needed 10 but had 0.00
+386:1 e1 recharged by 9.56 now has 9.56
+387:0 r1 gained 1.41 from e1 at a distance of 14.14
+387:0 r2 gained 0.71 from e1 at a distance of 7.07
+387:0 s1 gained 2.83 from e1 at a distance of 28.28
+387:0 s2 gained 2.12 from e1 at a distance of 21.21
+387:0 e1 recharged by 9.56 now has 9.56
+388:0 r1 gained 1.41 from e1 at a distance of 14.14
+388:0 r2 gained 0.71 from e1 at a distance of 7.07
+388:0 s1 gained 2.83 from e1 at a distance of 28.28
+388:0 s2 gained 2.12 from e1 at a distance of 21.21
+388:0 r1 failed to receive p202 because it needed 10 but had 0.00
+388:1 e1 recharged by 9.56 now has 9.56
+389:0 r1 gained 1.41 from e1 at a distance of 14.14
+389:0 r2 gained 0.71 from e1 at a distance of 7.07
+389:0 s1 gained 2.83 from e1 at a distance of 28.28
+389:0 s2 gained 2.12 from e1 at a distance of 21.21
+389:0 e1 recharged by 9.56 now has 9.56
+390:0 r1 gained 1.41 from e1 at a distance of 14.14
+390:0 r2 gained 0.71 from e1 at a distance of 7.07
+390:0 s1 gained 2.83 from e1 at a distance of 28.28
+390:0 s2 gained 2.12 from e1 at a distance of 21.21
+390:0 e1 recharged by 9.56 now has 9.56
+391:0 r1 gained 1.41 from e1 at a distance of 14.14
+391:0 r2 gained 0.71 from e1 at a distance of 7.07
+391:0 s1 gained 2.83 from e1 at a distance of 28.28
+391:0 s2 gained 2.12 from e1 at a distance of 21.21
+391:0 r1 failed to receive p203 because it needed 10 but had 0.00
+391:1 e1 recharged by 9.56 now has 9.56
+392:0 r1 gained 1.41 from e1 at a distance of 14.14
+392:0 r2 gained 0.71 from e1 at a distance of 7.07
+392:0 s1 gained 2.83 from e1 at a distance of 28.28
+392:0 s2 gained 2.12 from e1 at a distance of 21.21
+392:0 r1 failed to receive p204 because it needed 10 but had 0.00
+392:1 e1 recharged by 9.56 now has 9.56
+393:0 r1 gained 1.41 from e1 at a distance of 14.14
+393:0 r2 gained 0.71 from e1 at a distance of 7.07
+393:0 s1 gained 2.83 from e1 at a distance of 28.28
+393:0 s2 gained 2.12 from e1 at a distance of 21.21
+393:0 e1 recharged by 9.56 now has 9.56
+394:0 r1 gained 1.41 from e1 at a distance of 14.14
+394:0 r2 gained 0.71 from e1 at a distance of 7.07
+394:0 s1 gained 2.83 from e1 at a distance of 28.28
+394:0 s2 gained 2.12 from e1 at a distance of 21.21
+394:0 e1 recharged by 9.56 now has 9.56
+395:0 r1 gained 1.41 from e1 at a distance of 14.14
+395:0 r2 gained 0.71 from e1 at a distance of 7.07
+395:0 s1 gained 2.83 from e1 at a distance of 28.28
+395:0 s2 gained 2.12 from e1 at a distance of 21.21
+395:0 r1 failed to receive p205 because it needed 10 but had 0.00
+395:0 r1 failed to receive p206 because it needed 10 but had 0.00
+395:1 e1 recharged by 9.56 now has 9.56
+396:0 r1 gained 1.41 from e1 at a distance of 14.14
+396:0 r2 gained 0.71 from e1 at a distance of 7.07
+396:0 s1 gained 2.83 from e1 at a distance of 28.28
+396:0 s2 gained 2.12 from e1 at a distance of 21.21
+396:0 e1 recharged by 9.56 now has 9.56
+397:0 r1 gained 1.41 from e1 at a distance of 14.14
+397:0 r2 gained 0.71 from e1 at a distance of 7.07
+397:0 s1 gained 2.83 from e1 at a distance of 28.28
+397:0 s2 gained 2.12 from e1 at a distance of 21.21
+397:0 e1 recharged by 9.56 now has 9.56
+398:0 r1 gained 1.41 from e1 at a distance of 14.14
+398:0 r2 gained 0.71 from e1 at a distance of 7.07
+398:0 s1 gained 2.83 from e1 at a distance of 28.28
+398:0 s2 gained 2.12 from e1 at a distance of 21.21
+398:0 e1 recharged by 9.56 now has 9.56
+399:0 r1 gained 1.41 from e1 at a distance of 14.14
+399:0 r2 gained 0.71 from e1 at a distance of 7.07
+399:0 s1 gained 2.83 from e1 at a distance of 28.28
+399:0 s2 gained 2.12 from e1 at a distance of 21.21
+399:0 r1 failed to receive p207 because it needed 10 but had 0.00
+399:1 e1 recharged by 9.56 now has 9.56
+400:0 r1 gained 1.41 from e1 at a distance of 14.14
+400:0 r2 gained 0.71 from e1 at a distance of 7.07
+400:0 s1 gained 2.83 from e1 at a distance of 28.28
+400:0 s2 gained 2.12 from e1 at a distance of 21.21
+400:0 r1 failed to receive p208 because it needed 10 but had 0.00
+400:1 e1 recharged by 9.56 now has 9.56
+401:0 r1 gained 1.41 from e1 at a distance of 14.14
+401:0 r2 gained 0.71 from e1 at a distance of 7.07
+401:0 s1 gained 2.83 from e1 at a distance of 28.28
+401:0 s2 gained 2.12 from e1 at a distance of 21.21
+401:0 e1 recharged by 9.56 now has 9.56
+402:0 r1 gained 1.41 from e1 at a distance of 14.14
+402:0 r2 gained 0.71 from e1 at a distance of 7.07
+402:0 s1 gained 2.83 from e1 at a distance of 28.28
+402:0 s2 gained 2.12 from e1 at a distance of 21.21
+402:0 e1 recharged by 9.56 now has 9.56
+403:0 r1 gained 1.41 from e1 at a distance of 14.14
+403:0 r2 gained 0.71 from e1 at a distance of 7.07
+403:0 s1 gained 2.83 from e1 at a distance of 28.28
+403:0 s2 gained 2.12 from e1 at a distance of 21.21
+403:0 r1 failed to receive p209 because it needed 10 but had 0.00
+403:1 e1 recharged by 9.56 now has 9.56
+404:0 r1 gained 1.41 from e1 at a distance of 14.14
+404:0 r2 gained 0.71 from e1 at a distance of 7.07
+404:0 s1 gained 2.83 from e1 at a distance of 28.28
+404:0 s2 gained 2.12 from e1 at a distance of 21.21
+404:0 e1 recharged by 9.56 now has 9.56
+405:0 r1 gained 1.41 from e1 at a distance of 14.14
+405:0 r2 gained 0.71 from e1 at a distance of 7.07
+405:0 s1 gained 2.83 from e1 at a distance of 28.28
+405:0 s2 gained 2.12 from e1 at a distance of 21.21
+405:0 r1 failed to receive p210 because it needed 10 but had 0.00
+405:1 e1 recharged by 9.56 now has 9.56
+406:0 r1 gained 1.41 from e1 at a distance of 14.14
+406:0 r2 gained 0.71 from e1 at a distance of 7.07
+406:0 s1 gained 2.83 from e1 at a distance of 28.28
+406:0 s2 gained 2.12 from e1 at a distance of 21.21
+406:0 r1 failed to receive p211 because it needed 10 but had 0.00
+406:1 e1 recharged by 9.56 now has 9.56
+407:0 r1 gained 1.41 from e1 at a distance of 14.14
+407:0 r2 gained 0.71 from e1 at a distance of 7.07
+407:0 s1 gained 2.83 from e1 at a distance of 28.28
+407:0 s2 gained 2.12 from e1 at a distance of 21.21
+407:0 e1 recharged by 9.56 now has 9.56
+408:0 r1 gained 1.41 from e1 at a distance of 14.14
+408:0 r2 gained 0.71 from e1 at a distance of 7.07
+408:0 s1 gained 2.83 from e1 at a distance of 28.28
+408:0 s2 gained 2.12 from e1 at a distance of 21.21
+408:0 e1 recharged by 9.56 now has 9.56
+409:0 r1 gained 1.41 from e1 at a distance of 14.14
+409:0 r2 gained 0.71 from e1 at a distance of 7.07
+409:0 s1 gained 2.83 from e1 at a distance of 28.28
+409:0 s2 gained 2.12 from e1 at a distance of 21.21
+409:0 e1 recharged by 9.56 now has 9.56
+410:0 r1 gained 1.41 from e1 at a distance of 14.14
+410:0 r2 gained 0.71 from e1 at a distance of 7.07
+410:0 s1 gained 2.83 from e1 at a distance of 28.28
+410:0 s2 gained 2.12 from e1 at a distance of 21.21
+410:0 r1 failed to receive p212 because it needed 10 but had 0.00
+410:0 r1 failed to receive p213 because it needed 10 but had 0.00
+410:1 e1 recharged by 9.56 now has 9.56
+411:0 r1 gained 1.41 from e1 at a distance of 14.14
+411:0 r2 gained 0.71 from e1 at a distance of 7.07
+411:0 s1 gained 2.83 from e1 at a distance of 28.28
+411:0 s2 gained 2.12 from e1 at a distance of 21.21
+411:0 e1 recharged by 9.56 now has 9.56
+412:0 r1 gained 1.41 from e1 at a distance of 14.14
+412:0 r2 gained 0.71 from e1 at a distance of 7.07
+412:0 s1 gained 2.83 from e1 at a distance of 28.28
+412:0 s2 gained 2.12 from e1 at a distance of 21.21
+412:0 e1 recharged by 9.56 now has 9.56
+413:0 r1 gained 1.41 from e1 at a distance of 14.14
+413:0 r2 gained 0.71 from e1 at a distance of 7.07
+413:0 s1 gained 2.83 from e1 at a distance of 28.28
+413:0 s2 gained 2.12 from e1 at a distance of 21.21
+413:0 r1 failed to receive p214 because it needed 10 but had 0.00
+413:1 e1 recharged by 9.56 now has 9.56
+414:0 r1 gained 1.41 from e1 at a distance of 14.14
+414:0 r2 gained 0.71 from e1 at a distance of 7.07
+414:0 s1 gained 2.83 from e1 at a distance of 28.28
+414:0 s2 gained 2.12 from e1 at a distance of 21.21
+414:0 r1 failed to receive p215 because it needed 10 but had 0.00
+414:1 e1 recharged by 9.56 now has 9.56
+415:0 r1 gained 1.41 from e1 at a distance of 14.14
+415:0 r2 gained 0.71 from e1 at a distance of 7.07
+415:0 s1 gained 2.83 from e1 at a distance of 28.28
+415:0 s2 gained 2.12 from e1 at a distance of 21.21
+415:0 e1 recharged by 9.56 now has 9.56
+416:0 r1 gained 1.41 from e1 at a distance of 14.14
+416:0 r2 gained 0.71 from e1 at a distance of 7.07
+416:0 s1 gained 2.83 from e1 at a distance of 28.28
+416:0 s2 gained 2.12 from e1 at a distance of 21.21
+416:0 e1 recharged by 9.56 now has 9.56
+417:0 r1 gained 1.41 from e1 at a distance of 14.14
+417:0 r2 gained 0.71 from e1 at a distance of 7.07
+417:0 s1 gained 2.83 from e1 at a distance of 28.28
+417:0 s2 gained 2.12 from e1 at a distance of 21.21
+417:0 r1 failed to receive p216 because it needed 10 but had 0.00
+417:1 e1 recharged by 9.56 now has 9.56
+418:0 r1 gained 1.41 from e1 at a distance of 14.14
+418:0 r2 gained 0.71 from e1 at a distance of 7.07
+418:0 s1 gained 2.83 from e1 at a distance of 28.28
+418:0 s2 gained 2.12 from e1 at a distance of 21.21
+418:0 e1 recharged by 9.56 now has 9.56
+419:0 r1 gained 1.41 from e1 at a distance of 14.14
+419:0 r2 gained 0.71 from e1 at a distance of 7.07
+419:0 s1 gained 2.83 from e1 at a distance of 28.28
+419:0 s2 gained 2.12 from e1 at a distance of 21.21
+419:0 r1 failed to receive p217 because it needed 10 but had 0.00
+419:1 e1 recharged by 9.56 now has 9.56
+420:0 r1 gained 1.41 from e1 at a distance of 14.14
+420:0 r2 gained 0.71 from e1 at a distance of 7.07
+420:0 s1 gained 2.83 from e1 at a distance of 28.28
+420:0 s2 gained 2.12 from e1 at a distance of 21.21
+420:0 r1 failed to receive p218 because it needed 10 but had 0.00
+420:1 e1 recharged by 9.56 now has 9.56
+421:0 r1 gained 1.41 from e1 at a distance of 14.14
+421:0 r2 gained 0.71 from e1 at a distance of 7.07
+421:0 s1 gained 2.83 from e1 at a distance of 28.28
+421:0 s2 gained 2.12 from e1 at a distance of 21.21
+421:0 e1 recharged by 9.56 now has 9.56
+422:0 r1 gained 1.41 from e1 at a distance of 14.14
+422:0 r2 gained 0.71 from e1 at a distance of 7.07
+422:0 s1 gained 2.83 from e1 at a distance of 28.28
+422:0 s2 gained 2.12 from e1 at a distance of 21.21
+422:0 e1 recharged by 9.56 now has 9.56
+423:0 r1 gained 1.41 from e1 at a distance of 14.14
+423:0 r2 gained 0.71 from e1 at a distance of 7.07
+423:0 s1 gained 2.83 from e1 at a distance of 28.28
+423:0 s2 gained 2.12 from e1 at a distance of 21.21
+423:0 e1 recharged by 9.56 now has 9.56
+424:0 r1 gained 1.41 from e1 at a distance of 14.14
+424:0 r2 gained 0.71 from e1 at a distance of 7.07
+424:0 s1 gained 2.83 from e1 at a distance of 28.28
+424:0 s2 gained 2.12 from e1 at a distance of 21.21
+424:0 r1 failed to receive p219 because it needed 10 but had 0.00
+424:0 r1 failed to receive p220 because it needed 10 but had 0.00
+424:1 e1 recharged by 9.56 now has 9.56
+425:0 r1 gained 1.41 from e1 at a distance of 14.14
+425:0 r2 gained 0.71 from e1 at a distance of 7.07
+425:0 s1 gained 2.83 from e1 at a distance of 28.28
+425:0 s2 gained 2.12 from e1 at a distance of 21.21
+425:0 e1 recharged by 9.56 now has 9.56
+426:0 r1 gained 1.41 from e1 at a distance of 14.14
+426:0 r2 gained 0.71 from e1 at a distance of 7.07
+426:0 s1 gained 2.83 from e1 at a distance of 28.28
+426:0 s2 gained 2.12 from e1 at a distance of 21.21
+426:0 e1 recharged by 9.56 now has 9.56
+427:0 r1 gained 1.41 from e1 at a distance of 14.14
+427:0 r2 gained 0.71 from e1 at a distance of 7.07
+427:0 s1 gained 2.83 from e1 at a distance of 28.28
+427:0 s2 gained 2.12 from e1 at a distance of 21.21
+427:0 r1 failed to receive p221 because it needed 10 but had 0.00
+427:1 e1 recharged by 9.56 now has 9.56
+428:0 r1 gained 1.41 from e1 at a distance of 14.14
+428:0 r2 gained 0.71 from e1 at a distance of 7.07
+428:0 s1 gained 2.83 from e1 at a distance of 28.28
+428:0 s2 gained 2.12 from e1 at a distance of 21.21
+428:0 r1 failed to receive p222 because it needed 10 but had 0.00
+428:1 e1 recharged by 9.56 now has 9.56
+429:0 r1 gained 1.41 from e1 at a distance of 14.14
+429:0 r2 gained 0.71 from e1 at a distance of 7.07
+429:0 s1 gained 2.83 from e1 at a distance of 28.28
+429:0 s2 gained 2.12 from e1 at a distance of 21.21
+429:0 e1 recharged by 9.56 now has 9.56
+430:0 r1 gained 1.41 from e1 at a distance of 14.14
+430:0 r2 gained 0.71 from e1 at a distance of 7.07
+430:0 s1 gained 2.83 from e1 at a distance of 28.28
+430:0 s2 gained 2.12 from e1 at a distance of 21.21
+430:0 e1 recharged by 9.56 now has 9.56
+431:0 r1 gained 1.41 from e1 at a distance of 14.14
+431:0 r2 gained 0.71 from e1 at a distance of 7.07
+431:0 s1 gained 2.83 from e1 at a distance of 28.28
+431:0 s2 gained 2.12 from e1 at a distance of 21.21
+431:0 r1 failed to receive p223 because it needed 10 but had 0.00
+431:1 e1 recharged by 9.56 now has 9.56
+432:0 r1 gained 1.41 from e1 at a distance of 14.14
+432:0 r2 gained 0.71 from e1 at a distance of 7.07
+432:0 s1 gained 2.83 from e1 at a distance of 28.28
+432:0 s2 gained 2.12 from e1 at a distance of 21.21
+432:0 e1 recharged by 9.56 now has 9.56
+433:0 r1 gained 1.41 from e1 at a distance of 14.14
+433:0 r2 gained 0.71 from e1 at a distance of 7.07
+433:0 s1 gained 2.83 from e1 at a distance of 28.28
+433:0 s2 gained 2.12 from e1 at a distance of 21.21
+433:0 r1 failed to receive p224 because it needed 10 but had 0.00
+433:1 e1 recharged by 9.56 now has 9.56
+434:0 r1 gained 1.41 from e1 at a distance of 14.14
+434:0 r2 gained 0.71 from e1 at a distance of 7.07
+434:0 s1 gained 2.83 from e1 at a distance of 28.28
+434:0 s2 gained 2.12 from e1 at a distance of 21.21
+434:0 r1 failed to receive p225 because it needed 10 but had 0.00
+434:1 e1 recharged by 9.56 now has 9.56
+435:0 r1 gained 1.41 from e1 at a distance of 14.14
+435:0 r2 gained 0.71 from e1 at a distance of 7.07
+435:0 s1 gained 2.83 from e1 at a distance of 28.28
+435:0 s2 gained 2.12 from e1 at a distance of 21.21
+435:0 e1 recharged by 9.56 now has 9.56
+436:0 r1 gained 1.41 from e1 at a distance of 14.14
+436:0 r2 gained 0.71 from e1 at a distance of 7.07
+436:0 s1 gained 2.83 from e1 at a distance of 28.28
+436:0 s2 gained 2.12 from e1 at a distance of 21.21
+436:0 e1 recharged by 9.56 now has 9.56
+437:0 r1 gained 1.41 from e1 at a distance of 14.14
+437:0 r2 gained 0.71 from e1 at a distance of 7.07
+437:0 s1 gained 2.83 from e1 at a distance of 28.28
+437:0 s2 gained 2.12 from e1 at a distance of 21.21
+437:0 e1 recharged by 9.56 now has 9.56
+438:0 r1 gained 1.41 from e1 at a distance of 14.14
+438:0 r2 gained 0.71 from e1 at a distance of 7.07
+438:0 s1 gained 2.83 from e1 at a distance of 28.28
+438:0 s2 gained 2.12 from e1 at a distance of 21.21
+438:0 r1 failed to receive p226 because it needed 10 but had 0.00
+438:0 r1 failed to receive p227 because it needed 10 but had 0.00
+438:1 e1 recharged by 9.56 now has 9.56
+439:0 r1 gained 1.41 from e1 at a distance of 14.14
+439:0 r2 gained 0.71 from e1 at a distance of 7.07
+439:0 s1 gained 2.83 from e1 at a distance of 28.28
+439:0 s2 gained 2.12 from e1 at a distance of 21.21
+439:0 e1 recharged by 9.56 now has 9.56
+440:0 r1 gained 1.41 from e1 at a distance of 14.14
+440:0 r2 gained 0.71 from e1 at a distance of 7.07
+440:0 s1 gained 2.83 from e1 at a distance of 28.28
+440:0 s2 gained 2.12 from e1 at a distance of 21.21
+440:0 e1 recharged by 9.56 now has 9.56
+441:0 r1 gained 1.41 from e1 at a distance of 14.14
+441:0 r2 gained 0.71 from e1 at a distance of 7.07
+441:0 s1 gained 2.83 from e1 at a distance of 28.28
+441:0 s2 gained 2.12 from e1 at a distance of 21.21
+441:0 r1 failed to receive p228 because it needed 10 but had 0.00
+441:1 e1 recharged by 9.56 now has 9.56
+442:0 r1 gained 1.41 from e1 at a distance of 14.14
+442:0 r2 gained 0.71 from e1 at a distance of 7.07
+442:0 s1 gained 2.83 from e1 at a distance of 28.28
+442:0 s2 gained 2.12 from e1 at a distance of 21.21
+442:0 e1 recharged by 9.56 now has 9.56
+443:0 r1 gained 1.41 from e1 at a distance of 14.14
+443:0 r2 gained 0.71 from e1 at a distance of 7.07
+443:0 s1 gained 2.83 from e1 at a distance of 28.28
+443:0 s2 gained 2.12 from e1 at a distance of 21.21
+443:0 r1 failed to receive p229 because it needed 10 but had 0.00
+443:1 e1 recharged by 9.56 now has 9.56
+444:0 r1 gained 1.41 from e1 at a distance of 14.14
+444:0 r2 gained 0.71 from e1 at a distance of 7.07
+444:0 s1 gained 2.83 from e1 at a distance of 28.28
+444:0 s2 gained 2.12 from e1 at a distance of 21.21
+444:0 e1 recharged by 9.56 now has 9.56
+445:0 r1 gained 1.41 from e1 at a distance of 14.14
+445:0 r2 gained 0.71 from e1 at a distance of 7.07
+445:0 s1 gained 2.83 from e1 at a distance of 28.28
+445:0 s2 gained 2.12 from e1 at a distance of 21.21
+445:0 r1 failed to receive p230 because it needed 10 but had 0.00
+445:1 e1 recharged by 9.56 now has 9.56
+446:0 r1 gained 1.41 from e1 at a distance of 14.14
+446:0 r2 gained 0.71 from e1 at a distance of 7.07
+446:0 s1 gained 2.83 from e1 at a distance of 28.28
+446:0 s2 gained 2.12 from e1 at a distance of 21.21
+446:0 e1 recharged by 9.56 now has 9.56
+447:0 r1 gained 1.41 from e1 at a distance of 14.14
+447:0 r2 gained 0.71 from e1 at a distance of 7.07
+447:0 s1 gained 2.83 from e1 at a distance of 28.28
+447:0 s2 gained 2.12 from e1 at a distance of 21.21
+447:0 r1 failed to receive p231 because it needed 10 but had 0.00
+447:1 e1 recharged by 9.56 now has 9.56
+448:0 r1 gained 1.41 from e1 at a distance of 14.14
+448:0 r2 gained 0.71 from e1 at a distance of 7.07
+448:0 s1 gained 2.83 from e1 at a distance of 28.28
+448:0 s2 gained 2.12 from e1 at a distance of 21.21
+448:0 e1 recharged by 9.56 now has 9.56
+449:0 r1 gained 1.41 from e1 at a distance of 14.14
+449:0 r2 gained 0.71 from e1 at a distance of 7.07
+449:0 s1 gained 2.83 from e1 at a distance of 28.28
+449:0 s2 gained 2.12 from e1 at a distance of 21.21
+449:0 r1 failed to receive p232 because it needed 10 but had 0.00
+449:1 e1 recharged by 9.56 now has 9.56
+450:0 r1 gained 1.41 from e1 at a distance of 14.14
+450:0 r2 gained 0.71 from e1 at a distance of 7.07
+450:0 s1 gained 2.83 from e1 at a distance of 28.28
+450:0 s2 gained 2.12 from e1 at a distance of 21.21
+450:0 e1 recharged by 9.56 now has 9.56
+451:0 r1 gained 1.41 from e1 at a distance of 14.14
+451:0 r2 gained 0.71 from e1 at a distance of 7.07
+451:0 s1 gained 2.83 from e1 at a distance of 28.28
+451:0 s2 gained 2.12 from e1 at a distance of 21.21
+451:0 e1 recharged by 9.56 now has 9.56
+452:0 r1 gained 1.41 from e1 at a distance of 14.14
+452:0 r2 gained 0.71 from e1 at a distance of 7.07
+452:0 s1 gained 2.83 from e1 at a distance of 28.28
+452:0 s2 gained 2.12 from e1 at a distance of 21.21
+452:0 r1 failed to receive p233 because it needed 10 but had 0.00
+452:0 r1 failed to receive p234 because it needed 10 but had 0.00
+452:1 e1 recharged by 9.56 now has 9.56
+453:0 r1 gained 1.41 from e1 at a distance of 14.14
+453:0 r2 gained 0.71 from e1 at a distance of 7.07
+453:0 s1 gained 2.83 from e1 at a distance of 28.28
+453:0 s2 gained 2.12 from e1 at a distance of 21.21
+453:0 e1 recharged by 9.56 now has 9.56
+454:0 r1 gained 1.41 from e1 at a distance of 14.14
+454:0 r2 gained 0.71 from e1 at a distance of 7.07
+454:0 s1 gained 2.83 from e1 at a distance of 28.28
+454:0 s2 gained 2.12 from e1 at a distance of 21.21
+454:0 e1 recharged by 9.56 now has 9.56
+455:0 r1 gained 1.41 from e1 at a distance of 14.14
+455:0 r2 gained 0.71 from e1 at a distance of 7.07
+455:0 s1 gained 2.83 from e1 at a distance of 28.28
+455:0 s2 gained 2.12 from e1 at a distance of 21.21
+455:0 e1 recharged by 9.56 now has 9.56
+456:0 r1 gained 1.41 from e1 at a distance of 14.14
+456:0 r2 gained 0.71 from e1 at a distance of 7.07
+456:0 s1 gained 2.83 from e1 at a distance of 28.28
+456:0 s2 gained 2.12 from e1 at a distance of 21.21
+456:0 r1 failed to receive p235 because it needed 10 but had 0.00
+456:1 e1 recharged by 9.56 now has 9.56
+457:0 r1 gained 1.41 from e1 at a distance of 14.14
+457:0 r2 gained 0.71 from e1 at a distance of 7.07
+457:0 s1 gained 2.83 from e1 at a distance of 28.28
+457:0 s2 gained 2.12 from e1 at a distance of 21.21
+457:0 r1 failed to receive p236 because it needed 10 but had 0.00
+457:1 e1 recharged by 9.56 now has 9.56
+458:0 r1 gained 1.41 from e1 at a distance of 14.14
+458:0 r2 gained 0.71 from e1 at a distance of 7.07
+458:0 s1 gained 2.83 from e1 at a distance of 28.28
+458:0 s2 gained 2.12 from e1 at a distance of 21.21
+458:0 e1 recharged by 9.56 now has 9.56
+459:0 r1 gained 1.41 from e1 at a distance of 14.14
+459:0 r2 gained 0.71 from e1 at a distance of 7.07
+459:0 s1 gained 2.83 from e1 at a distance of 28.28
+459:0 s2 gained 2.12 from e1 at a distance of 21.21
+459:0 r1 failed to receive p237 because it needed 10 but had 0.00
+459:1 e1 recharged by 9.56 now has 9.56
+460:0 r1 gained 1.41 from e1 at a distance of 14.14
+460:0 r2 gained 0.71 from e1 at a distance of 7.07
+460:0 s1 gained 2.83 from e1 at a distance of 28.28
+460:0 s2 gained 2.12 from e1 at a distance of 21.21
+460:0 e1 recharged by 9.56 now has 9.56
+461:0 r1 gained 1.41 from e1 at a distance of 14.14
+461:0 r2 gained 0.71 from e1 at a distance of 7.07
+461:0 s1 gained 2.83 from e1 at a distance of 28.28
+461:0 s2 gained 2.12 from e1 at a distance of 21.21
+461:0 r1 failed to receive p238 because it needed 10 but had 0.00
+461:1 e1 recharged by 9.56 now has 9.56
+462:0 r1 gained 1.41 from e1 at a distance of 14.14
+462:0 r2 gained 0.71 from e1 at a distance of 7.07
+462:0 s1 gained 2.83 from e1 at a distance of 28.28
+462:0 s2 gained 2.12 from e1 at a distance of 21.21
+462:0 e1 recharged by 9.56 now has 9.56
+463:0 r1 gained 1.41 from e1 at a distance of 14.14
+463:0 r2 gained 0.71 from e1 at a distance of 7.07
+463:0 s1 gained 2.83 from e1 at a distance of 28.28
+463:0 s2 gained 2.12 from e1 at a distance of 21.21
+463:0 r1 failed to receive p239 because it needed 10 but had 0.00
+463:1 e1 recharged by 9.56 now has 9.56
+464:0 r1 gained 1.41 from e1 at a distance of 14.14
+464:0 r2 gained 0.71 from e1 at a distance of 7.07
+464:0 s1 gained 2.83 from e1 at a distance of 28.28
+464:0 s2 gained 2.12 from e1 at a distance of 21.21
+464:0 e1 recharged by 9.56 now has 9.56
+465:0 r1 gained 1.41 from e1 at a distance of 14.14
+465:0 r2 gained 0.71 from e1 at a distance of 7.07
+465:0 s1 gained 2.83 from e1 at a distance of 28.28
+465:0 s2 gained 2.12 from e1 at a distance of 21.21
+465:0 e1 recharged by 9.56 now has 9.56
+466:0 r1 gained 1.41 from e1 at a distance of 14.14
+466:0 r2 gained 0.71 from e1 at a distance of 7.07
+466:0 s1 gained 2.83 from e1 at a distance of 28.28
+466:0 s2 gained 2.12 from e1 at a distance of 21.21
+466:0 r1 failed to receive p240 because it needed 10 but had 0.00
+466:0 r1 failed to receive p241 because it needed 10 but had 0.00
+466:1 e1 recharged by 9.56 now has 9.56

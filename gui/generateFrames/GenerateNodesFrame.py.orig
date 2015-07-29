@@ -39,4 +39,8 @@ class GenerateNodesFrame(Frame):
 
 
     def on_edit(self):
+<<<<<<< HEAD
         webbrowser.open(Inventory.GENERATE_NODES_PROTOCOL_FILENAME)
+=======
+        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.GENERATE_NODES_PROTOCOL_FILENAME)
+>>>>>>> origin/development
