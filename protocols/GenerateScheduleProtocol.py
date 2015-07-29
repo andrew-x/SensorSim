@@ -15,7 +15,7 @@ class GenerateScheduleProtocol:
 
         DO NOT MODIFY
         '''
-        with open(os.path.split(os.path.abspath(os.path.dirname(__file__)))[0] + "//SCHEDULE.txt", "w") as f:
+        with open(os.path.split(os.path.abspath(os.path.dirname(__file__)))[0] + "//input//SCHEDULE.txt", "w") as f:
             [f.write(n) for n in self.schedule]
             f.close()
 
