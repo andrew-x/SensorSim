@@ -1,2 +1,2 @@
-Average Period Length
-1.01
+Average Period Length,Packet Count,Lost Packets Count,Packet Loss Rate,Average Dead Nodes,Average energy recharged
+0.37,64,44,68.75,0.20,7.07

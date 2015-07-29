@@ -18,6 +18,8 @@ from gui.generateFrames.GenerateScheduleFrame import *
 from core.Controller import *
 from gui.GraphFrame import *
 
+from tkinter import ttk
+
 import _thread
 import time
 import os
@@ -76,7 +78,6 @@ class MainFrame(Frame):
         file_menu.add_command(label='Edit Schedule', command=self.open_schedule)
         file_menu.add_command(label='Edit Settings ', command=self.open_settings)
         file_menu.add_command(label='Reset', command=self.reset)
-        file_menu.add_command(label='Export Data ', command=self.export_data)
         file_menu.add_command(label='Exit', command=self.exit)
         menubar.add_cascade(label='File', menu=file_menu)
 
@@ -93,6 +94,11 @@ class MainFrame(Frame):
         view_menu.add_command(label='View Sensors Information', command=self.view_sensors_info)
         view_menu.add_command(label='View Relays Information', command=self.view_relays_info)
         menubar.add_cascade(label='View', menu=view_menu)
+
+        export_menu = Menu(menubar, tearoff=1)
+        export_menu.add_command(label='Export Data ', command=self.export_data)
+        export_menu.add_command(label='Export Standard Graph', command=self.export_standard_graph)
+        menubar.add_cascade(label='Export', menu=export_menu)
 
         generate_menu = Menu(menubar, tearoff=1)
         generate_menu.add_command(label='Generate Nodes', command=self.generate_nodes)
@@ -113,13 +119,15 @@ class MainFrame(Frame):
         self.period_label.grid(row=1, column=0, columnspan=3)
 
         self.play_button = Button(self.master, text='Play', command=self.on_play)
-        self.play_button.grid(row=2, column=0, pady=10, padx=5)
+        self.play_button.grid(row=2, column=1, pady=10)
 
         self.step_through_button = Button(self.master, text='Step Through', command=self.on_step)
-        self.step_through_button .grid(row=2, column=1, pady=10, padx=15)
+        self.step_through_button .grid(row=3, column=1, pady=10)
 
         self.next_period_button = Button(self.master, text='Next Period', command=self.on_next_period)
-        self.next_period_button.grid(row=2, column=2, pady=10, padx=5)
+        self.next_period_button.grid(row=4, column=1, pady=10)
+
+        ttk.Separator(self.master, orient=HORIZONTAL).grid(row=5, columnspan=3, sticky="ew")
 
         self.graph = GraphFrame(self.master)
 
@@ -128,7 +136,8 @@ class MainFrame(Frame):
     # CONTROL OPTIONS
     def refresh(self):
         self.refresh_labels()
-        self.graph.refresh(self.mode)
+        if self.mode is Inventory.STEP_THROUGH_MODE:
+            self.graph.refresh(self.mode)
         # self.refresh_info_frames()
 
     def refresh_info_frames(self):
@@ -137,7 +146,10 @@ class MainFrame(Frame):
             self.relays_info_frame.set_widgets()
 
     def refresh_labels(self):
-        self.scheduled_label_text.set('Scheduled: ' + ', '.join(x for x in self.control.get_scheduled()))
+        if self.mode is Inventory.PLAY_MODE:
+            self.scheduled_label_text.set("")
+        else:
+            self.scheduled_label_text.set('Scheduled: ' + ', '.join(x for x in self.control.get_scheduled()))
         self.period_label_text.set('Completed Periods: ' + str(Inventory.PERIOD_COUNT))
 
     def on_play(self):
@@ -219,13 +231,13 @@ class MainFrame(Frame):
         root.destroy()
 
     def open_nodes(self):
-        os.system("start " + Inventory.NODES_FILENAME)
+        os.startfile(Inventory.NODES_FILENAME)
 
     def open_schedule(self):
-        os.system("start " + Inventory.SCHEDULE_FILENAME)
+        os.startfile(Inventory.SCHEDULE_FILENAME)
 
     def open_settings(self):
-        os.system("start " + Inventory.SETTINGS_FILENAME)
+        os.startfile(Inventory.SETTINGS_FILENAME)
 
     def reset(self):
         self.control = Controller()
@@ -239,6 +251,9 @@ class MainFrame(Frame):
             StandardModals.error_message("Cannot export when no periods have been completed")
         except PermissionError:
             StandardModals.error_message("Invalid permission to write to output location")
+
+    def export_standard_graph(self):
+        self.control.export_standard_graph()
 
     def generate_nodes(self):
         GenerateNodesFrame()

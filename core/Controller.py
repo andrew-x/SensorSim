@@ -11,6 +11,9 @@ from core.Debug import *
 from core.Audit import *
 from decimal import Decimal
 import csv, math, random
+import pygraphviz as pgv
+import pydotplus, pydot
+import graphviz as gv
 
 
 class Controller():
@@ -24,6 +27,8 @@ class Controller():
 
     dead_nodes = []
     dropped_packets = []
+    dead_nodes_count = 0
+    recharged_count = 0
 
     period_limit = -1
 
@@ -68,8 +73,11 @@ class Controller():
                 except DoneScheduleException:
                     break
         else:
-            for i in range(Inventory.SCHEDULE_INDEX, len(Inventory.SCHEDULE)):
-                self.step_through()
+            while True:
+                try:
+                    self.step_through()
+                except DoneScheduleException:
+                    break;
             self.fire()
 
     def step_through(self):
@@ -78,24 +86,28 @@ class Controller():
 
         Runs scheduled slot
         """
-        if not self.period_initialized:
-            self.dead_nodes = []
-            self.energize()
-            self.generate_packets()
-            self.period_initialized = True
-        if not self.done_schedule():
-            self.run_slot()
-            Inventory.SCHEDULE_INDEX += 1
-            if Inventory.SCHEDULE_INDEX >= len(Inventory.SCHEDULE):
+        try:
+            if not self.period_initialized:
+                self.dead_nodes = []
+                self.energize()
+                self.generate_packets()
+                self.period_initialized = True
+            if not self.done_schedule():
+                self.run_slot()
+                Inventory.SCHEDULE_INDEX += 1
+                if Inventory.SCHEDULE_INDEX >= len(Inventory.SCHEDULE):
+                    Inventory.SCHEDULE_INDEX = 0
+                self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
+            else:
+                self.collect_energy()
+                Inventory.PERIOD_COUNT += 1
+                self.period_initialized = False
                 Inventory.SCHEDULE_INDEX = 0
-            self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
-        if self.done_schedule():
-            self.collect_energy()
-            Inventory.PERIOD_COUNT += 1
-            self.period_initialized = False
-            Inventory.SCHEDULE_INDEX = 0
-            self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
-            raise DoneScheduleException
+                self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
+                self.dead_nodes_count += len(self.dead_nodes)
+                raise DoneScheduleException
+        finally:
+            Audit.audit_nodes_history()
 
     def done_schedule(self):
         """
@@ -119,11 +131,13 @@ class Controller():
                 dist = math.sqrt(abs(r.get_x() - e.get_x()) ** 2 + abs(r.get_x() - e.get_y()) ** 2)
                 to_charge = e.energize(dist)
                 r.recharge(to_charge)
+                self.recharged_count += to_charge
                 Audit.audit_recharge(r.get_id(), e.get_id(), to_charge, dist)
             for s in Inventory.SENSORS:
                 dist = math.sqrt(abs(s.get_x() - e.get_x()) ** 2 + abs(s.get_x() - e.get_y()) ** 2)
                 to_charge = e.energize(dist)
                 s.recharge(to_charge)
+                self.recharged_count += to_charge
                 Audit.audit_recharge(s.get_id(), e.get_id(), to_charge, dist)
 
     def collect_energy(self):
@@ -212,11 +226,11 @@ class Controller():
                     except NotEnoughEnergyException:
                         self.dead_nodes += [parent_id]
                         Inventory.FAILED_LINKS += [sender_id]
-
                         Audit.audit_receive_fail(parent_id, receiver.get_battery(),
                                                  receiver.get_e_use_in(), packet_id)
 
                         receiver.increment_receive_lost_count()
+                        Inventory.PACKET_LOST_COUNT += 1
                         packet.set_lost()
 
     def export_data(self):
@@ -229,68 +243,76 @@ class Controller():
             raise NullPeriodException
 
         data = []
-        data += [['Id', 'Origin', 'Current', 'Delivered', 'Lost', 'Lost at', 'Hop Count']]
+        data += [Inventory.get_packet_export_index()]
         for p in Inventory.PACKETS:
-            data += [[p.get_id(), p.get_origin(), p.get_current(), str(p.get_delivered()),
-                      str(p.get_lost()), p.get_lost_at(), str(p.get_hop_count())]]
-
+            data += [Inventory.get_packet_export(p)]
         with open(Inventory.EXPORT_ROOT + 'packets.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
+            f.close()
 
         data = []
-        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Gather Rate', 'Recharge Rate']]
+        data += [Inventory.get_energizer_export_index()]
         for e in Inventory.ENERGIZERS:
-            data += [[e.get_id(), e.get_x(), e.get_y(), e.get_range(), Inventory.f_str(e.get_battery()),
-                      e.get_gather_rate(), e.get_recharge_rate()]]
+            data += [Inventory.get_energizer_export(e)]
         with open(Inventory.EXPORT_ROOT + 'energizers.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
+            f.close()
 
         data = []
-        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use in', 'Energy use out', 'Parent',
-                  'Send tries', 'Send fails', 'Send success rate', 'Receive tries', 'Receive fails',
-                  'Receive success rate', 'Battery average', 'Lifetime']]
+        data += [Inventory.get_relay_export_index()]
         for r in Inventory.RELAYS:
-            data += [[r.get_id(), r.get_x(), r.get_y(), r.get_range(), Inventory.f_str(r.get_battery()),
-                      r.get_e_use_in(),
-                      r.get_e_use_out(), r.get_parent(), r.get_send_count(), r.get_send_lost_count(),
-                      Inventory.f_str(r.get_send_success_rate()),
-                      r.get_receive_count(), r.get_receive_lost_count(), Inventory.f_str(r.get_receive_success_rate()),
-                      Inventory.f_str(r.get_energy_average()), r.get_lifetime()]]
+            data += [Inventory.get_relay_export(r)]
         with open(Inventory.EXPORT_ROOT + 'relays.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
+            f.close()
 
         data = []
-        data += [['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use out', 'Parent', 'Send tries', 'Send fails',
-                  'Send success rate', 'Battery average', 'Lifetime']]
+        data += [Inventory.get_sensor_export_index()]
         for s in Inventory.SENSORS:
-            data += [[s.get_id(), s.get_x(), s.get_y(), s.get_range(), Inventory.f_str(s.get_battery()),
-                      s.get_e_use_out(),
-                      s.get_parent(),
-                      s.get_send_count(), s.get_send_lost_count(), Inventory.f_str(s.get_send_success_rate()),
-                      s.get_energy_average(),
-                      s.get_lifetime()]]
+            data += [Inventory.get_sensor_export(s)]
         with open(Inventory.EXPORT_ROOT + 'sensors.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
+            f.close()
 
         data = []
-        data += [['Id', 'X', 'Y']]
+        data += [Inventory.get_sink_export_index()]
         for s in Inventory.SINKS:
-            data += [[s.get_id(), s.get_x(), s.get_y()]]
+            data += [Inventory.get_sink_export(s)]
         with open(Inventory.EXPORT_ROOT + 'sinks.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
+            f.close()
 
         data = []
-        data += [['Average Period Length']]
+        data += [['Average Period Length', 'Packet Count', 'Lost Packets Count', 'Packet Loss Rate',
+                  'Average Dead Nodes', 'Average energy recharged']]
         avg_period_length = self.schedule_run_count / Inventory.PERIOD_COUNT
-        data += [[Inventory.f_str(avg_period_length)]]
+        packet_lost_rate = Inventory.PACKET_LOST_COUNT / len(Inventory.PACKETS) * 100
+        avg_dead_nodes = self.dead_nodes_count / Inventory.PERIOD_COUNT
+        avg_energy_recharged = self.recharged_count / Inventory.PERIOD_COUNT
+        data += [[Inventory.f_str(avg_period_length), str(len(Inventory.PACKETS)), str(Inventory.PACKET_LOST_COUNT),
+                  Inventory.f_str(packet_lost_rate), Inventory.f_str(avg_dead_nodes),
+                 Inventory.f_str(avg_energy_recharged)]]
         with open(Inventory.EXPORT_ROOT + 'simulation.csv', 'w', newline='') as f:
             writer = csv.writer(f, delimiter=',')
             writer.writerows(data)
+            f.close()
+
+    def export_standard_graph(self):
+        graph = pydot.Dot('graphname', graph_type='digraph')
+        pmo100 = pydot.Node("PMO-100")
+        sa300 = pydot.Node("SA-300")
+        sa100 = pydot.Node("SA-100")
+        sa200 = pydot.Node("SA-200")
+        graph.add_edge(pydot.Edge(pmo100, sa300))
+        graph.add_edge(pydot.Edge(sa100, sa300))
+        graph.add_edge(pydot.Edge(sa100, sa200))
+        graph.add_edge(pydot.Edge(pmo100, sa100))
+        graph.create('example1_graph.png')
 
     # SETTERS AND GETTERS
 

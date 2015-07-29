@@ -32,7 +32,9 @@ class Energizer(Node):
         Gathers energy
         """
         random.seed(seed)
-        self.battery += self.gather_rate * random.random()
+        gather_amount = self.gather_rate * random.random()
+        self.battery += gather_amount
+        return gather_amount
 
     def energize(self, dist):
         """

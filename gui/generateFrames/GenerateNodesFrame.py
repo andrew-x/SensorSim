@@ -5,7 +5,7 @@ from core.Inventory import *
 
 import sys
 import py_compile
-
+import webbrowser
 
 class GenerateNodesFrame(Frame):
     master = None
@@ -39,4 +39,4 @@ class GenerateNodesFrame(Frame):
 
 
     def on_edit(self):
-        os.system("start " + Inventory.GENERATE_NODES_PROTOCOL_FILENAME)
+        webbrowser.open(Inventory.GENERATE_NODES_PROTOCOL_FILENAME)

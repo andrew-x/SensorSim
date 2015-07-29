@@ -5,13 +5,12 @@ from core.Inventory import *
 
 import sys
 import py_compile
+import webbrowser
 
 
 class GenerateScheduleFrame(Frame):
     master = None
-
     textArea = None
-
     base = []
 
     def __init__(self):
@@ -39,4 +38,4 @@ class GenerateScheduleFrame(Frame):
 
 
     def on_edit(self):
-        os.system("start " + Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)
+        webbrowser.open(Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)

@@ -8,6 +8,8 @@ from datatypes.Sensor import *
 from datatypes.Packet import *
 from decimal import Decimal
 
+import unittest
+
 class Inventory():
     """
     Contains all constants and static variables of the simulation.
@@ -69,6 +71,7 @@ class Inventory():
     SCHEDULE = []
     SUCCESSFUL_LINKS = []
     FAILED_LINKS = []
+    NODES_TO_AUDIT = ['e1']
 
     SINKS = []
     ENERGIZERS = []
@@ -79,6 +82,8 @@ class Inventory():
 
     PERIOD_COUNT = 0
     SCHEDULE_INDEX = 0
+
+    PACKET_LOST_COUNT = 0
 
     @staticmethod
     def load_settings():
@@ -164,6 +169,19 @@ class Inventory():
             Inventory.SCHEDULE += [slot]
 
     @staticmethod
+    def get_all_nodes():
+        out = []
+        for e in Inventory.ENERGIZERS:
+            out += [e]
+        for s in Inventory.SENSORS:
+            out += [s]
+        for r in Inventory.RELAYS:
+            out += [r]
+        for s in Inventory.SINKS:
+            out += [s]
+        return out
+
+    @staticmethod
     def find_node(target):
         if target[0] == Inventory.TYPE_SINK:
             return Inventory.SINKS[Inventory.find_sink(target)]
@@ -242,6 +260,57 @@ class Inventory():
         else:
             raise NotFoundException
         return Inventory.PACKETS[pos]
+
+    @staticmethod
+    def get_packet_export_index():
+        return ['Id', 'Origin', 'Current', 'Delivered', 'Lost', 'Lost at', 'Hop Count']
+
+    @staticmethod
+    def get_energizer_export_index():
+        return ['Id', 'X', 'Y', 'Range', 'Battery', 'Gather Rate', 'Recharge Rate']
+
+    @staticmethod
+    def get_relay_export_index():
+        return ['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use in', 'Energy use out', 'Parent',
+                'Send tries', 'Send fails', 'Send success rate', 'Receive tries', 'Receive fails',
+                'Receive success rate', 'Battery average', 'Lifetime']
+
+    @staticmethod
+    def get_sensor_export_index():
+        return ['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use out', 'Parent', 'Send tries', 'Send fails',
+                'Send success rate', 'Battery average', 'Lifetime']
+
+    @staticmethod
+    def get_sink_export_index():
+        return ['Id', 'X', 'Y']
+
+    @staticmethod
+    def get_packet_export(p):
+        return [p.get_id(), p.get_origin(), p.get_current(), str(p.get_delivered()),
+                str(p.get_lost()), p.get_lost_at(), str(p.get_hop_count())]
+
+    @staticmethod
+    def get_sensor_export(s):
+        return [s.get_id(), s.get_x(), s.get_y(), s.get_range(), Inventory.f_str(s.get_battery()),
+                s.get_e_use_out(), s.get_parent(),s.get_send_count(), s.get_send_lost_count(),
+                Inventory.f_str(s.get_send_success_rate()), s.get_energy_average(), s.get_lifetime()]
+
+    @staticmethod
+    def get_energizer_export(e):
+        return [e.get_id(), e.get_x(), e.get_y(), e.get_range(), Inventory.f_str(e.get_battery()),
+                e.get_gather_rate(), e.get_recharge_rate()]
+
+    @staticmethod
+    def get_relay_export(r):
+        return [r.get_id(), r.get_x(), r.get_y(), r.get_range(), Inventory.f_str(r.get_battery()),
+                r.get_e_use_in(), r.get_e_use_out(), r.get_parent(), r.get_send_count(), r.get_send_lost_count(),
+                Inventory.f_str(r.get_send_success_rate()), r.get_receive_count(), r.get_receive_lost_count(),
+                Inventory.f_str(r.get_receive_success_rate()), Inventory.f_str(r.get_energy_average()),
+                r.get_lifetime()]
+
+    @staticmethod
+    def get_sink_export(s):
+        return [s.get_id(), s.get_x(), s.get_y()]
 
     @staticmethod
     def convert_values(to_convert):
