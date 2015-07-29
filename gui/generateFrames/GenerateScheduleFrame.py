@@ -33,7 +33,7 @@ class GenerateScheduleFrame(Frame):
         Button(self.master, text='Edit', command=self.on_edit).grid()
 
     def on_run(self):
-        os.system("python " + Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)
+        os.system(("python " if os.name == 'nt' else "python3 ") + Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)
         Inventory.load_schedule()
 
 

@@ -1,3 +1,3 @@
 Id,X,Y,Range,Battery,Energy use in,Energy use out,Parent,Send tries,Send fails,Send success rate,Receive tries,Receive fails,Receive success rate,Battery average,Lifetime
-r1,15,15,100,11.13,10,10,i1,20,0,100.00,20,44,-120.00,14.75,20
-r2,20,20,100,255.56,10,10,i1,0,0,100.00,0,0,100.00,158.12,0
+r1,15,15,100,0.00,10,10,i1,6,0,100.00,6,235,-3816.67,39.50,6
+r2,20,20,100,430.22,10,10,i1,0,0,100.00,0,0,100.00,101.41,0

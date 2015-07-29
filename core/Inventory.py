@@ -19,17 +19,14 @@ class Inventory():
     AUDIT_MODE = True
 
     ROOT = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
-    EXPORT_ROOT = ROOT + '//Generated//'
-    SETTINGS_FILENAME = os.path.join(ROOT, "input//SETTINGS.txt")
-    NODES_FILENAME = os.path.join(ROOT, "input//NODES.txt")
-    SCHEDULE_FILENAME = os.path.join(ROOT, "input//SCHEDULE.txt")
+    EXPORT_ROOT = ROOT + ('//Generated//' if os.name == 'nt' else '/generated/')
+    SETTINGS_FILENAME = os.path.join(ROOT, "input//SETTINGS.txt" if os.name == 'nt' else "input/SETTINGS.txt")
+    NODES_FILENAME = os.path.join(ROOT, "input//NODES.txt" if os.name == 'nt' else "input/NODES.txt")
+    SCHEDULE_FILENAME = os.path.join(ROOT, "input//SCHEDULE.txt" if os.name == 'nt' else "input/SCHEDULE.txt")
 
-    GENERATE_NODES_PROTOCOL_FILENAME = os.path.join(ROOT,
-                                                    "protocols//GenerateNodesProtocol.py")
-    GENERATE_SCHEDULE_PROTOCOL_FILENAME = os.path.join(ROOT,
-                                                    "protocols//GenerateScheduleProtocol.py")
-    GENERATE_NODES_PROTOCOL_PYC_FILENAME = os.path.join(ROOT,
-                                                        "protocols//__pycache__//GenerateNodesProtocol.cpython-34.pyc")
+    GENERATE_NODES_PROTOCOL_FILENAME = os.path.join(ROOT, "protocols//GenerateNodesProtocol.py" if os.name == 'nt' else "protocols/GenerateNodesProtocol.py")
+    GENERATE_SCHEDULE_PROTOCOL_FILENAME = os.path.join(ROOT, "protocols//GenerateScheduleProtocol.py" if os.name == 'nt' else "protocols/GenerateScheduleProtocol.py")
+    GENERATE_NODES_PROTOCOL_PYC_FILENAME = os.path.join(ROOT, "protocols//__pycache__//GenerateNodesProtocol.cpython-34.pyc"  if os.name == 'nt' else "protocols/__pycache__/GenerateNodesProtocol.cpython-34.pyc")
 
     # Settings
 
