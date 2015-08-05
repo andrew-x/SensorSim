@@ -26,7 +26,6 @@ class Inventory():
 
     GENERATE_NODES_PROTOCOL_FILENAME = os.path.join(ROOT, "protocols//GenerateNodesProtocol.py" if os.name == 'nt' else "protocols/GenerateNodesProtocol.py")
     GENERATE_SCHEDULE_PROTOCOL_FILENAME = os.path.join(ROOT, "protocols//GenerateScheduleProtocol.py" if os.name == 'nt' else "protocols/GenerateScheduleProtocol.py")
-    GENERATE_NODES_PROTOCOL_PYC_FILENAME = os.path.join(ROOT, "protocols//__pycache__//GenerateNodesProtocol.cpython-34.pyc"  if os.name == 'nt' else "protocols/__pycache__/GenerateNodesProtocol.cpython-34.pyc")
 
     # Settings
 
