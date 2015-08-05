@@ -11,6 +11,8 @@ class Audit():
 
     @staticmethod
     def set_up():
+        if not os.path.exists(Inventory.EXPORT_ROOT):
+            os.makedirs(Inventory.EXPORT_ROOT)
         with open(Inventory.EXPORT_ROOT + 'simulation_log.txt', 'w') as f:
             f.close()
 

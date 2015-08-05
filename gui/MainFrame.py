@@ -47,7 +47,6 @@ class MainFrame(Frame):
 
         try:
             self.control = Controller()
-            print(Inventory.NODES_TO_AUDIT)
         except ImproperSettingsException:
             print("Invalid Settings File")
             StandardModals.error_message("Invalid Settings File")
