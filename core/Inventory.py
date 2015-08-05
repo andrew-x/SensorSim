@@ -32,22 +32,12 @@ class Inventory():
 
     SCALE_FACTOR = 5
 
+    NODES_TO_AUDIT = ['e1']
+
     X_SIZE = 0
     Y_SIZE = 0
     SEED = 0
     REFRESH_DELAY = 0
-
-    NEUTRAL_MODE = 0
-    PLAY_MODE = 1
-    STEP_THROUGH_MODE = 2
-    PERIOD_MODE = 3
-
-    # Constants
-
-    TYPE_SINK = 'i'
-    TYPE_RELAY = 'r'
-    TYPE_SENSOR = 's'
-    TYPE_ENERGIZER = 'e'
 
     COLOR_SINK = 'blue'
     COLOR_RELAY = 'red'
@@ -57,6 +47,18 @@ class Inventory():
     COLOR_LINK_DEFAULT = 'purple'
     COLOR_LINK_SUCCESS = 'green'
     COLOR_LINK_FAIL = 'red'
+
+    # Constants
+
+    TYPE_SINK = 'i'
+    TYPE_RELAY = 'r'
+    TYPE_SENSOR = 's'
+    TYPE_ENERGIZER = 'e'
+
+    NEUTRAL_MODE = 0
+    PLAY_MODE = 1
+    STEP_THROUGH_MODE = 2
+    PERIOD_MODE = 3
 
     UPDATE_TYPE_SEND_SUCCESS = 1
     UPDATE_TYPE_SEND_FAIL = 2
@@ -68,7 +70,6 @@ class Inventory():
     SCHEDULE = []
     SUCCESSFUL_LINKS = []
     FAILED_LINKS = []
-    NODES_TO_AUDIT = ['e1']
 
     SINKS = []
     ENERGIZERS = []
@@ -93,26 +94,65 @@ class Inventory():
         y_size = -1
         seed = -1
         refresh_delay = -1
+
+        nodes_to_audit = []
+
+        color_sink = ''
+        color_relay = ''
+        color_sensor = ''
+        color_energizer = ''
+        color_link_default = ''
+        color_link_success = ''
+        color_link_fail = ''
+
         with open(Inventory.SETTINGS_FILENAME) as f:
             content = f.readlines()
         for l in content:
             l = l.strip()
-            val = Decimal(l[l.index(':') + 1:])
+            val = l[l.index(':') + 1:]
+            print(val)
             if 'X_SIZE' in l:
-                x_size = val
+                x_size = Decimal(val)
             elif 'Y_SIZE' in l:
-                y_size = val
+                y_size = Decimal(val)
             elif 'SEED' in l:
-                seed = val
+                seed = Decimal(val)
             elif 'REFRESH_DELAY' in l:
-                refresh_delay = val
-        if x_size is not -1 and y_size is not -1 and seed is not -1 and refresh_delay is not -1:
+                refresh_delay = Decimal(val)
+            elif 'NODES_TO_AUDIT' in l:
+                nodes_to_audit = val.split(" ")
+            elif 'COLOR_SINK' in l:
+                color_sink = val
+            elif 'COLOR_RELAY' in l:
+                color_relay = val
+            elif 'COLOR_SENSOR' in l:
+                color_sensor = val
+            elif 'COLOR_ENERGIZER' in l:
+                color_energizer = val
+            elif 'COLOR_LINK_DEFAULT' in l:
+                color_link_default = val
+            elif 'COLOR_LINK_SUCCESS' in l:
+                color_link_success = val
+            elif 'COLOR_LINK_FAIL' in l:
+                color_link_fail = val
+        if x_size is not -1 and y_size is not -1 and seed is not -1 and refresh_delay is not -1\
+                 and color_sink is not '' and color_relay is not ''\
+                and color_sensor is not '' and color_energizer is not '' and color_link_default is not ''\
+                and color_link_success is not '' and color_link_fail is not '':
             Inventory.SEED = seed
             Inventory.REFRESH_DELAY = refresh_delay
             Inventory.X_SIZE = x_size
             Inventory.Y_SIZE = y_size
+            Inventory.NODES_TO_AUDIT = nodes_to_audit
+            Inventory.COLOR_SINK = color_sink
+            Inventory.COLOR_RELAY = color_relay
+            Inventory.COLOR_SENSOR = color_sensor
+            Inventory.COLOR_ENERGIZER = color_energizer
+            Inventory.COLOR_LINK_DEFAULT = color_link_default
+            Inventory.COLOR_LINK_SUCCESS = color_link_success
+            Inventory.COLOR_LINK_FAIL = color_link_fail
         else:
-            print('IMPROPER SETTINGS FILE')  # TODO: switch to forgiveness
+            raise ImproperSettingsException
 
     @staticmethod
     def load_nodes():
@@ -147,7 +187,7 @@ class Inventory():
                         Sensor(arr[1], int(arr[2]), int(arr[3]), int(arr[4]), int(arr[5]), int(arr[6]),
                                int(arr[7]), arr[8])]
         except IndexError:
-            print("INVALID NODES FILE")
+            raise ImproperNodesException
 
     @staticmethod
     def load_schedule():

@@ -18,7 +18,7 @@ class RelaysEditFrame(Frame):
         super(RelaysEditFrame, self).__init__(master)
 
         self.master = master
-        self.relays = Controller.get_relays()
+        self.relays = Inventory.RELAYS
 
         self.init_window()
         self.set_widgets()

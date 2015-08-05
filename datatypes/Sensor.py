@@ -11,6 +11,8 @@ class Sensor(Node):
     parent = None
     packet = ''
 
+    battery_max = -1
+
     energy_count = 0
     energy_count_count = 0
     energy_average = 0
@@ -27,6 +29,7 @@ class Sensor(Node):
         self.y = y
         self.range = sensor_range
         self.battery = battery
+        self.battery_max = battery
         self.e_use_out = e_use_out
         self.e_use_generate = e_use_generate
         self.parent = parent
@@ -72,7 +75,10 @@ class Sensor(Node):
             raise EmptyQueueException
 
     def recharge(self, recharge_amount):
-        self.battery += recharge_amount
+        if self.battery + recharge_amount > self.battery_max:
+            self.battery = self.battery_max
+        else:
+            self.battery += recharge_amount
 
     def increment_send_lost_count(self):
         self.send_lost_count += 1
