@@ -1,0 +1,9 @@
+Input protocol for nodes file:
+
+INPUT PROTOCOL:
+SINKS:      I id x y
+ENERGIZERS: E id x y range battery gather_rate recharge_rate
+RELAY:      R id x y range battery energy_use_in energy_use_out parent_id
+SENSOR:  S id x y range battery energy_use_out energy_use_generate parent_id
+
+This project uses GraphViz and PyGraphViz. Dependency errors for this may come up.
