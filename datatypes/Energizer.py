@@ -9,9 +9,9 @@ class Energizer(Node):
     """
     range = -1
     battery = -1
+    battery_max = -1
     gather_rate = -1
     recharge_rate = -1
-
 
     def __init__(self, energizer_id, x, y, energizer_range, battery, gather_rate, recharge_rate):
         """
@@ -22,6 +22,7 @@ class Energizer(Node):
         super(Energizer, self).__init__(energizer_id, x, y)
         self.range = energizer_range
         self.battery = battery
+        self.battery_max = battery
         self.gather_rate = gather_rate
         self.recharge_rate = recharge_rate
 
@@ -33,8 +34,14 @@ class Energizer(Node):
         """
         random.seed(seed)
         gather_amount = self.gather_rate * random.random()
-        self.battery += gather_amount
-        return gather_amount
+        if self.battery + gather_amount > self.battery_max:
+            try:
+                return self.battery_max - self.battery_max
+            finally:
+                self.battery = self.battery_max
+        else:
+            self.battery += gather_amount
+            return gather_amount
 
     def energize(self, dist):
         """

@@ -15,6 +15,8 @@ class Relay(Node):
     parent = None
     packets = []
 
+    battery_max = -1
+
     send_count = 0
     receive_count = 0
     send_lost_count = 0
@@ -31,6 +33,7 @@ class Relay(Node):
 
         self.range = relay_range
         self.battery = battery
+        self.battery_max = battery
         self.e_use_in = e_use_in
         self.e_use_out = e_use_out
         self.parent = parent
@@ -51,11 +54,11 @@ class Relay(Node):
         Raises NotEnoughEnergyException if this relay does not have the
         amount of energy needed.
         """
+        self.receive_count += 1
         if self.battery < self.e_use_in:
             self.battery = 0
             raise NotEnoughEnergyException
 
-        self.receive_count += 1
         self.battery -= self.e_use_in
         self.packets += [packet]
 
@@ -83,7 +86,10 @@ class Relay(Node):
             raise EmptyQueueException
 
     def recharge(self, recharge_amount):
-        self.battery += recharge_amount
+        if self.battery + recharge_amount > self.battery_max:
+            self.battery = self.battery_max
+        else:
+            self.battery += recharge_amount
 
     def increment_send_lost_count(self):
         self.send_lost_count += 1

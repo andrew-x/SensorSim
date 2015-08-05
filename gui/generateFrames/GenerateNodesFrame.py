@@ -7,6 +7,7 @@ import sys
 import py_compile
 import webbrowser
 
+
 class GenerateNodesFrame(Frame):
     master = None
 

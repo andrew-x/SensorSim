@@ -19,3 +19,15 @@ class NotFoundException(Exception):
 
 class NullPeriodException(Exception):
     pass
+
+
+class ImproperSettingsException(Exception):
+    pass
+
+
+class ImproperNodesException(Exception):
+    pass
+
+
+class ImproperScheduleException(Exception):
+    pass

@@ -19,7 +19,7 @@ class SensorsEditFrame(Frame):
 
         self.master = master
 
-        self.sensors = Controller.get_sensors()
+        self.sensors = Inventory.SENSORS
 
         self.init_window()
         self.set_widgets()

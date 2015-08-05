@@ -1,9 +1,7 @@
 __author__ = 'Andrew'
 
 
-from datatypes.Energizer import *
 from tests.TestCore import *
-from core.Inventory import *
 from gui.MainFrame import *
 
 import unittest

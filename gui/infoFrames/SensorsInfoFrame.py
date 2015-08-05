@@ -28,7 +28,7 @@ class SensorsInfoFrame(Frame):
         self.master.destroy()
 
     def set_widgets(self):
-        self.sensors = Controller.get_sensors()
+        self.sensors = Inventory.SENSORS
 
         id_text = Entry(self.master, relief=RIDGE)
         x_text = Entry(self.master, relief=RIDGE)
@@ -37,6 +37,8 @@ class SensorsInfoFrame(Frame):
         battery_text = Entry(self.master, relief=RIDGE)
         e_use_out_text = Entry(self.master, relief=RIDGE)
         parent_text = Entry(self.master, relief=RIDGE)
+        send_success_text = Entry(self.master, relief=RIDGE)
+        energy_average_text = Entry(self.master, relief=RIDGE)
 
         id_text.grid(row=0, column=0, sticky=NSEW)
         x_text.grid(row=0, column=1, sticky=NSEW)
@@ -45,6 +47,8 @@ class SensorsInfoFrame(Frame):
         battery_text.grid(row=0, column=4, sticky=NSEW)
         e_use_out_text.grid(row=0, column=5, sticky=NSEW)
         parent_text.grid(row=0, column=6, sticky=NSEW)
+        send_success_text.grid(row=0, column=7, sticky=NSEW)
+        energy_average_text.grid(row=0, column=8, sticky=NSEW)
 
         id_text.insert(END, 'ID')
         x_text.insert(END, 'X')
@@ -53,6 +57,8 @@ class SensorsInfoFrame(Frame):
         battery_text.insert(END, 'Battery')
         e_use_out_text.insert(END, 'Energy use out')
         parent_text.insert(END, 'Parent')
+        send_success_text.insert(END, 'Send Success Rate')
+        energy_average_text.insert(END, 'Battery Average')
 
         id_text.configure(state=DISABLED)
         x_text.configure(state=DISABLED)
@@ -61,6 +67,8 @@ class SensorsInfoFrame(Frame):
         battery_text.configure(state=DISABLED)
         e_use_out_text.configure(state=DISABLED)
         parent_text.configure(state=DISABLED)
+        send_success_text.configure(state=DISABLED)
+        energy_average_text.configure(state=DISABLED)
 
         for i in range(len(self.sensors)):
             tmp = Entry(self.master, relief=RIDGE)
@@ -85,7 +93,7 @@ class SensorsInfoFrame(Frame):
 
             tmp = Entry(self.master, relief=RIDGE)
             tmp.grid(row=(i+1), column=4)
-            tmp.insert(END, self.sensors[i].get_battery())
+            tmp.insert(END, Inventory.f_str(self.sensors[i].get_battery()))
             tmp.configure(state=DISABLED)
 
             tmp = Entry(self.master, relief=RIDGE)
@@ -96,4 +104,14 @@ class SensorsInfoFrame(Frame):
             tmp = Entry(self.master, relief=RIDGE)
             tmp.grid(row=(i+1), column=6)
             tmp.insert(END, self.sensors[i].get_parent())
+            tmp.configure(state=DISABLED)
+
+            tmp = Entry(self.master, relief=RIDGE)
+            tmp.grid(row=(i+1), column=7)
+            tmp.insert(END, Inventory.f_str(self.sensors[i].get_send_success_rate()))
+            tmp.configure(state=DISABLED)
+
+            tmp = Entry(self.master, relief=RIDGE)
+            tmp.grid(row=(i+1), column=8)
+            tmp.insert(END, Inventory.f_str(self.sensors[i].get_energy_average()))
             tmp.configure(state=DISABLED)

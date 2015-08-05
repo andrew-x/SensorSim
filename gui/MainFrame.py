@@ -1,11 +1,5 @@
 __author__ = 'Andrew'
 
-from gui.editFrames.SinkEditFrame import *
-from gui.editFrames.EnergizersEditFrame import *
-from gui.editFrames.SensorsEditFrame import *
-from gui.editFrames.RelaysEditFrame import *
-
-from gui.infoFrames.PacketsInfoFrame import *
 from gui.infoFrames.SinkInfoFrame import *
 from gui.infoFrames.RelaysInfoFrame import *
 from gui.infoFrames.SensorsInfoFrame import *
@@ -15,14 +9,12 @@ from gui.modals.StandardModals import *
 
 from gui.generateFrames.GenerateNodesFrame import *
 from gui.generateFrames.GenerateScheduleFrame import *
-from core.Controller import *
 from gui.GraphFrame import *
 
 from tkinter import ttk
 
 import _thread
 import time
-import os
 
 
 class MainFrame(Frame):
@@ -53,12 +45,21 @@ class MainFrame(Frame):
     def __init__(self, master=Tk()):
         super(MainFrame, self).__init__(master)
 
-        self.control = Controller()
+        try:
+            self.control = Controller()
+            print(Inventory.NODES_TO_AUDIT)
+        except ImproperSettingsException:
+            print("Invalid Settings File")
+            StandardModals.error_message("Invalid Settings File")
+        except ImproperNodesException:
+            print("Invalid Nodes File")
+            StandardModals.error_message("Invalid Nodes File")
+        except ImproperScheduleException:
+            print("Invalid Schedule File")
+            StandardModals.error_message("Invalid Schedule File")
 
         self.init_window()
-
         self.set_widgets()
-
         self.mainloop()
 
     def init_window(self):
@@ -81,13 +82,6 @@ class MainFrame(Frame):
         file_menu.add_command(label='Exit', command=self.exit)
         menubar.add_cascade(label='File', menu=file_menu)
 
-        edit_menu = Menu(menubar, tearoff=1)
-        edit_menu.add_command(label='Edit Sink Information', command=self.edit_sink_info)
-        edit_menu.add_command(label='Edit Energizers Information', command=self.edit_energizers_info)
-        edit_menu.add_command(label='Edit Sensors Information', command=self.edit_sensors_info)
-        edit_menu.add_command(label='Edit Relays Information', command=self.edit_relays_info)
-        menubar.add_cascade(label='Edit', menu=edit_menu)
-
         view_menu = Menu(menubar, tearoff=1)
         view_menu.add_command(label='View Sink Information', command=self.view_sink_info)
         view_menu.add_command(label='View Energizers Information', command=self.view_energizers_info)
@@ -98,6 +92,7 @@ class MainFrame(Frame):
         export_menu = Menu(menubar, tearoff=1)
         export_menu.add_command(label='Export Data ', command=self.export_data)
         export_menu.add_command(label='Export Standard Graph', command=self.export_standard_graph)
+        export_menu.add_command(label='Export Hierarchical Graph', command=self.export_hierarchical_graph)
         menubar.add_cascade(label='Export', menu=export_menu)
 
         generate_menu = Menu(menubar, tearoff=1)
@@ -204,40 +199,14 @@ class MainFrame(Frame):
     def view_sensors_info(self):
         self.sensors_info_frame = SensorsInfoFrame()
 
-    def edit_sink_info(self):
-        # todo: update
-        root = Tk()
-        sink_info = SinkEditFrame(master=root)
-        sink_info.set_widgets()
-        sink_info.mainloop()
-        root.destroy()
-
-    def edit_energizers_info(self):
-        root = Tk()
-        energizers_info = EnergizersEditFrame(master=root)
-        energizers_info.mainloop()
-        root.destroy()
-
-    def edit_relays_info(self):
-        root = Tk()
-        relays_info = RelaysEditFrame(master=root)
-        relays_info.mainloop()
-        root.destroy()
-
-    def edit_sensors_info(self):
-        root = Tk()
-        sensors_info = SensorsEditFrame(master=root)
-        sensors_info.mainloop()
-        root.destroy()
-
     def open_nodes(self):
-        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.NODES_FILENAME)
+        webbrowser.open(Inventory.NODES_FILENAME)
 
     def open_schedule(self):
-        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.SCHEDULE_FILENAME)
+        webbrowser.open(Inventory.SCHEDULE_FILENAME)
 
     def open_settings(self):
-        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.SETTINGS_FILENAME)
+        webbrowser.open(Inventory.SETTINGS_FILENAME)
 
     def reset(self):
         self.control = Controller()
@@ -254,6 +223,11 @@ class MainFrame(Frame):
 
     def export_standard_graph(self):
         self.control.export_standard_graph()
+        StandardModals.message("Generated")
+
+    def export_hierarchical_graph(self):
+        self.control.export_hierarchical_graph()
+        StandardModals.message("Generated")
 
     def generate_nodes(self):
         GenerateNodesFrame()

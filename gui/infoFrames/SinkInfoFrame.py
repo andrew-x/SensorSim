@@ -10,7 +10,7 @@ class SinkInfoFrame(Frame):
 
     master = None
 
-    sink = None
+    sinks = None
 
     id_view= None
     x_view = None
@@ -36,7 +36,7 @@ class SinkInfoFrame(Frame):
         self.master.destroy()
 
     def set_widgets(self):
-        self.sink = Controller.get_sink()
+        self.sinks = Inventory.SINKS
 
         id_text = Entry(self.master, relief=RIDGE)
         x_text = Entry(self.master, relief=RIDGE)
@@ -54,17 +54,18 @@ class SinkInfoFrame(Frame):
         x_text.configure(state=DISABLED)
         y_text.configure(state=DISABLED)
 
-        self.id_view = Entry(self.master, relief=RIDGE)
-        self.id_view.grid(row=1, column=0)
-        self.id_view.insert(END, self.sink.get_id())
-        self.id_view.configure(state=DISABLED)
+        for i in range(len(self.sinks)):
+            tmp = Entry(self.master, relief=RIDGE)
+            tmp.grid(row=(i+1), column=0)
+            tmp.insert(END, self.sinks[i].get_id())
+            tmp.configure(state=DISABLED)
 
-        self.x_view = Entry(self.master, relief=RIDGE)
-        self.x_view.grid(row=1, column=1)
-        self.x_view.insert(END, self.sink.get_x())
-        self.x_view.configure(state=DISABLED)
+            tmp = Entry(self.master, relief=RIDGE)
+            tmp.grid(row=(i+1), column=1)
+            tmp.insert(END, self.sinks[i].get_x())
+            tmp.configure(state=DISABLED)
 
-        self.y_view = Entry(self.master, relief=RIDGE)
-        self.y_view.grid(row=1, column=2)
-        self.y_view.insert(END, self.sink.get_y())
-        self.y_view.configure(state=DISABLED)
+            tmp = Entry(self.master, relief=RIDGE)
+            tmp.grid(row=(i+1), column=2)
+            tmp.insert(END, self.sinks[i].get_y())
+            tmp.configure(state=DISABLED)

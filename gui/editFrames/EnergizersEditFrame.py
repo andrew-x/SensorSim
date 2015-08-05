@@ -19,7 +19,7 @@ class EnergizersEditFrame(Frame):
 
         self.master = master
 
-        self.energizers = Controller.get_energizers()
+        self.energizers = Inventory.ENERGIZERS
 
         self.init_window()
         self.set_widgets()
@@ -89,7 +89,7 @@ class EnergizersEditFrame(Frame):
 
             tmp = Entry(self.master, relief=RIDGE)
             tmp.grid(row=(i+1), column=4)
-            tmp.insert(END, self.energizers[i].get_battery())
+            tmp.insert(END, Inventory.f_str(self.energizers[i].get_battery()))
             self.cols.append(tmp)
 
             tmp = Entry(self.master, relief=RIDGE)

@@ -13,8 +13,6 @@ class EnergizersInfoFrame(Frame):
         self.master = Tk()
         super(EnergizersInfoFrame, self).__init__(self.master)
 
-        self.energizers = Controller.get_energizers()
-
         self.init_window()
         self.set_widgets()
 
@@ -27,12 +25,15 @@ class EnergizersInfoFrame(Frame):
         self.master.destroy()
 
     def set_widgets(self):
+        self.energizers = Inventory.ENERGIZERS
+
         id_text = Entry(self.master, relief=RIDGE)
         x_text = Entry(self.master, relief=RIDGE)
         y_text = Entry(self.master, relief=RIDGE)
         range_text = Entry(self.master, relief=RIDGE)
         battery_text = Entry(self.master, relief=RIDGE)
         rate_text = Entry(self.master, relief=RIDGE)
+        gather_text = Entry(self.master, relief=RIDGE)
 
         id_text.grid(row=0, column=0, sticky=NSEW)
         x_text.grid(row=0, column=1, sticky=NSEW)
@@ -40,6 +41,7 @@ class EnergizersInfoFrame(Frame):
         range_text.grid(row=0, column=3, sticky=NSEW)
         battery_text.grid(row=0, column=4, sticky=NSEW)
         rate_text.grid(row=0, column=5, sticky=NSEW)
+        gather_text.grid(row=0, column=6, sticky=NSEW)
 
         id_text.insert(END, 'ID')
         x_text.insert(END, 'X')
@@ -47,6 +49,7 @@ class EnergizersInfoFrame(Frame):
         range_text.insert(END, 'Range')
         battery_text.insert(END, 'Battery')
         rate_text.insert(END, 'Recharge Rate')
+        gather_text.insert(END, 'Gather Rate')
 
         id_text.configure(state=DISABLED)
         x_text.configure(state=DISABLED)
@@ -54,6 +57,7 @@ class EnergizersInfoFrame(Frame):
         range_text.configure(state=DISABLED)
         battery_text.configure(state=DISABLED)
         rate_text.configure(state=DISABLED)
+        gather_text.configure(state=DISABLED)
 
         for i in range(len(self.energizers)):
             tmp = Entry(self.master, relief=RIDGE)
@@ -78,10 +82,15 @@ class EnergizersInfoFrame(Frame):
 
             tmp = Entry(self.master, relief=RIDGE)
             tmp.grid(row=(i+1), column=4)
-            tmp.insert(END, self.energizers[i].get_battery())
+            tmp.insert(END, Inventory.f_str(self.energizers[i].get_battery()))
             tmp.configure(state=DISABLED)
 
             tmp = Entry(self.master, relief=RIDGE)
             tmp.grid(row=(i+1), column=5)
-            tmp.insert(END, self.energizers[i].get_rate())
+            tmp.insert(END, self.energizers[i].get_recharge_rate())
+            tmp.configure(state=DISABLED)
+
+            tmp = Entry(self.master, relief=RIDGE)
+            tmp.grid(row=(i+1), column=6)
+            tmp.insert(END, self.energizers[i].get_gather_rate())
             tmp.configure(state=DISABLED)

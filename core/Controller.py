@@ -12,7 +12,7 @@ from core.Audit import *
 from decimal import Decimal
 import csv, math, random
 import pygraphviz as pgv
-import pydotplus, pydot
+import pydot as pd
 import graphviz as gv
 
 
@@ -303,16 +303,64 @@ class Controller():
             f.close()
 
     def export_standard_graph(self):
-        graph = pydot.Dot('graphname', graph_type='digraph')
-        pmo100 = pydot.Node("PMO-100")
-        sa300 = pydot.Node("SA-300")
-        sa100 = pydot.Node("SA-100")
-        sa200 = pydot.Node("SA-200")
-        graph.add_edge(pydot.Edge(pmo100, sa300))
-        graph.add_edge(pydot.Edge(sa100, sa300))
-        graph.add_edge(pydot.Edge(sa100, sa200))
-        graph.add_edge(pydot.Edge(pmo100, sa100))
-        graph.create('example1_graph.png')
+        G = pgv.AGraph()
+        G.graph_attr.update(size=str(Inventory.X_SIZE)+','+str(Inventory.Y_SIZE))
+        for node in Inventory.get_all_nodes():
+            G.add_node(node.get_id())
+            G.get_node(node.get_id()).attr['label'] = node.get_id()
+            G.get_node(node.get_id()).attr['pos'] = str(node.get_x()) + ',' + str(100-node.get_y())+'!'
+        for node in Inventory.SENSORS:
+            G.add_edge(node.get_id(), node.get_parent())
+        for node in Inventory.RELAYS:
+            G.add_edge(node.get_id(), node.get_parent())
+        G.layout()
+        G.draw(Inventory.EXPORT_ROOT + 'standard_graph.png', format='png')
+
+    def export_hierarchical_graph(self):
+        levels = [[]]
+        for s in Inventory.SENSORS:
+            levels[0] += [s]
+        while True:
+            levels += [[]]
+            done = True
+            for n in levels[len(levels)-2]:
+                if n.get_id()[0] is not Inventory.TYPE_SINK:
+                    done = False
+                    levels[len(levels)-1] += [Inventory.find_node(n.get_parent())]
+                else:
+                    continue
+            if done:
+                break
+
+        G = pgv.AGraph()
+        G.graph_attr.update(size=str(Inventory.X_SIZE)+','+str(Inventory.Y_SIZE))
+        for y in range(len(levels)):
+            for x in range(len(levels[y])):
+                n = levels[y][x]
+                G.add_node(n.get_id())
+                G.get_node(n.get_id()).attr['label'] = n.get_id()
+                G.get_node(n.get_id()).attr['pos'] = str(x*2) + ',' + str(y*2) + '!'
+        for node in Inventory.SENSORS:
+            G.add_edge(node.get_id(), node.get_parent())
+        for node in Inventory.RELAYS:
+            if self.check_levels_membership(levels, node):
+                G.add_edge(node.get_id(), node.get_parent())
+        count = 0
+        for n in Inventory.get_all_nodes():
+            if not self.check_levels_membership(levels, n):
+                G.add_node(n.get_id())
+                G.get_node(n.get_id()).attr['label'] = n.get_id()
+                G.get_node(n.get_id()).attr['pos'] = str(count*2) + ',' + str(len(levels) + 2) + '!'
+                count += 1
+        G.layout()
+        G.draw(Inventory.EXPORT_ROOT + 'hierarchical_graph.png', format='png')
+
+    def check_levels_membership(self, levels, node):
+        for y in range(len(levels)):
+            for x in range(len(levels[y])):
+                if node.get_id() is levels[y][x].get_id():
+                    return True
+        return False
 
     # SETTERS AND GETTERS
 
