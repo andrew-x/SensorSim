@@ -110,7 +110,6 @@ class Inventory():
         for l in content:
             l = l.strip()
             val = l[l.index(':') + 1:]
-            print(val)
             if 'X_SIZE' in l:
                 x_size = Decimal(val)
             elif 'Y_SIZE' in l:

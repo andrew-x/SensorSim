@@ -10,7 +10,7 @@ class StandardModals():
 
     @staticmethod
     def error_message(message):
-        top = Toplevel(master=None, width=50)
+        top = Toplevel(master=None)
         top.title("Error")
         msg = Message(top, text=message, anchor=CENTER)
         msg.pack()
@@ -19,7 +19,7 @@ class StandardModals():
 
     @staticmethod
     def message(message):
-        top = Toplevel(master=None, width=100)
+        top = Toplevel(master=None)
         top.title("Message")
         msg = Message(top, text=message, anchor=CENTER)
         msg.pack()

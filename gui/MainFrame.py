@@ -1,11 +1,5 @@
 __author__ = 'Andrew'
 
-from gui.editFrames.SinkEditFrame import *
-from gui.editFrames.EnergizersEditFrame import *
-from gui.editFrames.SensorsEditFrame import *
-from gui.editFrames.RelaysEditFrame import *
-
-from gui.infoFrames.PacketsInfoFrame import *
 from gui.infoFrames.SinkInfoFrame import *
 from gui.infoFrames.RelaysInfoFrame import *
 from gui.infoFrames.SensorsInfoFrame import *
@@ -15,14 +9,12 @@ from gui.modals.StandardModals import *
 
 from gui.generateFrames.GenerateNodesFrame import *
 from gui.generateFrames.GenerateScheduleFrame import *
-from core.Controller import *
 from gui.GraphFrame import *
 
 from tkinter import ttk
 
 import _thread
 import time
-import os
 
 
 class MainFrame(Frame):
@@ -208,13 +200,13 @@ class MainFrame(Frame):
         self.sensors_info_frame = SensorsInfoFrame()
 
     def open_nodes(self):
-        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.NODES_FILENAME)
+        webbrowser.open(Inventory.NODES_FILENAME)
 
     def open_schedule(self):
-        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.SCHEDULE_FILENAME)
+        webbrowser.open(Inventory.SCHEDULE_FILENAME)
 
     def open_settings(self):
-        os.system(("start " if os.name == 'nt' else "gedit ") + Inventory.SETTINGS_FILENAME)
+        webbrowser.open(Inventory.SETTINGS_FILENAME)
 
     def reset(self):
         self.control = Controller()
@@ -231,9 +223,11 @@ class MainFrame(Frame):
 
     def export_standard_graph(self):
         self.control.export_standard_graph()
+        StandardModals.message("Generated")
 
     def export_hierarchical_graph(self):
         self.control.export_hierarchical_graph()
+        StandardModals.message("Generated")
 
     def generate_nodes(self):
         GenerateNodesFrame()

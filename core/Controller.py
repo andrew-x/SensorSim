@@ -314,7 +314,6 @@ class Controller():
         for node in Inventory.RELAYS:
             G.add_edge(node.get_id(), node.get_parent())
         G.layout()
-        print(G)
         G.draw(Inventory.EXPORT_ROOT + 'standard_graph.png', format='png')
 
     def export_hierarchical_graph(self):
@@ -354,7 +353,6 @@ class Controller():
                 G.get_node(n.get_id()).attr['pos'] = str(count*2) + ',' + str(len(levels) + 2) + '!'
                 count += 1
         G.layout()
-        print(G)
         G.draw(Inventory.EXPORT_ROOT + 'hierarchical_graph.png', format='png')
 
     def check_levels_membership(self, levels, node):
