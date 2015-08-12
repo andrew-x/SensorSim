@@ -11,6 +11,11 @@ class Audit():
 
     @staticmethod
     def set_up():
+        """
+        None -> None
+
+        Clears the simulation log.
+        """
         if not os.path.exists(Inventory.EXPORT_ROOT):
             os.makedirs(Inventory.EXPORT_ROOT)
         with open(Inventory.EXPORT_ROOT + 'simulation_log.txt', 'w') as f:
@@ -18,6 +23,11 @@ class Audit():
 
     @staticmethod
     def to_log(line):
+        """
+        (Str) -> None
+
+        Writes line to simulation log
+        """
         if Inventory.AUDIT_MODE:
             with open(Inventory.EXPORT_ROOT + 'simulation_log.txt', 'a') as f:
                 f.write(str(Inventory.PERIOD_COUNT) + ':' + str(Inventory.SCHEDULE_INDEX) + ' ' + line + '\n')
@@ -25,11 +35,22 @@ class Audit():
 
     @staticmethod
     def audit_transmission(packet_id, send_id, receive_id):
+        """
+        (Str, Str, Str) -> None
+
+        Formats line for auditing transmission of a packet.
+        """
+
         line = send_id + ' sent ' + packet_id + ' to ' + receive_id
         Audit.to_log(line)
 
     @staticmethod
     def audit_send_fail(send_id, power, cost, packet_id=''):
+        """
+        (Str, Int, Int, Str) -> None
+
+        Formats line for auditing the failed sending of a packet
+        """
         line = send_id + ' failed to send ' + packet_id + \
             ' because it needed ' + str(cost) + ' but had ' + Inventory.f_str(power) if packet_id is not '' \
             else send_id + ' failed to send ' + ' because it needed ' + str(cost) + ' but had ' + Inventory.f_str(power)
@@ -37,29 +58,54 @@ class Audit():
 
     @staticmethod
     def audit_receive_fail(receive_id, power, cost, packet_id):
+        """
+        (Str, Int, Int, Str) -> None
+
+        Formats line for auditing the failed receiving of a packet
+        """
         line = receive_id + ' failed to receive ' + packet_id + \
             ' because it needed ' + str(cost) + ' but had ' + Inventory.f_str(power)
         Audit.to_log(line)
 
     @staticmethod
     def audit_energy_loss(node_id, cost, power):
+        """
+        (Str, Int, Int, Int) -> None
+
+        Formats line for auditing energy use.
+        """
         line = node_id + ' used up ' + str(cost) + ' now has ' + Inventory.f_str(power)
         Audit.to_log(line)
 
     @staticmethod
     def audit_recharge(node_id, energizer_id, power, node_dist):
+        """
+        (Str, Str, Int, Int) -> None
+
+        Formats line for auditing energy recharge.
+        """
         line = node_id + ' gained ' + Inventory.f_str(power) + ' from ' + \
             energizer_id + ' at a distance of ' + Inventory.f_str(node_dist)
         Audit.to_log(line)
 
     @staticmethod
     def audit_energy_gather(energizer_id, recharge_amount, power):
+        """
+        (Str, Int, Int) -> None
+
+        Formats line for auditing energy gathering.
+        """
         line = energizer_id + ' recharged by ' + Inventory.f_str(recharge_amount) + \
             ' now has ' + Inventory.f_str(power)
         Audit.to_log(line)
 
     @staticmethod
     def audit_nodes_history():
+        """
+        None -> None
+
+        Audits the current state of a node.
+        """
         for a in Inventory.NODES_TO_AUDIT:
             node = Inventory.find_node(a)
             out = []

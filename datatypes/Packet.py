@@ -2,9 +2,6 @@ __author__ = 'Andrew'
 
 
 class Packet():
-    """
-    Packet object
-    """
     id = ''
     origin = ''
     current = ''
@@ -15,12 +12,6 @@ class Packet():
     hop_count = 0
 
     def __init__(self, packet_id='', origin=''):
-        """
-        (Packet, string, string) -> None
-
-        Constructor
-        """
-
         self.id = packet_id
         self.origin = origin
         self.current = origin
@@ -28,7 +19,7 @@ class Packet():
 
     def increment_hop_count(self):
         """
-        (Packet) -> None
+        None -> None
 
         Increments the number of hops this packet has committed.
         """

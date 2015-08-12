@@ -1,7 +1,6 @@
 __author__ = 'Andrew'
-from exceptions.Exceptions import *
-from datatypes.Node import Node
 from core.Inventory import *
+
 
 class Sensor(Node):
     range = -1
@@ -41,9 +40,9 @@ class Sensor(Node):
 
     def generate_packet(self, packet_id):
         """
-        (Sensor, string) -> None
+        (None, string) -> Bool
 
-        Generates a packet
+        Generates a packet, returns true if successful.
         """
         if self.battery < self.e_use_generate:
             raise NotEnoughEnergyException
@@ -53,9 +52,9 @@ class Sensor(Node):
 
     def send(self):
         """
-        (Sensor) -> None
+        None -> Packet, Str
 
-        Sends the packet at the top of the que.
+        Returns packet at top of que and the parent.
         Raises NotEnoughEnergyException if it does not have
         the energy required.
         """
@@ -75,6 +74,11 @@ class Sensor(Node):
             raise EmptyQueueException
 
     def recharge(self, recharge_amount):
+        """
+        (Decimal) -> None
+
+        Recharges battery.
+        """
         if self.battery + recharge_amount > self.battery_max:
             self.battery = self.battery_max
         else:

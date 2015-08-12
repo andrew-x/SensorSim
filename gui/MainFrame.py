@@ -16,7 +16,6 @@ from tkinter import ttk
 import _thread
 import time
 
-
 class MainFrame(Frame):
     control = None
 
@@ -50,12 +49,15 @@ class MainFrame(Frame):
         except ImproperSettingsException:
             print("Invalid Settings File")
             StandardModals.error_message("Invalid Settings File")
+            sys.exit(0)
         except ImproperNodesException:
             print("Invalid Nodes File")
             StandardModals.error_message("Invalid Nodes File")
+            sys.exit(0)
         except ImproperScheduleException:
             print("Invalid Schedule File")
             StandardModals.error_message("Invalid Schedule File")
+            sys.exit(0)
 
         self.init_window()
         self.set_widgets()
@@ -89,9 +91,10 @@ class MainFrame(Frame):
         menubar.add_cascade(label='View', menu=view_menu)
 
         export_menu = Menu(menubar, tearoff=1)
-        export_menu.add_command(label='Export Data ', command=self.export_data)
+        export_menu.add_command(label='Export Data', command=self.export_data)
         export_menu.add_command(label='Export Standard Graph', command=self.export_standard_graph)
         export_menu.add_command(label='Export Hierarchical Graph', command=self.export_hierarchical_graph)
+        export_menu.add_command(label='Export Period Length Trendline', command=self.export_period_length_trendline)
         menubar.add_cascade(label='Export', menu=export_menu)
 
         generate_menu = Menu(menubar, tearoff=1)
@@ -147,6 +150,7 @@ class MainFrame(Frame):
         self.period_label_text.set('Completed Periods: ' + str(Inventory.PERIOD_COUNT))
 
     def on_play(self):
+        self.graph.refresh(Inventory.PLAY_MODE)
         self.mode = Inventory.PLAY_MODE
         if self.threads_stop:
             self.threads_stop = False
@@ -176,7 +180,6 @@ class MainFrame(Frame):
             self.refresh()
 
     # THREAD OPTIONS
-
     def main_loop(self):
         while not self.threads_stop:
             if self.playing:
@@ -185,7 +188,6 @@ class MainFrame(Frame):
                 time.sleep(Inventory.REFRESH_DELAY)
 
     # MENU OPTIONS
-
     def view_sink_info(self):
         self.sink_info_frame = SinkInfoFrame()
 
@@ -208,8 +210,10 @@ class MainFrame(Frame):
         webbrowser.open(Inventory.SETTINGS_FILENAME)
 
     def reset(self):
-        self.control = Controller()
-        self.refresh()
+        try:
+            sys.exit()
+        finally:
+            os.system(("python " if os.name == 'nt' else "python3 ") + Inventory.ROOT + "/core/__main__.py")
 
     def export_data(self):
         try:
@@ -227,6 +231,15 @@ class MainFrame(Frame):
     def export_hierarchical_graph(self):
         self.control.export_hierarchical_graph()
         StandardModals.message("Generated")
+
+    def export_period_length_trendline(self):
+        try:
+            self.control.export_period_length_trend()
+            StandardModals.message("Generated")
+        except ConnectionException:
+            StandardModals.error_message("Connection Error")
+        except ImproperSettingsException:
+            StandardModals.error_message("AUDIT_PERIOD_LENGTH needs to be set to true")
 
     def generate_nodes(self):
         GenerateNodesFrame()

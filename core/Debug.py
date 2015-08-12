@@ -4,7 +4,6 @@ from core.Inventory import *
 
 
 class Debug():
-
     @staticmethod
     def print_send_receive():
         print(*Inventory.RELAYS, sep='\n')

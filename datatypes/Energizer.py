@@ -4,9 +4,6 @@ import math, random
 
 
 class Energizer(Node):
-    """
-    The energizer object
-    """
     range = -1
     battery = -1
     battery_max = -1
@@ -14,11 +11,6 @@ class Energizer(Node):
     recharge_rate = -1
 
     def __init__(self, energizer_id, x, y, energizer_range, battery, gather_rate, recharge_rate):
-        """
-        (Energizer, string, int, int, int, int, int) -> None
-
-        Constructor
-        """
         super(Energizer, self).__init__(energizer_id, x, y)
         self.range = energizer_range
         self.battery = battery
@@ -28,9 +20,9 @@ class Energizer(Node):
 
     def gather_energy(self, seed):
         """
-        (Energizer) -> None
+        None -> Decimal
 
-        Gathers energy
+        Gathers energy, returns the energy gained.
         """
         random.seed(seed)
         gather_amount = self.gather_rate * random.random()
@@ -45,7 +37,7 @@ class Energizer(Node):
 
     def energize(self, dist):
         """
-        (Energizer) -> int
+        None -> Decimal
 
         Returns the amount of energy to charge
         """

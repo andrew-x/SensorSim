@@ -5,9 +5,6 @@ from core.Inventory import *
 
 
 class Relay(Node):
-    """
-    relay object
-    """
     range = -1
     battery = -1
     e_use_in = -1

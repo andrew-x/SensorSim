@@ -1,15 +1,13 @@
 __author__ = 'Andrew'
 from core.Audit import *
 import csv, math
-#import pygraphviz as pgv
+import pygraphviz as pgv
+import plotly.plotly as py
+from plotly.graph_objs import *
+from urllib.request import *
+
 
 class Controller():
-    """
-    The controller in this semi MVC design.
-    Contains all methods to do with the actual running
-    of the simulation.
-    """
-
     packet_count = 0
 
     dead_nodes = []
@@ -23,11 +21,6 @@ class Controller():
     period_initialized = False
 
     def __init__(self):
-        """
-        (Controller) -> None
-
-        Constructor
-        """
         Inventory.load_settings()
         Inventory.load_nodes()
         Inventory.load_schedule()
@@ -46,7 +39,7 @@ class Controller():
 
     def fire(self):
         """
-        (Controller) -> None
+        None -> None
 
         Runs a period
         """
@@ -54,22 +47,27 @@ class Controller():
             self.period_initialized = False
             Inventory.SCHEDULE_INDEX = 0
             self.scheduled = Inventory.SCHEDULE[Inventory.SCHEDULE_INDEX]
+
+            count = 0
             while True:
+                count += 1
                 try:
                     self.step_through()
                 except DoneScheduleException:
                     break
+            if Inventory.AUDIT_PERIOD_LENGTH:
+                Inventory.PERIOD_LENGTHS += [count]
         else:
             while True:
                 try:
                     self.step_through()
                 except DoneScheduleException:
-                    break;
+                    break
             self.fire()
 
     def step_through(self):
         """
-        (Controller) -> None
+        None -> None
 
         Runs scheduled slot
         """
@@ -98,7 +96,7 @@ class Controller():
 
     def done_schedule(self):
         """
-        (Controller) -> None
+        None -> None
 
         Checks if the schedule is done. As in, all packets that can be delivered this time has been delivered.
         """
@@ -109,9 +107,9 @@ class Controller():
 
     def energize(self):
         """
-        (Controller) -> None
+        None -> None
 
-        Energizes all nodes
+        Energizes all nodes based on distance
         """
         for e in Inventory.ENERGIZERS:
             for r in Inventory.RELAYS:
@@ -129,7 +127,7 @@ class Controller():
 
     def collect_energy(self):
         """
-        (Controller) -> None
+        None -> None
 
         Recharge energizers
         """
@@ -139,7 +137,7 @@ class Controller():
 
     def generate_packets(self):
         """
-        (Controller) -> None
+        None -> None
 
         Generates packets from sensors.
         """
@@ -154,7 +152,7 @@ class Controller():
 
     def run_slot(self):
         """
-        (Controller) -> None
+        None -> None
 
         Runs scheduled slot.
         """
@@ -222,7 +220,7 @@ class Controller():
 
     def export_data(self):
         """
-        (Controller) -> None
+        None -> None
 
         Exports data to csv files.
         """
@@ -290,6 +288,11 @@ class Controller():
             f.close()
 
     def export_standard_graph(self):
+        """
+        None -> None
+
+        Renders and exports the entire topology.
+        """
         G = pgv.AGraph()
         G.graph_attr.update(size=str(Inventory.X_SIZE)+','+str(Inventory.Y_SIZE))
         for node in Inventory.get_all_nodes():
@@ -304,6 +307,11 @@ class Controller():
         G.draw(Inventory.EXPORT_ROOT + 'standard_graph.png', format='png')
 
     def export_hierarchical_graph(self):
+        """
+        None -> None
+
+        Renders the hierarchy.
+        """
         levels = [[]]
         for s in Inventory.SENSORS:
             levels[0] += [s]
@@ -318,7 +326,6 @@ class Controller():
                     continue
             if done:
                 break
-
         G = pgv.AGraph()
         G.graph_attr.update(size=str(Inventory.X_SIZE)+','+str(Inventory.Y_SIZE))
         for y in range(len(levels)):
@@ -343,11 +350,47 @@ class Controller():
         G.draw(Inventory.EXPORT_ROOT + 'hierarchical_graph.png', format='png')
 
     def check_levels_membership(self, levels, node):
+        """
+        (Arr of Str, Node) -> bool
+
+        Checks if the node is in the current tree.
+        """
         for y in range(len(levels)):
             for x in range(len(levels[y])):
                 if node.get_id() is levels[y][x].get_id():
                     return True
         return False
+
+    def export_period_length_trend(self):
+        """
+        None -> None
+
+        Renders trend-line, launches plot.ly and renders picture locally.
+        """
+        if not Inventory.AUDIT_PERIOD_LENGTH:
+            raise ImproperSettingsException
+        if not self.check_internet():
+            raise ConnectionException
+        x = []
+        for i in range(Inventory.PERIOD_COUNT):
+            x += [i+1]
+        trace = Scatter(x=x, y=Inventory.PERIOD_LENGTHS)
+        data = Data([trace])
+        py.plot(data, filename='Period_length_trend')
+        py.image.save_as({'data':data}, Inventory.EXPORT_ROOT + '\Period_Length_Trend.png')
+
+
+    def check_internet(self):
+        """
+        None -> bool
+
+        Checks connection to plot.ly website.
+        """
+        try:
+            urlopen('http://www.plot.ly/')
+            return True
+        except Exception:
+            return False
 
     # SETTERS AND GETTERS
 

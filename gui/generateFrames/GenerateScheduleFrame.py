@@ -36,6 +36,5 @@ class GenerateScheduleFrame(Frame):
         os.system(("python " if os.name == 'nt' else "python3 ") + Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)
         Inventory.load_schedule()
 
-
     def on_edit(self):
         webbrowser.open(Inventory.GENERATE_SCHEDULE_PROTOCOL_FILENAME)

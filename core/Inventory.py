@@ -29,9 +29,8 @@ class Inventory():
 
     # Settings
 
-    SCALE_FACTOR = 5
-
-    NODES_TO_AUDIT = ['e1']
+    NODES_TO_AUDIT = []
+    AUDIT_PERIOD_LENGTH = False
 
     X_SIZE = 0
     Y_SIZE = 0
@@ -48,6 +47,7 @@ class Inventory():
     COLOR_LINK_FAIL = 'red'
 
     # Constants
+    SCALE_FACTOR = 5
 
     TYPE_SINK = 'i'
     TYPE_RELAY = 'r'
@@ -80,12 +80,14 @@ class Inventory():
     PERIOD_COUNT = 0
     SCHEDULE_INDEX = 0
 
+    PERIOD_LENGTHS = []
+
     PACKET_LOST_COUNT = 0
 
     @staticmethod
     def load_settings():
         """
-        (Controller) -> None
+        None -> None
 
         Loads the settings file values
         """
@@ -95,6 +97,7 @@ class Inventory():
         refresh_delay = -1
 
         nodes_to_audit = []
+        audit_period_length = False
 
         color_sink = ''
         color_relay = ''
@@ -119,6 +122,8 @@ class Inventory():
                 refresh_delay = Decimal(val)
             elif 'NODES_TO_AUDIT' in l:
                 nodes_to_audit = val.split(" ")
+            elif 'AUDIT_PERIOD_LENGTH' in l:
+                audit_period_length = val.lower() == 'true'
             elif 'COLOR_SINK' in l:
                 color_sink = val
             elif 'COLOR_RELAY' in l:
@@ -134,7 +139,7 @@ class Inventory():
             elif 'COLOR_LINK_FAIL' in l:
                 color_link_fail = val
         if x_size is not -1 and y_size is not -1 and seed is not -1 and refresh_delay is not -1\
-                 and color_sink is not '' and color_relay is not ''\
+                and color_sink is not '' and color_relay is not ''\
                 and color_sensor is not '' and color_energizer is not '' and color_link_default is not ''\
                 and color_link_success is not '' and color_link_fail is not '':
             Inventory.SEED = seed
@@ -142,6 +147,8 @@ class Inventory():
             Inventory.X_SIZE = x_size
             Inventory.Y_SIZE = y_size
             Inventory.NODES_TO_AUDIT = nodes_to_audit
+            Inventory.AUDIT_PERIOD_LENGTH = audit_period_length
+
             Inventory.COLOR_SINK = color_sink
             Inventory.COLOR_RELAY = color_relay
             Inventory.COLOR_SENSOR = color_sensor
@@ -155,7 +162,7 @@ class Inventory():
     @staticmethod
     def load_nodes():
         """
-        (Controller) -> None
+        None -> None
 
         Loads nodes from input file.
         """
@@ -190,7 +197,7 @@ class Inventory():
     @staticmethod
     def load_schedule():
         """
-        (Controller) -> None
+        None -> None
 
         Loads schedule from input file.
         """
@@ -205,6 +212,11 @@ class Inventory():
 
     @staticmethod
     def get_all_nodes():
+        """
+        None -> list of all nodes
+
+        Return list of all the nodes in the system.
+        """
         out = []
         for e in Inventory.ENERGIZERS:
             out += [e]
@@ -218,6 +230,11 @@ class Inventory():
 
     @staticmethod
     def find_node(target):
+        """
+        (Str) -> Node
+
+        Returns the node in the system.
+        """
         if target[0] == Inventory.TYPE_SINK:
             return Inventory.SINKS[Inventory.find_sink(target)]
         if target[0] == Inventory.TYPE_ENERGIZER:
@@ -230,7 +247,7 @@ class Inventory():
     @staticmethod
     def find_sink(target):
         """
-        (Controller, string) -> int
+        (Str) -> int
 
         Returns the index of the sensor that matches the input id;
         raises NotFoundException if cannot be found
@@ -243,7 +260,7 @@ class Inventory():
     @staticmethod
     def find_energizer(target):
         """
-        (Controller, string) -> int
+        (Str) -> int
 
         Returns the index of the sensor that matches the input id;
         raises NotFoundException if cannot be found
@@ -256,7 +273,7 @@ class Inventory():
     @staticmethod
     def find_relay(target):
         """
-        (Controller, string) -> int
+        (Str) -> int
 
         Returns the index of the relay that matches the input id;
         raises NotFoundException if cannot be found
@@ -269,7 +286,7 @@ class Inventory():
     @staticmethod
     def find_sensor(target):
         """
-        (Controller, string) -> int
+        (Str) -> int
 
         Returns the index of the sensor that matches the input id;
         raises NotFoundException if cannot be found
@@ -282,7 +299,7 @@ class Inventory():
     @staticmethod
     def find_packet(target):
         """
-        (Controller, string) -> Packet
+        (Str) -> Packet
 
         Returns the packet that matches the input id;
         raises NotFoundException if cannot be found
@@ -298,45 +315,90 @@ class Inventory():
 
     @staticmethod
     def get_packet_export_index():
+        """
+        None -> Array of str
+
+        returns the index for data export of packet.
+        """
         return ['Id', 'Origin', 'Current', 'Delivered', 'Lost', 'Lost at', 'Hop Count']
 
     @staticmethod
     def get_energizer_export_index():
+        """
+        None -> Array of str
+
+        returns the index for data export of energizer.
+        """
         return ['Id', 'X', 'Y', 'Range', 'Battery', 'Gather Rate', 'Recharge Rate']
 
     @staticmethod
     def get_relay_export_index():
+        """
+        None -> Array of str
+
+        returns the index for data export of relay.
+        """
         return ['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use in', 'Energy use out', 'Parent',
                 'Send tries', 'Send fails', 'Send success rate', 'Receive tries', 'Receive fails',
                 'Receive success rate', 'Battery average', 'Lifetime']
 
     @staticmethod
     def get_sensor_export_index():
+        """
+        None -> Array of str
+
+        returns the index for data export of sensor.
+        """
         return ['Id', 'X', 'Y', 'Range', 'Battery', 'Energy use out', 'Parent', 'Send tries', 'Send fails',
                 'Send success rate', 'Battery average', 'Lifetime']
 
     @staticmethod
     def get_sink_export_index():
+        """
+        None -> Array of str
+
+        returns the index for data export of sink.
+        """
         return ['Id', 'X', 'Y']
 
     @staticmethod
     def get_packet_export(p):
+        """
+        None -> Array of str
+
+        returns formatted data fields of packet.
+        """
         return [p.get_id(), p.get_origin(), p.get_current(), str(p.get_delivered()),
                 str(p.get_lost()), p.get_lost_at(), str(p.get_hop_count())]
 
     @staticmethod
     def get_sensor_export(s):
+        """
+        None -> Array of str
+
+        returns formatted data fields of sensor.
+        """
         return [s.get_id(), s.get_x(), s.get_y(), s.get_range(), Inventory.f_str(s.get_battery()),
                 s.get_e_use_out(), s.get_parent(),s.get_send_count(), s.get_send_lost_count(),
                 Inventory.f_str(s.get_send_success_rate()), s.get_energy_average(), s.get_lifetime()]
 
     @staticmethod
     def get_energizer_export(e):
+        """
+        None -> Array of str
+
+        returns formatted data fields of energizer.
+        """
         return [e.get_id(), e.get_x(), e.get_y(), e.get_range(), Inventory.f_str(e.get_battery()),
                 e.get_gather_rate(), e.get_recharge_rate()]
 
     @staticmethod
     def get_relay_export(r):
+        """
+        None -> Array of str
+
+        returns formatted data fields of relay.
+        """
         return [r.get_id(), r.get_x(), r.get_y(), r.get_range(), Inventory.f_str(r.get_battery()),
                 r.get_e_use_in(), r.get_e_use_out(), r.get_parent(), r.get_send_count(), r.get_send_lost_count(),
                 Inventory.f_str(r.get_send_success_rate()), r.get_receive_count(), r.get_receive_lost_count(),
@@ -345,12 +407,27 @@ class Inventory():
 
     @staticmethod
     def get_sink_export(s):
+        """
+        None -> Array of str
+
+        returns formatted data fields of sink.
+        """
         return [s.get_id(), s.get_x(), s.get_y()]
 
     @staticmethod
     def convert_values(to_convert):
+        """
+        (Decimal) -> Decimal
+
+        Returns value converted to the scale of system. Used for rendering coordinates.
+        """
         return to_convert * Inventory.SCALE_FACTOR
 
     @staticmethod
     def f_str(to_convert):
+        """
+        (Decimal) -> Str
+
+        Returns value rounded to two decimal places as string.
+        """
         return "{0:.2f}".format(to_convert)

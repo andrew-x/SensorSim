@@ -31,3 +31,7 @@ class ImproperNodesException(Exception):
 
 class ImproperScheduleException(Exception):
     pass
+
+
+class ConnectionException(Exception):
+    pass
