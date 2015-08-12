@@ -2,6 +2,7 @@ __author__ = 'Andrew'
 import os
 
 from random import randint
+from generator import Generator
 
 
 class GenerateNodesProtocol:
@@ -29,6 +30,8 @@ class GenerateNodesProtocol:
         to the type contract.
         '''
         # todo: generation code here
+		g = Generator("//input//SETTINGS.txt" if os.name == 'nt' else "/input/SETTINGS.txt",99,4)
+		
         self.OUT()
 
 if __name__ == '__main__':
