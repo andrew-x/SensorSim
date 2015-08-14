@@ -2,7 +2,7 @@ __author__ = 'Andrew'
 import os
 
 from random import randint
-from generator import Generator
+from NodeUtils import *
 
 
 class GenerateNodesProtocol:
@@ -29,9 +29,34 @@ class GenerateNodesProtocol:
         Note: this is the method that will be called so do not alter this method's name and adhere
         to the type contract.
         '''
-        # todo: generation code here
-		g = Generator("//input//SETTINGS.txt" if os.name == 'nt' else "/input/SETTINGS.txt",99,4)
-		
+        with open("//input//SETTINGS.txt" if os.name == 'nt' else "input/SETTINGS.txt") as f:
+            settings = f.readlines()
+        f.close()
+
+        settings = [x.strip('\n') for x in settings]
+
+        for setting in settings:
+            parts = setting.split(':')
+            if parts[0] == "X_SIZE":
+                X_SIZE = int(parts[1])
+            elif parts[0] == "Y_SIZE":
+                Y_SIZE = int(parts[1])
+            elif parts[0] == "SEED":
+                if len(parts[1]) > 0:
+                    SEED = parts[1]
+                else:
+                    SEED = hex(random.randint(0,2**32-1))
+            elif parts[0] == "NODES":
+                nodenum = int(parts[1])
+            elif parts[0] == "RANGE":
+                Range = int(parts[1])
+
+        workingnodes = generateNodes(nodenum,SEED,X_SIZE,Y_SIZE)
+        workingnodes = dijkstra(nodes,Range,"hop")
+        workingnodes = setOuter(nodes)
+        self.nodes = formatNodeData(workingnodes)
+        
+        
         self.OUT()
 
 if __name__ == '__main__':

@@ -29,6 +29,7 @@ class GenerateScheduleProtocol:
         to the type contract.
         '''
         # todo: generation code here
+		
         self.OUT()
 
 if __name__ == '__main__':

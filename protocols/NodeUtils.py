@@ -215,7 +215,26 @@ def formatNodeData(nodes,Range):
 				f.append("S s"+"{:0>2d}".format(z)+" "+"{:0>2d}".format(nodes[z].X)+" "+"{:0>2d}".format(nodes[z].Y)+" "+str(Range)+" 0 0 "+typ+"{:0>2d}".format(nodes[z].path)+"\n")
 		
 		return f
-	
+
+def formatScheduleData(nodes,schedule):
+	out = []
+	for slot in schedule:
+		string = ""
+		for s in slot:
+			if nodes[s].type == Node.RELAY:
+				string = string + "r"+"{:0>2d}".format(s)+" "
+			if snodes[s].type == Node.SENSOR:
+				string = string + "s"+"{:0>2d}".format(s)+" "
+			if nodes[s].type == Node.SINK:
+				string = string + "i"+"{:0>2d}".format(s)+" "
+		out.append(string)
+	return out
+
+def nodesFromFile(loc):
+	with open(loc) as f:
+            stuff = f.readlines()
+        f.close()
+	stuff = [x.strip('\n') for x in stuff]
 	
 	
 
