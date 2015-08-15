@@ -1,0 +1,33 @@
+Use the following Nodes input.
+I i1 30 30
+E e1 10 20 100 100 10 10
+R r1 20 20 100 100 10 10 i1
+S s1 10 10 100 100 10 10 r1
+
+Use the following Schedule input.
+s1
+r1
+
+Use the following Settings input.
+X_SIZE:100
+Y_SIZE:100
+SEED:2
+REFRESH_DELAY:0.001
+NODES_TO_AUDIT:e1 i1 r1 s1
+AUDIT_PERIOD_LENGTH:true
+COLOR_SINK:blue
+COLOR_RELAY:red
+COLOR_SENSOR:green
+COLOR_ENERGIZER:yellow
+COLOR_LINK_DEFAULT:purple
+COLOR_LINK_SUCCESS:green
+COLOR_LINK_FAIL:red
+
+Run simulation for 10 periods.
+
+Export -> Export Data.
+
+Check output logs to ensure each transaction is correct.
+
+Check output nodes and packets data files to ensure they match with
+the transaction logs.
