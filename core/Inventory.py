@@ -98,6 +98,7 @@ class Inventory():
 
         nodes_to_audit = []
         audit_period_length = False
+        audit_mode = False
 
         color_sink = ''
         color_relay = ''
@@ -124,6 +125,8 @@ class Inventory():
                 nodes_to_audit = val.split(" ")
             elif 'AUDIT_PERIOD_LENGTH' in l:
                 audit_period_length = val.lower() == 'true'
+            elif 'AUDIT_MODE' in l:
+                audit_mode == val.lower() == 'true'
             elif 'COLOR_SINK' in l:
                 color_sink = val
             elif 'COLOR_RELAY' in l:
@@ -148,6 +151,7 @@ class Inventory():
             Inventory.Y_SIZE = y_size
             Inventory.NODES_TO_AUDIT = nodes_to_audit
             Inventory.AUDIT_PERIOD_LENGTH = audit_period_length
+            Inventory.AUDIT_MODE = audit_mode
 
             Inventory.COLOR_SINK = color_sink
             Inventory.COLOR_RELAY = color_relay
